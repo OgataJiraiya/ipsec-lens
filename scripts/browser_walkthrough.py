@@ -1,5 +1,6 @@
 """Optional Selenium/Chromium release check; operates only on local loopback UI."""
 import json
+import argparse
 import shutil
 from selenium.webdriver.chrome.service import Service
 from pathlib import Path
@@ -10,7 +11,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/"runtime/browser"
+parser=argparse.ArgumentParser()
+parser.add_argument("--live",action="store_true")
+ARGS=parser.parse_args()
+OUT=ROOT/("runtime/browser-live" if ARGS.live else "runtime/browser")
 OUT.mkdir(parents=True,exist_ok=True)
 options=Options()
 options.binary_location=shutil.which("chromium")
@@ -41,14 +45,17 @@ try:
     resize(1366,768)
     driver.get("http://127.0.0.1:5173")
     wait.until(lambda d:"CONNECTED" in text())
-    for scenario in ("strong","weak","replay","partial","ipv6"):
+    for scenario in (("strong","weak","transport","ipv6","natt","partial","replay") if ARGS.live else ("strong","weak","replay","partial","ipv6")):
         click_nav("New Analysis")
-        driver.find_element(By.CSS_SELECTOR,'input[aria-label="Capture file"]').send_keys(str(ROOT/f"demo/{scenario}/{scenario}.pcap"))
-        telemetry=ROOT/f"demo/{scenario}/telemetry.json"
+        is_live=ARGS.live and scenario not in ("partial","replay")
+        folder=ROOT/f"runtime/live/{scenario}" if is_live else ROOT/f"demo/{scenario}"
+        path=folder/("negotiation.pcap" if is_live else scenario+".pcap")
+        driver.find_element(By.CSS_SELECTOR,'input[aria-label="Capture file"]').send_keys(str(path))
+        telemetry=folder/"telemetry.json"
         if telemetry.exists():
             driver.find_element(By.CSS_SELECTOR,'input[aria-label="Telemetry file"]').send_keys(str(telemetry))
         label=driver.find_element(By.CSS_SELECTOR,'input[placeholder^="e.g."]')
-        label.send_keys("SYNTHETIC FIXTURE · browser "+scenario)
+        label.send_keys(("REAL LAB · browser " if is_live else "SYNTHETIC FIXTURE · browser ")+scenario)
         button=wait.until(EC.element_to_be_clickable((By.XPATH,"//button[normalize-space()='Run analysis']")))
         button.click()
         wait.until(EC.text_to_be_present_in_element((By.TAG_NAME,"h1"),"Overview"))
@@ -58,25 +65,35 @@ try:
             assert "97.5" in body and "ACCEPT" in body
             driver.save_screenshot(str(OUT/"strong-overview-1366.png"))
         elif scenario=="weak":
-            assert "30.5" in body and "HARDEN" in body
+            expected=str(json.loads((ROOT/"docs/LIVE_PROTOCOL_VALIDATION.json").read_text())["weak"]["score"]["security_score"]) if ARGS.live else "30.5"
+            assert expected in body and "HARDEN" in body
         elif scenario=="partial":
             assert "UNAVAILABLE" in body and "UNKNOWN" in body
         results.append({"scenario":scenario,"upload":"PASS"})
     # Re-select strong for all pages and ensure responsive content is present.
     selector=driver.find_element(By.CSS_SELECTOR,'select[aria-label="Selected analysis"]')
     from selenium.webdriver.support.ui import Select
-    Select(selector).select_by_visible_text("SYNTHETIC FIXTURE · browser strong")
+    Select(selector).select_by_visible_text(("REAL LAB" if ARGS.live else "SYNTHETIC FIXTURE")+" · browser strong")
     wait.until(lambda d:"97.5" in text())
-    for name in ("Protocol Analysis","Security Associations","Encrypted Traffic AI","Security Assessment",
-                 "Findings","Threat Matrix","Reports","Testbed / Demo","System"):
-        click_nav(name)
-        assert driver.execute_script("return document.documentElement.scrollWidth<=window.innerWidth")
-        results.append({"page":name,"render":"PASS"})
+    for width,height in ((1366,768),(1920,1080)):
+        resize(width,height)
+        for name in ("Protocol Analysis","Security Associations","Encrypted Traffic AI","Security Assessment",
+                     "Findings","Threat Matrix","Reports","Testbed / Demo","System"):
+            click_nav(name)
+            assert driver.execute_script("return document.documentElement.scrollWidth<=window.innerWidth")
+            results.append({"page":name,"viewport":f"{width}x{height}","render":"PASS"})
     click_nav("Reports")
     for kind in ("executive","technical"):
         before=set(OUT.glob("*-"+kind+".html"))
         driver.find_element(By.PARTIAL_LINK_TEXT,"Download "+kind).click()
         wait.until(lambda d:bool(set(OUT.glob("*-"+kind+".html"))-before))
+    if ARGS.live:
+        for kind in ("executive","technical"):
+            before=set(OUT.glob("*-"+kind+".pdf"))
+            driver.find_element(By.PARTIAL_LINK_TEXT,"Download "+kind+" PDF").click()
+            wait.until(lambda d:bool(set(OUT.glob("*-"+kind+".pdf"))-before))
+            newest=next(iter(set(OUT.glob("*-"+kind+".pdf"))-before))
+            assert newest.read_bytes().startswith(b"%PDF-")
     click_nav("Overview")
     resize(1920,1080)
     driver.save_screenshot(str(OUT/"strong-overview-1920.png"))
