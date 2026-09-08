@@ -23,6 +23,7 @@ class Packet:
 
 
 def decode(data: bytes, link: int) -> Packet | None:
+    expected_version = None
     if link == 1:
         if len(data) < 14:
             raise PacketError("Ethernet header")
@@ -39,6 +40,7 @@ def decode(data: bytes, link: int) -> Packet | None:
             raise UnsupportedPacket("Excessive VLAN chain")
         if ethertype not in (0x0800, 0x86DD):
             return None
+        expected_version = 4 if ethertype == 0x0800 else 6
         data = data[offset:]
     elif link in (113, 276):
         size = 16 if link == 113 else 20
@@ -47,10 +49,13 @@ def decode(data: bytes, link: int) -> Packet | None:
         cooked_proto = data[14:16] if link == 113 else data[:2]
         if int.from_bytes(cooked_proto, "big") not in (0x0800, 0x86DD):
             return None
+        expected_version = 4 if int.from_bytes(cooked_proto, "big") == 0x0800 else 6
         data = data[size:]
     if not data:
         raise PacketError("Empty IP")
     version = data[0] >> 4
+    if expected_version is not None and version != expected_version:
+        raise PacketError("EtherType/IP version mismatch")
     if (link == 228 and version != 4) or (link == 229 and version != 6):
         raise PacketError("Link/IP version mismatch")
     if version == 4:

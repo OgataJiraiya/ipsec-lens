@@ -8,7 +8,7 @@ from dataclasses import asdict
 from pathlib import Path
 from typing import Literal
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Query, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, Response
 from fastapi.exceptions import RequestValidationError
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 from pydantic import ValidationError, Field
@@ -18,6 +18,7 @@ from backend.database.store import Store
 from backend.ml.classifier import model_info
 from backend.protocol.pcap import CaptureError
 from backend.reporting.html import render
+from backend.reporting.pdf import render_pdf
 from backend.schemas.models import (Analysis, ProtocolSummary, SecurityAssociation, Prediction,
                                     Finding, Score, StrictModel, PolicyName)
 from backend.services.analysis import build_analysis
@@ -210,7 +211,19 @@ def create_app(data_dir: Path | None = None):
         return result
 
     @app.get("/api/analyses/{identity}/report/{kind}", response_class=HTMLResponse)
-    def report(identity: str, kind: Literal["executive", "technical"]):
+    def report(identity: str, kind: Literal["executive", "technical"],
+               output_format: Literal["html", "pdf"] = Query("html", alias="format")):
+        analysis = get(identity)
+        if output_format == "pdf":
+            try:
+                data = render_pdf(analysis, kind)
+            except ValueError:
+                raise HTTPException(413, "Report exceeds PDF size limit; use HTML") from None
+            except RuntimeError:
+                raise HTTPException(503, "PDF renderer busy; retry shortly") from None
+            return Response(data, media_type="application/pdf", headers={
+                "Content-Disposition": f'attachment; filename="ipseclens-{identity}-{kind}.pdf"',
+                "X-Content-Type-Options": "nosniff"})
         return HTMLResponse(render(get(identity), kind), headers={
             "Content-Disposition": f'attachment; filename="ipseclens-{identity}-{kind}.html"',
             "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'",

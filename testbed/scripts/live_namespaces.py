@@ -143,6 +143,26 @@ swanctl {{
             # Raw XFRM includes keys: private runtime only, never print or commit.
             (folder / side / "xfrm-state.private").write_text(run(ns(holder.pid, ["ip", "-s", "xfrm", "state"])).stdout)
             (folder / side / "xfrm-policy.txt").write_text(run(ns(holder.pid, ["ip", "xfrm", "policy"])).stdout)
+        if name == "sensor":
+            sensor_results = {}
+            for case, duration, bound in [("normal", 1.5, 1048576), ("bounded", 1.5, 24), ("interrupted", 30, 1048576)]:
+                sensor_path = folder / (case+".pcap")
+                sensor_path.unlink(missing_ok=True)
+                proc = subprocess.Popen(ns(namespaces[0].pid, [sys.executable, str(ROOT / "scripts/capture.py"),
+                    "--interface", "vpn0", "--output", str(sensor_path), "--duration", str(duration),
+                    "--max-bytes", str(bound)]),stdout=serverlog,stderr=serverlog)
+                processes.append(proc)
+                time.sleep(.3)
+                run(ns(namespaces[0].pid, ["ping", "-c", "5", "-i", ".05", peers[1]]))
+                if case == "interrupted":
+                    proc.send_signal(signal.SIGINT)
+                proc.wait(timeout=8)
+                if case == "normal":
+                    assert proc.returncode == 0 and sensor_path.stat().st_size > 24
+                else:
+                    assert proc.returncode != 0 and not sensor_path.exists()
+                sensor_results[case] = "PASS"
+            (folder/"sensor-validation.json").write_text(json.dumps(sensor_results,indent=2)+"\n")
         if dataset_group is not None:
             udp_server = subprocess.Popen(ns(namespaces[1].pid, [sys.executable, str(ROOT / "testbed/traffic/session.py"), "serve", "--peer", peers[1]]), stdout=serverlog, stderr=serverlog)
             processes.append(udp_server)
@@ -210,7 +230,7 @@ swanctl {{
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--name", choices=["strong","weak","transport","ipv6","natt"], default="strong")
+    parser.add_argument("--name", choices=["strong","weak","transport","ipv6","natt","sensor"], default="strong")
     parser.add_argument("--dataset", action="store_true")
     args = parser.parse_args()
     if args.dataset:

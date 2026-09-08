@@ -62,7 +62,11 @@ def model_info():
     if model is None:
         return {"status": "UNAVAILABLE", "reason": "Run make train to build the trusted synthetic classifier",
                 "features": FEATURES, "abstention_threshold": ABSTENTION}
-    return {"status": "AVAILABLE", "kind": model["kind"], "classes": model["classes"], "features": FEATURES,
+    validation_path = ROOT / "docs/REAL_ML_EVALUATION.json"
+    real_validation = None
+    if validation_path.is_file() and validation_path.stat().st_size <= 2*1024*1024:
+        real_validation = json.loads(validation_path.read_text())
+    return {"real_testbed_evaluation": real_validation, "status": "AVAILABLE", "kind": model["kind"], "classes": model["classes"], "features": FEATURES,
             "metadata": model["metadata"], "metrics": model["metrics"], "model_sha256": model["model_sha256"],
             "abstention_threshold": ABSTENTION}
 

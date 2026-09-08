@@ -10,8 +10,8 @@ frontend:
 	cd frontend && npm run dev -- --host 127.0.0.1
 test: train
 	$(PY) -m pytest -q
-	$(PY) -m ruff check backend training scripts
-	$(PY) -m mypy backend
+	$(PY) -m ruff check .
+	$(PY) -m mypy backend training scripts
 	cd frontend && npm run typecheck && npm run lint && npm test -- --run && npm run build
 train:
 	$(PY) -m training.train
