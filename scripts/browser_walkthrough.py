@@ -74,8 +74,9 @@ try:
         results.append({"page":name,"render":"PASS"})
     click_nav("Reports")
     for kind in ("executive","technical"):
+        before=set(OUT.glob("*-"+kind+".html"))
         driver.find_element(By.PARTIAL_LINK_TEXT,"Download "+kind).click()
-        wait.until(lambda d:any(OUT.glob("*-"+kind+".html")))
+        wait.until(lambda d:bool(set(OUT.glob("*-"+kind+".html"))-before))
     click_nav("Overview")
     resize(1920,1080)
     driver.save_screenshot(str(OUT/"strong-overview-1920.png"))

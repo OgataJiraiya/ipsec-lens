@@ -90,3 +90,9 @@ def test_retain_capture(client,strong):
     run=upload(client,strong,retain_capture="true").json()
     folder=Path(client.app.state.store.engine.url.database).parent
     assert (folder/"captures"/(run["analysis_id"]+".pcap")).exists()
+
+
+def test_offline_openapi(client):
+    assert client.get("/openapi.json").status_code==200
+    assert client.get("/docs").status_code==404
+    assert client.get("/redoc").status_code==404

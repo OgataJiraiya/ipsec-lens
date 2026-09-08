@@ -98,7 +98,7 @@ class TelemetryRequest(Telemetry):
 def create_app(data_dir: Path | None = None):
     directory = data_dir or config.DATA_DIR
     store = Store(directory)
-    app = FastAPI(title="IPsecLens AI", version="0.1.0", description=(
+    app = FastAPI(title="IPsecLens AI", version="0.1.0", docs_url=None, redoc_url=None, description=(
         "Local evidence-aware IPsec analyzer. UNKNOWN != SECURE. IKE proposals are not ESP transforms."))
     app.add_middleware(IntakeLimits)
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "testserver"] if data_dir else ["127.0.0.1", "localhost"])
