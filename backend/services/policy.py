@@ -136,11 +136,16 @@ def assess(summary, sas, policy_name, visibility_partial=False):
     if not sas:
         for name in ("Cryptography", "Key Exchange", "PFS / Rekey", "Replay Protection"):
             check(name, None, "No matching SA telemetry")
-    ike_versions = {m.version for m in summary.ike_messages}
+    # Version counts are recorded for every parsed IKE message, even after detailed-message
+    # retention reaches its ceiling. Use them so a later IKEv1 packet cannot disappear from policy.
+    ike_versions = {version for version in ("IKEv1", "IKEv2") if summary.counts.get(version, 0)}
+    if not ike_versions:
+        ike_versions = {m.version for m in summary.ike_messages}
     check("Protocol Hygiene", 30 if "IKEv1" in ike_versions else 100 if "IKEv2" in ike_versions else None,
           "Observed IKE versions: " + ", ".join(sorted(ike_versions)))
     if "IKEv1" in ike_versions:
-        add("IKEV1", "MEDIUM", Source.OBSERVED, "IKEv1 identified.", ["IKEv1 header"],
+        add("IKEV1", "MEDIUM", Source.OBSERVED, "IKEv1 identified.",
+            [f"IKEv1 messages={summary.counts.get('IKEv1', 0) or 'retained'}"],
             "Migrate to IKEv2 after interoperability review.")
     esp_count = summary.counts.get("ESP", 0)
     # Fixed exposure score is an explicit policy rubric for visible metadata, not encryption failure.
