@@ -13,7 +13,7 @@ These name synthetic workload shapes, not proven applications inside actual ESP.
 Feature schema: 22 outer-length/timing/count features, documented in AI_TRAFFIC_CLASSIFIER.md.
 Seed 26160. CPU training, single-thread forest. Dependencies pinned in requirements.lock.
 
-## Model selection and measured metrics
+## SYNTHETIC VALIDATION
 Selected RandomForestClassifier against LogisticRegression and GradientBoosting using validation macro F1.
 Synthetic held-out test: accuracy 1.000, macro F1 1.000, weighted F1 1.000.
 All seven classes have precision/recall/F1 1.000, with 24 test examples per class.
@@ -42,3 +42,17 @@ First 2048 packets may not represent a long-lived SA. Confident errors remain po
 Built-in JSON only. No pickle/joblib import path exposed to users.
 SHA-256 detects accidental artifact mismatch, not malicious replacement by a trusted local operator.
 Real-world calibrated confidence and externally validated datasets remain future work.
+
+## REAL TESTBED VALIDATION
+
+Preliminary evaluation: 120 real ESP captures of generated local workloads, five classes, 12 isolated strongSwan tunnel groups. Group-safe train/validation/test = 60/20/40. Both AES-GCM and AES-CBC; no session or paired workload seed crosses splits.
+
+| Training | Held-out real accuracy | Macro F1 | Weighted F1 | Brier | ECE |
+|---|---:|---:|---:|---:|---:|
+| Original synthetic | 0.45 | 0.32 | 0.32 | 0.5130825 | 0.307 |
+| Real-only RF | 1.00 | 1.00 | 1.00 | 0.000295 | 0.006 |
+| Mixed RF | 1.00 | 1.00 | 1.00 | 0.00025875 | 0.006 |
+
+RF/LR/GradientBoosting selection and threshold selection used validation only. Experimental threshold 0.90; synthetic-model coverage 0.40 with 24/40 abstentions, real/mixed coverage 1.00. Both held-out cross-crypto directions scored macro F1 1.00 on 20 target sessions. Full distributions, candidate metrics and group IDs: ../docs/REAL_ML_EVALUATION.json.
+
+The production artifact remains synthetic-trained at threshold 0.60. Poor transfer (macro F1 0.32) is material. Perfect lab-trained results reflect a small, controlled single-host experiment with only four held-out tunnel groups; no deployment, vendor/application attribution or calibrated operational confidence claim is supported. EMAIL/OTHER lack real samples. Generated workload labels are not organic application traces.

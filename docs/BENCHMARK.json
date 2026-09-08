@@ -12,32 +12,32 @@
     {
       "packets": 10000,
       "capture_bytes": 2180024,
-      "parse_seconds": 0.11114363799970306,
-      "feature_seconds": 0.001609620000635914,
-      "inference_seconds_including_first_model_load": 0.004919715999676555,
-      "report_seconds": 0.00041230399983760435,
+      "parse_seconds": 0.10589926499960711,
+      "feature_seconds": 0.0015644869999960065,
+      "inference_seconds_including_first_model_load": 0.006750923999788938,
+      "report_seconds": 0.0004055719982716255,
       "report_bytes": 15920,
-      "peak_process_rss_mib": 54.74609375
+      "peak_process_rss_mib": 54.828125
     },
     {
       "packets": 100000,
       "capture_bytes": 21800024,
-      "parse_seconds": 1.192756828999336,
-      "feature_seconds": 0.0008058110006459174,
-      "inference_seconds_including_first_model_load": 0.005124768000314361,
-      "report_seconds": 0.00035982900044473354,
+      "parse_seconds": 1.1105205530002422,
+      "feature_seconds": 0.0007791120006004348,
+      "inference_seconds_including_first_model_load": 0.006680477999907453,
+      "report_seconds": 0.0004302300003473647,
       "report_bytes": 15933,
-      "peak_process_rss_mib": 69.62890625
+      "peak_process_rss_mib": 69.3984375
     },
     {
       "packets": 500000,
       "capture_bytes": 109000024,
-      "parse_seconds": 6.188574318999599,
-      "feature_seconds": 0.0013719819999096217,
-      "inference_seconds_including_first_model_load": 0.005943883000327332,
-      "report_seconds": 0.0007783359997119987,
+      "parse_seconds": 5.515118065000934,
+      "feature_seconds": 0.0008212869997805683,
+      "inference_seconds_including_first_model_load": 0.005407483999078977,
+      "report_seconds": 0.0003920720009773504,
       "report_bytes": 15932,
-      "peak_process_rss_mib": 130.015625
+      "peak_process_rss_mib": 129.80078125
     }
   ]
 }

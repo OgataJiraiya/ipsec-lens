@@ -94,5 +94,9 @@ The model may be confidently wrong on real traffic. VPN SAs can multiplex applic
 The first 2048 packets per directional SA feed inference; all bounded packets feed sequence analysis.
 
 Docker integration is unverified on this host because daemon access is denied.
-Generated lab configs are not proof of a functioning VPN. The complete demo uses truthful synthetic fallback.
-Raw swanctl/XFRM text parsers, endpoint attestation, reassembly and PDF export are not implemented.
+Real namespace tunnels and captured workloads are now verified; synthetic fixtures remain separately labelled.
+Raw swanctl/XFRM parsers and offline PDF export are implemented and tested. Endpoint attestation and fragment reassembly remain unsupported.
+
+## Live validation update
+
+See [docs/LIVE_VALIDATION.md](docs/LIVE_VALIDATION.md) for real strong/weak, transport, IPv6 and forced NAT-T verification. Real generated-workload dataset: 120 sessions; group-safe preliminary evaluation is recorded separately from synthetic metrics. Production retains the original synthetic classifier; its held-out real macro F1 is 0.32. HTML and bounded offline server PDF reports are verified.

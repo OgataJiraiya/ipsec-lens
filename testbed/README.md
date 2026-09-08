@@ -1,11 +1,11 @@
-# Isolated local strongSwan lab (integration verification required)
+# Isolated local strongSwan lab
 
 The default demo uses labelled synthetic PCAPs. The optional lab has two containers
 on a Docker internal network, no published ports, no host networking.
 NET_ADMIN/NET_RAW apply inside container network namespaces. The web server never runs as root.
 Check subnet conflicts before launching. Do not attach this lab to an external network.
 
-Build requires Internet once; subsequent runtime is local. Docker and Linux XFRM are prerequisites.
+The Compose variant below requires Docker and Linux XFRM and remains unverified here. Building its image requires Internet once. The verified namespace alternative requires no Docker; see ../docs/LIVE_VALIDATION.md.
 Generated random PSKs are ignored by Git; files are mode 0600.
 
     .venv/bin/python -m testbed.scripts.generate --profile modern --mode tunnel
@@ -34,3 +34,7 @@ endpoint configuration. Do not copy fixture assertions.
 
 Live interoperability and crypto plugin availability require target-host verification.
 Configuration generation is not evidence of an established VPN. See FINAL_BUILD_REPORT.
+
+## Live validation update
+
+See [../docs/LIVE_VALIDATION.md](../docs/LIVE_VALIDATION.md) for real strong/weak, transport, IPv6 and forced NAT-T verification. Real generated-workload dataset: 120 sessions; group-safe preliminary evaluation is recorded separately from synthetic metrics. Production retains the original synthetic classifier; its held-out real macro F1 is 0.32. HTML and bounded offline server PDF reports are verified.

@@ -1,7 +1,7 @@
 # Testbed status
 
 See [testbed instructions](../testbed/README.md) and docker-compose.yml.
-Configuration generation works; live integration is PARTIAL / UNVERIFIED.
+Live namespace integration is verified; see LIVE_VALIDATION.md for measured results. Docker remains unavailable.
 Docker daemon access was denied both in and outside the execution sandbox on the build host.
 
 Supported generator combinations:
@@ -23,3 +23,7 @@ telemetry, never precomputed analyzer results. Both UI and reports disclose gene
 - ipv6: IKEv2/NAT-T ESP plus one AH header; AH configuration unknown.
 
 Do not describe fallback fixtures as captured deployments or cryptographically valid functioning tunnels.
+
+## Live validation update
+
+See [../docs/LIVE_VALIDATION.md](../docs/LIVE_VALIDATION.md) for real strong/weak, transport, IPv6 and forced NAT-T verification. Real generated-workload dataset: 120 sessions; group-safe preliminary evaluation is recorded separately from synthetic metrics. Production retains the original synthetic classifier; its held-out real macro F1 is 0.32. HTML and bounded offline server PDF reports are verified.

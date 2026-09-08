@@ -10,7 +10,7 @@ Review date: 2026-09-08. This is an internal engineering review, not an independ
 | Paths | Sanitized display basename; UUID paths; no client directory access; temporary directories |
 | Cleanup | finally closes upload, context removes working files; capture retained only by explicit option |
 | Telemetry | 2 MiB JSON, typed allowlist, capture hash and exact directional SPI match; unknown fields rejected |
-| Sensitive data | Raw XFRM/key import unsupported; validation responses omit submitted values |
+| Sensitive data | Local raw XFRM parser discards key values; committed samples are redacted; validation responses omit submitted values |
 | Serialization | Fixed trusted JSON model, SHA check; no user-supplied pickle/joblib |
 | Subprocess | Explicit local CLI only, argument arrays, no shell interpolation; local interface allowlist |
 | Privilege | Non-root web runtime; optional capture/lab requires explicit local CLI actions |
@@ -55,3 +55,5 @@ Docker integration remains unverified; no privileged lab experiment was falsely 
 Final follow-up: rejected impossible key lengths and contradictory AEAD/PFS assertions;
 restricted demo cleanup by both known fixture hash and demo label; prevented pending telemetry
 file reads from racing submission; disabled CDN-dependent documentation UI for offline operation.
+
+Fresh live-pass review and fixed issues: [FINAL_SOURCE_REVIEW.md](FINAL_SOURCE_REVIEW.md). Offline PDF resource fetching is disabled. Capture output uses exclusive no-follow creation with byte bounds and interruption cleanup.

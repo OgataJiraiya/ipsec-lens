@@ -1,6 +1,6 @@
 # Limitations and non-claims
 
-- All bundled training samples, captures and endpoint assertions are synthetic; no real-world ML validation.
+- Bundled demo PCAPs remain synthetic. Real namespace captures of generated workloads were evaluated separately; no external deployment validation.
 - Wire-format fixtures contain dummy KE values and opaque ESP bytes, not authenticated encryption.
 - No decryption, password cracking, vulnerability reproduction, exploitation or external scanning.
 - IKEv1 header identification only; no v1 proposal decoding.
@@ -16,7 +16,7 @@
 - ESN high-order sequence tracking is not reconstructed.
 - Telemetry is an operator assertion, not attested endpoint truth; collected_at is not automatically aligned
   to every capture timestamp. The capture hash binds intended association, not authenticity.
-- Normalized JSON only; raw swanctl/XFRM parsers not implemented. Raw XFRM can contain keys.
+- Raw parsers support observed strongSwan 6.0.7/Linux formats, not every version. Raw XFRM contains keys: only sanitized samples are committed.
 - Mode/PFS/lifetime/replay window unknown without matched telemetry.
 - Scoring is a documented prototype rubric, not NTRO certification or an external compliance standard.
 - No comprehensive score of IKE authentication (certificates/PSK strength), endpoint software or CVEs.
@@ -24,8 +24,11 @@
 - No probability calibration; abstention cannot eliminate confident out-of-distribution errors.
 - Synchronous bounded analysis with two concurrent writes; no job queue or cancellation/progress API.
 - Non-root loopback backend only, no authentication/multi-user isolation; unsuitable for public exposure.
-- Reports are HTML; browser print-to-PDF may be used manually. Server PDF export not implemented.
+- HTML is canonical; offline PDF export has a 256 KiB HTML ceiling and one-render concurrency limit.
 - Capture retention is opt-in; no UI deletion/retention scheduling. Protect the local runtime directory.
 - Graceful temporary cleanup is implemented; an OS kill/crash can leave spool/temp artifacts.
-- Optional lab configs generated/tested as files; live Docker strongSwan integration unverified due permissions.
+- Docker integration remains unverified due permissions. Real isolated namespace strong/weak, transport, IPv6 and forced NAT-T SAs are verified.
 - Benchmark represents one synthetic directional flow, not worst-case many-SA/IKE-heavy workloads.
+
+- Real ML validation is preliminary: generated workloads, one host/topology, five classes, four held-out tunnel groups. Production synthetic model transfers poorly (macro F1 0.32).
+- Forced NAT-T is not a NAT-router traversal test; live IPv6 extension chains were not exercised.

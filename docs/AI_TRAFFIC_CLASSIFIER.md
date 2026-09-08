@@ -49,3 +49,7 @@ Confidence below threshold also abstains; probabilities remain visible.
 Low confidence is not the only failure mode: synthetic domain shift can be confidently wrong.
 
 Encrypted payload was not decrypted. Classification is statistical flow-metadata inference.
+
+## Live validation update
+
+See [../docs/LIVE_VALIDATION.md](../docs/LIVE_VALIDATION.md) for real strong/weak, transport, IPv6 and forced NAT-T verification. Real generated-workload dataset: 120 sessions; group-safe preliminary evaluation is recorded separately from synthetic metrics. Production retains the original synthetic classifier; its held-out real macro F1 is 0.32. HTML and bounded offline server PDF reports are verified.
