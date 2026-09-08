@@ -35,8 +35,9 @@ def export(model, name):
 
 
 def train(output=Path("models")):
-    data_hash = write()
+    manifest_hash = write()
     data = dataset()
+    data_hash = hashlib.sha256(data.to_csv(index=False, float_format="%.12g").encode()).hexdigest()
     subsets = {s: data[data.split == s] for s in ("train", "validation", "test")}
     x = {s: frame[FEATURES].to_numpy() for s, frame in subsets.items()}
     y = {s: frame.label.to_numpy() for s, frame in subsets.items()}
@@ -54,7 +55,7 @@ def train(output=Path("models")):
     chosen = candidates[best]
     artifact = export(chosen, best)
     artifact["metadata"] = {"seed": SEED, "training_source": "SYNTHETIC FIXTURE metadata profiles",
-        "dataset_sha256": data_hash, "sklearn_version": sklearn.__version__,
+        "dataset_sha256": data_hash, "manifest_sha256": manifest_hash, "sklearn_version": sklearn.__version__,
         "split_method": "Disjoint configuration groups; one feature row per independent session",
         "split_sizes": {s: len(f) for s, f in subsets.items()},
         "selection": "Highest validation macro F1, stable candidate-order tie break",

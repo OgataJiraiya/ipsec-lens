@@ -36,9 +36,12 @@ def test_prediction_confidence():
     assert sum(p.probabilities.values())==pytest.approx(1)
 
 
-def test_abstention():
+def test_abstention(monkeypatch):
     assert predict("x",[(0,100)]).predicted_class=="UNKNOWN"
-    assert predict("x",samples({"seed":2,"label":"WEB"}),threshold=1.01).predicted_class=="UNKNOWN"
+    import numpy as np
+    monkeypatch.setattr("backend.ml.classifier.probabilities", lambda model, row: np.ones(7) / 7)
+    p=predict("x",samples({"seed":2,"label":"WEB"}),threshold=.60)
+    assert p.predicted_class=="UNKNOWN" and p.confidence < .60
 
 
 def test_model_hash():

@@ -2,7 +2,7 @@ PY=.venv/bin/python
 .PHONY: install backend frontend test demo clean-demo train
 install:
 	python3.13 -m venv .venv
-	$(PY) -m pip install -e '.[dev]'
+	$(PY) -m pip install -r requirements.lock -e '.[dev]'
 	cd frontend && npm ci
 backend:
 	$(PY) -m uvicorn backend.api.main:app --host 127.0.0.1 --port 18760

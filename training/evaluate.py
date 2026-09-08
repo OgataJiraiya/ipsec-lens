@@ -22,6 +22,5 @@ def evaluate(model, x, y):
 
 
 if __name__ == "__main__":
-    import json
     from pathlib import Path
     print(Path("models/metrics.json").read_text())
