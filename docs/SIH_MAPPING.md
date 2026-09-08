@@ -52,7 +52,7 @@ Synthetic tests do not verify an actual VPN deployment. PARTIAL identifies absen
 | Isolated strongSwan integration | User/network/mount namespace fallback | real SAs, local ping/HTTP, tshark | COMPLETE — LIVE VERIFIED |
 | Offline runtime | Local assets/model/database | browser/source review | COMPLETE — OFFLINE VERIFIED |
 | Regressions | Python, frontend, browser, bounded fuzz | release results | COMPLETE — OFFLINE VERIFIED |
-| CI | Workflow implemented; not pushed/run remotely | local equivalent gates | PARTIAL |
+| CI | Pinned GitHub Actions Python/frontend quality gates | PR #1 hosted run 34202981510 passed; 142 Python tests + frontend gates | COMPLETE — OFFLINE VERIFIED |
 | Documentation | Architecture/semantics/model/demo/review/mapping | repository documents | COMPLETE — OFFLINE VERIFIED |
 
 Live scope is narrow: forced ESP-in-UDP, ordinary IPv6, strong/weak tunnel and transport profiles. Docker execution, NAT router traversal, other generated crypto combinations and organic application attribution are not validated. See LIVE_VALIDATION.md.
