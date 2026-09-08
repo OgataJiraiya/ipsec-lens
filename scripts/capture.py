@@ -13,13 +13,49 @@ import time
 FILTER = "(udp port 500 or udp port 4500 or ip proto 50 or ip proto 51 or ip6 protochain 50 or ip6 protochain 51)"
 
 
+def _mapped_user_namespace_root() -> bool:
+    """True only when uid 0 is mapped to a non-root host uid."""
+    if os.getuid() != 0:
+        return False
+    try:
+        fields = Path("/proc/self/uid_map").read_text().splitlines()[0].split()
+        return len(fields) >= 3 and fields[0] == "0" and fields[1] != "0"
+    except (OSError, IndexError):
+        return False
+
+
+def _tcpdump_drop_user() -> str:
+    """Never force tcpdump to retain host-root privileges.
+
+    A sudo invocation drops to the invoking uid. Mapped namespace root is already
+    unprivileged on the host and may stay namespace-root for lab compatibility.
+    A true root shell falls back to the dedicated tcpdump account or refuses.
+    """
+    uid = os.getuid()
+    if uid != 0:
+        return pwd.getpwuid(uid).pw_name
+    sudo_uid = os.environ.get("SUDO_UID", "")
+    if sudo_uid.isdecimal() and int(sudo_uid) > 0:
+        try:
+            return pwd.getpwuid(int(sudo_uid)).pw_name
+        except KeyError as exc:
+            raise ValueError("SUDO_UID does not resolve to a local account") from exc
+    if _mapped_user_namespace_root():
+        return "root"  # namespace root maps to the invoking unprivileged host uid
+    try:
+        return pwd.getpwnam("tcpdump").pw_name
+    except KeyError as exc:
+        raise ValueError("Refusing to keep tcpdump as host root; invoke via sudo from a non-root account") from exc
+
+
 def command(interface: str, max_packets: int, full: bool = False) -> list[str]:
     if interface not in {name for _, name in socket.if_nameindex()}:
         raise ValueError("Interface is not a local interface")
     if not 1 <= max_packets <= 1_000_000:
         raise ValueError("Packet limit must be 1..1000000")
     # stdout avoids tcpdump opening/chowning a path. Parent owns an exclusive no-follow descriptor.
-    args = ["tcpdump", "-Z", pwd.getpwuid(os.getuid()).pw_name, "--immediate-mode",
+    # -Z explicitly drops capture privileges after device/filter setup; host root is never selected.
+    args = ["tcpdump", "-Z", _tcpdump_drop_user(), "--immediate-mode",
             "-i", interface, "-n", "-s", "65535", "-U", "-c", str(max_packets), "-w", "-"]
     if not full:
         args.append(FILTER)
