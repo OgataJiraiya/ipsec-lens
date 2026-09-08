@@ -1,0 +1,6722 @@
+[
+  {
+    "session_id": "cfg00-voip-00",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26160,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-voip-01",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26161,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-voip-02",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26162,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-voip-03",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26163,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-voip-04",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26164,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-voip-05",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26165,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-voip-06",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26166,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-voip-07",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26167,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-voip-08",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26168,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-voip-09",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26169,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-voip-10",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26170,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-voip-11",
+    "configuration": "cfg00",
+    "label": "VOIP",
+    "seed": 26171,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-00",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26260,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-01",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26261,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-02",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26262,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-03",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26263,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-04",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26264,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-05",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26265,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-06",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26266,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-07",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26267,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-08",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26268,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-09",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26269,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-10",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26270,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-messaging-11",
+    "configuration": "cfg00",
+    "label": "MESSAGING",
+    "seed": 26271,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-00",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26360,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-01",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26361,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-02",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26362,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-03",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26363,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-04",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26364,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-05",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26365,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-06",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26366,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-07",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26367,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-08",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26368,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-09",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26369,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-10",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26370,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-email-11",
+    "configuration": "cfg00",
+    "label": "EMAIL",
+    "seed": 26371,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-00",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26460,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-01",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26461,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-02",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26462,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-03",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26463,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-04",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26464,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-05",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26465,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-06",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26466,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-07",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26467,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-08",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26468,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-09",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26469,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-10",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26470,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-web-11",
+    "configuration": "cfg00",
+    "label": "WEB",
+    "seed": 26471,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-00",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26560,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-01",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26561,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-02",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26562,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-03",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26563,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-04",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26564,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-05",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26565,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-06",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26566,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-07",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26567,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-08",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26568,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-09",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26569,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-10",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26570,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-icmp-11",
+    "configuration": "cfg00",
+    "label": "ICMP",
+    "seed": 26571,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-00",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26660,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-01",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26661,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-02",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26662,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-03",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26663,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-04",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26664,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-05",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26665,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-06",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26666,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-07",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26667,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-08",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26668,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-09",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26669,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-10",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26670,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-video-11",
+    "configuration": "cfg00",
+    "label": "VIDEO",
+    "seed": 26671,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-00",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26760,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-01",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26761,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-02",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26762,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-03",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26763,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-04",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26764,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-05",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26765,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-06",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26766,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-07",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26767,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-08",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26768,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-09",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26769,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-10",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26770,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg00-other-11",
+    "configuration": "cfg00",
+    "label": "OTHER",
+    "seed": 26771,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-00",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36160,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-01",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36161,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-02",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36162,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-03",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36163,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-04",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36164,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-05",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36165,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-06",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36166,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-07",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36167,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-08",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36168,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-09",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36169,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-10",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36170,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-voip-11",
+    "configuration": "cfg01",
+    "label": "VOIP",
+    "seed": 36171,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-00",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36260,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-01",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36261,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-02",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36262,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-03",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36263,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-04",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36264,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-05",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36265,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-06",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36266,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-07",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36267,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-08",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36268,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-09",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36269,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-10",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36270,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-messaging-11",
+    "configuration": "cfg01",
+    "label": "MESSAGING",
+    "seed": 36271,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-00",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36360,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-01",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36361,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-02",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36362,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-03",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36363,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-04",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36364,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-05",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36365,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-06",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36366,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-07",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36367,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-08",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36368,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-09",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36369,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-10",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36370,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-email-11",
+    "configuration": "cfg01",
+    "label": "EMAIL",
+    "seed": 36371,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-00",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36460,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-01",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36461,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-02",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36462,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-03",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36463,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-04",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36464,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-05",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36465,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-06",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36466,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-07",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36467,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-08",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36468,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-09",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36469,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-10",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36470,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-web-11",
+    "configuration": "cfg01",
+    "label": "WEB",
+    "seed": 36471,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-00",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36560,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-01",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36561,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-02",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36562,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-03",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36563,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-04",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36564,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-05",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36565,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-06",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36566,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-07",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36567,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-08",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36568,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-09",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36569,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-10",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36570,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-icmp-11",
+    "configuration": "cfg01",
+    "label": "ICMP",
+    "seed": 36571,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-00",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36660,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-01",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36661,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-02",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36662,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-03",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36663,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-04",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36664,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-05",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36665,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-06",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36666,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-07",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36667,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-08",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36668,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-09",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36669,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-10",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36670,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-video-11",
+    "configuration": "cfg01",
+    "label": "VIDEO",
+    "seed": 36671,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-00",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36760,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-01",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36761,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-02",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36762,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-03",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36763,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-04",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36764,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-05",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36765,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-06",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36766,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-07",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36767,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-08",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36768,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-09",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36769,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-10",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36770,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg01-other-11",
+    "configuration": "cfg01",
+    "label": "OTHER",
+    "seed": 36771,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-00",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46160,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-01",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46161,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-02",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46162,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-03",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46163,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-04",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46164,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-05",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46165,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-06",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46166,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-07",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46167,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-08",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46168,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-09",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46169,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-10",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46170,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-voip-11",
+    "configuration": "cfg02",
+    "label": "VOIP",
+    "seed": 46171,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-00",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46260,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-01",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46261,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-02",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46262,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-03",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46263,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-04",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46264,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-05",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46265,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-06",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46266,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-07",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46267,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-08",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46268,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-09",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46269,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-10",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46270,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-messaging-11",
+    "configuration": "cfg02",
+    "label": "MESSAGING",
+    "seed": 46271,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-00",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46360,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-01",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46361,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-02",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46362,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-03",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46363,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-04",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46364,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-05",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46365,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-06",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46366,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-07",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46367,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-08",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46368,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-09",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46369,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-10",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46370,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-email-11",
+    "configuration": "cfg02",
+    "label": "EMAIL",
+    "seed": 46371,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-00",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46460,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-01",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46461,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-02",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46462,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-03",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46463,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-04",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46464,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-05",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46465,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-06",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46466,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-07",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46467,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-08",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46468,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-09",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46469,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-10",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46470,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-web-11",
+    "configuration": "cfg02",
+    "label": "WEB",
+    "seed": 46471,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-00",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46560,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-01",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46561,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-02",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46562,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-03",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46563,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-04",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46564,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-05",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46565,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-06",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46566,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-07",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46567,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-08",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46568,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-09",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46569,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-10",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46570,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-icmp-11",
+    "configuration": "cfg02",
+    "label": "ICMP",
+    "seed": 46571,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-00",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46660,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-01",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46661,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-02",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46662,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-03",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46663,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-04",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46664,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-05",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46665,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-06",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46666,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-07",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46667,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-08",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46668,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-09",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46669,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-10",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46670,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-video-11",
+    "configuration": "cfg02",
+    "label": "VIDEO",
+    "seed": 46671,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-00",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46760,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-01",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46761,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-02",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46762,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-03",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46763,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-04",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46764,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-05",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46765,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-06",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46766,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-07",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46767,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-08",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46768,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-09",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46769,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-10",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46770,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg02-other-11",
+    "configuration": "cfg02",
+    "label": "OTHER",
+    "seed": 46771,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-00",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56160,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-01",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56161,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-02",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56162,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-03",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56163,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-04",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56164,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-05",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56165,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-06",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56166,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-07",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56167,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-08",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56168,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-09",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56169,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-10",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56170,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-voip-11",
+    "configuration": "cfg03",
+    "label": "VOIP",
+    "seed": 56171,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-00",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56260,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-01",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56261,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-02",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56262,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-03",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56263,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-04",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56264,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-05",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56265,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-06",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56266,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-07",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56267,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-08",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56268,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-09",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56269,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-10",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56270,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-messaging-11",
+    "configuration": "cfg03",
+    "label": "MESSAGING",
+    "seed": 56271,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-00",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56360,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-01",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56361,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-02",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56362,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-03",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56363,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-04",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56364,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-05",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56365,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-06",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56366,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-07",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56367,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-08",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56368,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-09",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56369,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-10",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56370,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-email-11",
+    "configuration": "cfg03",
+    "label": "EMAIL",
+    "seed": 56371,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-00",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56460,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-01",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56461,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-02",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56462,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-03",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56463,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-04",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56464,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-05",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56465,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-06",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56466,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-07",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56467,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-08",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56468,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-09",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56469,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-10",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56470,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-web-11",
+    "configuration": "cfg03",
+    "label": "WEB",
+    "seed": 56471,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-00",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56560,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-01",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56561,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-02",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56562,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-03",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56563,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-04",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56564,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-05",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56565,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-06",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56566,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-07",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56567,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-08",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56568,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-09",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56569,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-10",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56570,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-icmp-11",
+    "configuration": "cfg03",
+    "label": "ICMP",
+    "seed": 56571,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-00",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56660,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-01",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56661,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-02",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56662,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-03",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56663,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-04",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56664,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-05",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56665,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-06",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56666,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-07",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56667,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-08",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56668,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-09",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56669,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-10",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56670,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-video-11",
+    "configuration": "cfg03",
+    "label": "VIDEO",
+    "seed": 56671,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-00",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56760,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-01",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56761,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-02",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56762,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-03",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56763,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-04",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56764,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-05",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56765,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-06",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56766,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-07",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56767,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-08",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56768,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-09",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56769,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-10",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56770,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg03-other-11",
+    "configuration": "cfg03",
+    "label": "OTHER",
+    "seed": 56771,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-00",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66160,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-01",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66161,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-02",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66162,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-03",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66163,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-04",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66164,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-05",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66165,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-06",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66166,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-07",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66167,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-08",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66168,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-09",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66169,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-10",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66170,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-voip-11",
+    "configuration": "cfg04",
+    "label": "VOIP",
+    "seed": 66171,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-00",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66260,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-01",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66261,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-02",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66262,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-03",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66263,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-04",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66264,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-05",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66265,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-06",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66266,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-07",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66267,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-08",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66268,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-09",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66269,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-10",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66270,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-messaging-11",
+    "configuration": "cfg04",
+    "label": "MESSAGING",
+    "seed": 66271,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-00",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66360,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-01",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66361,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-02",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66362,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-03",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66363,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-04",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66364,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-05",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66365,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-06",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66366,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-07",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66367,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-08",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66368,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-09",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66369,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-10",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66370,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-email-11",
+    "configuration": "cfg04",
+    "label": "EMAIL",
+    "seed": 66371,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-00",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66460,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-01",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66461,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-02",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66462,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-03",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66463,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-04",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66464,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-05",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66465,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-06",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66466,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-07",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66467,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-08",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66468,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-09",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66469,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-10",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66470,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-web-11",
+    "configuration": "cfg04",
+    "label": "WEB",
+    "seed": 66471,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-00",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66560,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-01",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66561,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-02",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66562,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-03",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66563,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-04",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66564,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-05",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66565,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-06",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66566,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-07",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66567,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-08",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66568,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-09",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66569,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-10",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66570,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-icmp-11",
+    "configuration": "cfg04",
+    "label": "ICMP",
+    "seed": 66571,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-00",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66660,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-01",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66661,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-02",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66662,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-03",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66663,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-04",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66664,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-05",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66665,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-06",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66666,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-07",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66667,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-08",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66668,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-09",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66669,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-10",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66670,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-video-11",
+    "configuration": "cfg04",
+    "label": "VIDEO",
+    "seed": 66671,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-00",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66760,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-01",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66761,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-02",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66762,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-03",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66763,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-04",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66764,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-05",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66765,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-06",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66766,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-07",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66767,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-08",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66768,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-09",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66769,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-10",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66770,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg04-other-11",
+    "configuration": "cfg04",
+    "label": "OTHER",
+    "seed": 66771,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-00",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76160,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-01",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76161,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-02",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76162,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-03",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76163,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-04",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76164,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-05",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76165,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-06",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76166,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-07",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76167,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-08",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76168,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-09",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76169,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-10",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76170,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-voip-11",
+    "configuration": "cfg05",
+    "label": "VOIP",
+    "seed": 76171,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-00",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76260,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-01",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76261,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-02",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76262,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-03",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76263,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-04",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76264,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-05",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76265,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-06",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76266,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-07",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76267,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-08",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76268,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-09",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76269,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-10",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76270,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-messaging-11",
+    "configuration": "cfg05",
+    "label": "MESSAGING",
+    "seed": 76271,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-00",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76360,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-01",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76361,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-02",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76362,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-03",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76363,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-04",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76364,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-05",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76365,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-06",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76366,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-07",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76367,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-08",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76368,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-09",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76369,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-10",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76370,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-email-11",
+    "configuration": "cfg05",
+    "label": "EMAIL",
+    "seed": 76371,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-00",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76460,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-01",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76461,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-02",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76462,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-03",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76463,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-04",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76464,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-05",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76465,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-06",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76466,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-07",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76467,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-08",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76468,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-09",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76469,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-10",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76470,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-web-11",
+    "configuration": "cfg05",
+    "label": "WEB",
+    "seed": 76471,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-00",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76560,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-01",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76561,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-02",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76562,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-03",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76563,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-04",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76564,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-05",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76565,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-06",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76566,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-07",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76567,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-08",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76568,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-09",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76569,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-10",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76570,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-icmp-11",
+    "configuration": "cfg05",
+    "label": "ICMP",
+    "seed": 76571,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-00",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76660,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-01",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76661,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-02",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76662,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-03",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76663,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-04",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76664,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-05",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76665,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-06",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76666,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-07",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76667,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-08",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76668,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-09",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76669,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-10",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76670,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-video-11",
+    "configuration": "cfg05",
+    "label": "VIDEO",
+    "seed": 76671,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-00",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76760,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-01",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76761,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-02",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76762,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-03",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76763,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-04",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76764,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-05",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76765,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-06",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76766,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-07",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76767,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-08",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76768,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-09",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76769,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-10",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76770,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg05-other-11",
+    "configuration": "cfg05",
+    "label": "OTHER",
+    "seed": 76771,
+    "split": "train",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-00",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86160,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-01",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86161,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-02",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86162,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-03",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86163,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-04",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86164,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-05",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86165,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-06",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86166,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-07",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86167,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-08",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86168,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-09",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86169,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-10",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86170,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-voip-11",
+    "configuration": "cfg06",
+    "label": "VOIP",
+    "seed": 86171,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-00",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86260,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-01",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86261,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-02",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86262,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-03",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86263,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-04",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86264,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-05",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86265,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-06",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86266,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-07",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86267,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-08",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86268,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-09",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86269,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-10",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86270,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-messaging-11",
+    "configuration": "cfg06",
+    "label": "MESSAGING",
+    "seed": 86271,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-00",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86360,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-01",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86361,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-02",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86362,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-03",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86363,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-04",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86364,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-05",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86365,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-06",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86366,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-07",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86367,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-08",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86368,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-09",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86369,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-10",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86370,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-email-11",
+    "configuration": "cfg06",
+    "label": "EMAIL",
+    "seed": 86371,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-00",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86460,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-01",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86461,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-02",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86462,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-03",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86463,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-04",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86464,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-05",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86465,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-06",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86466,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-07",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86467,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-08",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86468,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-09",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86469,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-10",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86470,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-web-11",
+    "configuration": "cfg06",
+    "label": "WEB",
+    "seed": 86471,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-00",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86560,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-01",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86561,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-02",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86562,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-03",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86563,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-04",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86564,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-05",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86565,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-06",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86566,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-07",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86567,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-08",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86568,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-09",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86569,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-10",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86570,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-icmp-11",
+    "configuration": "cfg06",
+    "label": "ICMP",
+    "seed": 86571,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-00",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86660,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-01",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86661,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-02",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86662,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-03",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86663,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-04",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86664,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-05",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86665,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-06",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86666,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-07",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86667,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-08",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86668,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-09",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86669,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-10",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86670,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-video-11",
+    "configuration": "cfg06",
+    "label": "VIDEO",
+    "seed": 86671,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-00",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86760,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-01",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86761,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-02",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86762,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-03",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86763,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-04",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86764,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-05",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86765,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-06",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86766,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-07",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86767,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-08",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86768,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-09",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86769,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-10",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86770,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg06-other-11",
+    "configuration": "cfg06",
+    "label": "OTHER",
+    "seed": 86771,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-00",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96160,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-01",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96161,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-02",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96162,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-03",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96163,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-04",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96164,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-05",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96165,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-06",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96166,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-07",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96167,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-08",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96168,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-09",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96169,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-10",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96170,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-voip-11",
+    "configuration": "cfg07",
+    "label": "VOIP",
+    "seed": 96171,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-00",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96260,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-01",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96261,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-02",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96262,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-03",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96263,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-04",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96264,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-05",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96265,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-06",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96266,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-07",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96267,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-08",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96268,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-09",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96269,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-10",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96270,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-messaging-11",
+    "configuration": "cfg07",
+    "label": "MESSAGING",
+    "seed": 96271,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-00",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96360,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-01",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96361,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-02",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96362,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-03",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96363,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-04",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96364,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-05",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96365,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-06",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96366,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-07",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96367,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-08",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96368,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-09",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96369,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-10",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96370,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-email-11",
+    "configuration": "cfg07",
+    "label": "EMAIL",
+    "seed": 96371,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-00",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96460,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-01",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96461,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-02",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96462,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-03",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96463,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-04",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96464,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-05",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96465,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-06",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96466,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-07",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96467,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-08",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96468,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-09",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96469,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-10",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96470,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-web-11",
+    "configuration": "cfg07",
+    "label": "WEB",
+    "seed": 96471,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-00",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96560,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-01",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96561,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-02",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96562,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-03",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96563,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-04",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96564,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-05",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96565,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-06",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96566,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-07",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96567,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-08",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96568,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-09",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96569,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-10",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96570,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-icmp-11",
+    "configuration": "cfg07",
+    "label": "ICMP",
+    "seed": 96571,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-00",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96660,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-01",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96661,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-02",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96662,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-03",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96663,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-04",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96664,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-05",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96665,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-06",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96666,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-07",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96667,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-08",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96668,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-09",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96669,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-10",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96670,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-video-11",
+    "configuration": "cfg07",
+    "label": "VIDEO",
+    "seed": 96671,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-00",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96760,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-01",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96761,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-02",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96762,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-03",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96763,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-04",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96764,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-05",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96765,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-06",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96766,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-07",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96767,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-08",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96768,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-09",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96769,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-10",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96770,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg07-other-11",
+    "configuration": "cfg07",
+    "label": "OTHER",
+    "seed": 96771,
+    "split": "validation",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-00",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106160,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-01",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106161,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-02",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106162,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-03",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106163,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-04",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106164,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-05",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106165,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-06",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106166,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-07",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106167,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-08",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106168,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-09",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106169,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-10",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106170,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-voip-11",
+    "configuration": "cfg08",
+    "label": "VOIP",
+    "seed": 106171,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-00",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106260,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-01",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106261,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-02",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106262,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-03",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106263,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-04",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106264,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-05",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106265,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-06",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106266,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-07",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106267,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-08",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106268,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-09",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106269,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-10",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106270,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-messaging-11",
+    "configuration": "cfg08",
+    "label": "MESSAGING",
+    "seed": 106271,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-00",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106360,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-01",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106361,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-02",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106362,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-03",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106363,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-04",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106364,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-05",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106365,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-06",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106366,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-07",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106367,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-08",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106368,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-09",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106369,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-10",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106370,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-email-11",
+    "configuration": "cfg08",
+    "label": "EMAIL",
+    "seed": 106371,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-00",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106460,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-01",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106461,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-02",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106462,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-03",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106463,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-04",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106464,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-05",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106465,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-06",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106466,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-07",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106467,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-08",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106468,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-09",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106469,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-10",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106470,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-web-11",
+    "configuration": "cfg08",
+    "label": "WEB",
+    "seed": 106471,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-00",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106560,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-01",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106561,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-02",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106562,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-03",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106563,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-04",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106564,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-05",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106565,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-06",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106566,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-07",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106567,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-08",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106568,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-09",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106569,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-10",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106570,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-icmp-11",
+    "configuration": "cfg08",
+    "label": "ICMP",
+    "seed": 106571,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-00",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106660,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-01",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106661,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-02",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106662,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-03",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106663,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-04",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106664,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-05",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106665,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-06",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106666,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-07",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106667,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-08",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106668,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-09",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106669,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-10",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106670,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-video-11",
+    "configuration": "cfg08",
+    "label": "VIDEO",
+    "seed": 106671,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-00",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106760,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-01",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106761,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-02",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106762,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-03",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106763,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-04",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106764,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-05",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106765,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-06",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106766,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-07",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106767,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-08",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106768,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-09",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106769,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-10",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106770,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg08-other-11",
+    "configuration": "cfg08",
+    "label": "OTHER",
+    "seed": 106771,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-00",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116160,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-01",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116161,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-02",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116162,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-03",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116163,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-04",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116164,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-05",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116165,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-06",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116166,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-07",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116167,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-08",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116168,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-09",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116169,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-10",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116170,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-voip-11",
+    "configuration": "cfg09",
+    "label": "VOIP",
+    "seed": 116171,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-00",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116260,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-01",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116261,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-02",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116262,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-03",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116263,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-04",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116264,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-05",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116265,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-06",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116266,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-07",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116267,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-08",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116268,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-09",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116269,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-10",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116270,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-messaging-11",
+    "configuration": "cfg09",
+    "label": "MESSAGING",
+    "seed": 116271,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-00",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116360,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-01",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116361,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-02",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116362,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-03",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116363,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-04",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116364,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-05",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116365,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-06",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116366,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-07",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116367,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-08",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116368,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-09",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116369,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-10",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116370,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-email-11",
+    "configuration": "cfg09",
+    "label": "EMAIL",
+    "seed": 116371,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-00",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116460,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-01",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116461,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-02",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116462,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-03",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116463,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-04",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116464,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-05",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116465,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-06",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116466,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-07",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116467,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-08",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116468,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-09",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116469,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-10",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116470,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-web-11",
+    "configuration": "cfg09",
+    "label": "WEB",
+    "seed": 116471,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-00",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116560,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-01",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116561,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-02",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116562,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-03",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116563,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-04",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116564,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-05",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116565,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-06",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116566,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-07",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116567,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-08",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116568,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-09",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116569,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-10",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116570,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-icmp-11",
+    "configuration": "cfg09",
+    "label": "ICMP",
+    "seed": 116571,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-00",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116660,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-01",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116661,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-02",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116662,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-03",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116663,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-04",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116664,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-05",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116665,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-06",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116666,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-07",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116667,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-08",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116668,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-09",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116669,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-10",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116670,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-video-11",
+    "configuration": "cfg09",
+    "label": "VIDEO",
+    "seed": 116671,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-00",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116760,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-01",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116761,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-02",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116762,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-03",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116763,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-04",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116764,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-05",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116765,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-06",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116766,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-07",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116767,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-08",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116768,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-09",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116769,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-10",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116770,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  },
+  {
+    "session_id": "cfg09-other-11",
+    "configuration": "cfg09",
+    "label": "OTHER",
+    "seed": 116771,
+    "split": "test",
+    "source": "SYNTHETIC FIXTURE"
+  }
+]
