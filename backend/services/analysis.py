@@ -1,0 +1,32 @@
+import hashlib
+from datetime import datetime, timezone
+from pathlib import Path
+from backend.protocol.analyzer import analyze_capture
+from backend.ml.classifier import predict
+from backend.schemas.models import Analysis, SEMANTIC_LIMITATIONS
+from backend.services.policy import assess
+from backend.telemetry.importer import Telemetry, apply_telemetry
+
+
+def build_analysis(path: Path, analysis_id: str, filename: str, label: str, policy: str,
+                   retain=False, telemetry: Telemetry | None = None) -> Analysis:
+    digest = hashlib.file_digest(path.open("rb"), "sha256").hexdigest()
+    summary, flows, count, duration, warnings = analyze_capture(path)
+    sas = [f.result() for f in flows]
+    provenance = apply_telemetry(sas, telemetry, digest) if telemetry else []
+    findings, score, matrix = assess(summary, sas, policy, bool(warnings))
+    predictions = [predict(sa.sa_id, flow.samples) for sa, flow in zip(sas, flows, strict=True) if sa.protocol == "ESP"]
+    limitations = list(SEMANTIC_LIMITATIONS) + warnings
+    if any(f.count > 2048 for f in flows):
+        limitations.append("Classifier features use only the first 2048 packets per directional SA.")
+    if not predictions or any(not p.probabilities for p in predictions):
+        limitations.append("Traffic classification unavailable for one or more flows.")
+    return Analysis(analysis_id=analysis_id, created_at=datetime.now(timezone.utc).isoformat(),
+                    label=label, capture_sha256=digest, capture_filename=filename,
+                    capture_size=path.stat().st_size, packet_count=count, capture_duration=duration,
+                    analysis_status="PARTIAL" if warnings else "COMPLETE", policy=policy,
+                    protocol_observations=summary, security_associations=sas, traffic_predictions=predictions,
+                    findings=findings, score=score, threat_matrix=matrix, limitations=limitations,
+                    report_references={kind: f"/api/analyses/{analysis_id}/report/{kind}"
+                                       for kind in ("executive", "technical")},
+                    retain_capture=retain, telemetry_provenance=provenance)
