@@ -56,3 +56,7 @@ Sequence anomaly evidence confidence refers to observation reliability, not prob
 Threat matrix rows derive from backend findings and explicit unknown configuration checks.
 Configuration hardener outputs policy-specific ipsec.conf-style fragments labelled RECOMMENDATION.
 No configuration is applied, no host commands run.
+
+Short GCM-8/GCM-12 authentication tags cap the cipher check at 80 with LOW review findings.
+Telemetry rejects impossible AES/ChaCha20/3DES key lengths, separate integrity assertions on AEAD,
+and PFS=true paired with DH group NONE.

@@ -8,7 +8,7 @@ backend:
 	$(PY) -m uvicorn backend.api.main:app --host 127.0.0.1 --port 18760
 frontend:
 	cd frontend && npm run dev -- --host 127.0.0.1
-test:
+test: train
 	$(PY) -m pytest -q
 	$(PY) -m ruff check backend training scripts
 	$(PY) -m mypy backend

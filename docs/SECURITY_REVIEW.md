@@ -51,3 +51,7 @@ Bounded randomized tests are not an exhaustive fuzzer campaign.
 Installed dependency transitive code was not independently audited.
 SHA-256 model checking assumes a trusted local installation.
 Docker integration remains unverified; no privileged lab experiment was falsely reported successful.
+
+Final follow-up: rejected impossible key lengths and contradictory AEAD/PFS assertions;
+restricted demo cleanup by both known fixture hash and demo label; prevented pending telemetry
+file reads from racing submission; disabled CDN-dependent documentation UI for offline operation.
