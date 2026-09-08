@@ -22,6 +22,11 @@ driver=webdriver.Chrome(service=Service(shutil.which("chromedriver")),options=op
 wait=WebDriverWait(driver,20)
 results=[]
 
+def resize(width,height):
+    driver.set_window_size(width,height)
+    inner=driver.execute_script("return [window.innerWidth,window.innerHeight]")
+    driver.set_window_size(width+(width-inner[0]),height+(height-inner[1]))
+
 
 def click_nav(name):
     driver.find_element(By.XPATH,f"//nav/button[.//span[text()='{name}']]").click()
@@ -33,6 +38,7 @@ def text():
 
 
 try:
+    resize(1366,768)
     driver.get("http://127.0.0.1:5173")
     wait.until(lambda d:"CONNECTED" in text())
     for scenario in ("strong","weak","replay","partial","ipv6"):
@@ -71,9 +77,9 @@ try:
         driver.find_element(By.PARTIAL_LINK_TEXT,"Download "+kind).click()
         wait.until(lambda d:any(OUT.glob("*-"+kind+".html")))
     click_nav("Overview")
-    driver.set_window_size(1920,1080)
+    resize(1920,1080)
     driver.save_screenshot(str(OUT/"strong-overview-1920.png"))
-    driver.set_window_size(390,844)
+    resize(390,844)
     assert driver.execute_script("return document.documentElement.scrollWidth<=window.innerWidth")
     driver.save_screenshot(str(OUT/"overview-mobile.png"))
     errors=[x for x in driver.get_log("browser") if x["level"]=="SEVERE" and "favicon" not in x["message"]]

@@ -1,0 +1,31 @@
+# Limitations and non-claims
+
+- All bundled training samples, captures and endpoint assertions are synthetic; no real-world ML validation.
+- Wire-format fixtures contain dummy KE values and opaque ESP bytes, not authenticated encryption.
+- No decryption, password cracking, vulnerability reproduction, exploitation or external scanning.
+- IKEv1 header identification only; no v1 proposal decoding.
+- No authenticated negotiation verification, IKE/ESP association inference or endpoint version/CVE claims.
+- IKE_SA_INIT proposal ≠ selected cipher ≠ ESP Child-SA transform.
+- Encrypted IKE payloads remain opaque. No IKE fragmented-payload reassembly.
+- AH is basic header recognition; no integrity verification or inner recursion.
+- IPv4/IPv6 fragments are unsupported except atomic IPv6 fragments.
+- PCAPNG simple/obsolete packet blocks, pcap gzip, unusual link types and IPv6 jumbograms are unsupported.
+- No IP/UDP checksum or ESP authentication verification; a syntactically plausible forged capture can mislead.
+- Directional (endpoints, protocol, SPI) grouping can conflate SPI reuse; one SA can multiplex applications.
+- Sequence duplicates/regressions/gaps do not prove replay acceptance, replay-window policy or an attack.
+- ESN high-order sequence tracking is not reconstructed.
+- Telemetry is an operator assertion, not attested endpoint truth; collected_at is not automatically aligned
+  to every capture timestamp. The capture hash binds intended association, not authenticity.
+- Normalized JSON only; raw swanctl/XFRM parsers not implemented. Raw XFRM can contain keys.
+- Mode/PFS/lifetime/replay window unknown without matched telemetry.
+- Scoring is a documented prototype rubric, not NTRO certification or an external compliance standard.
+- No comprehensive score of IKE authentication (certificates/PSK strength), endpoint software or CVEs.
+- Prefix classification, no automatic paired-SA model or real application attribution.
+- No probability calibration; abstention cannot eliminate confident out-of-distribution errors.
+- Synchronous bounded analysis with two concurrent writes; no job queue or cancellation/progress API.
+- Non-root loopback backend only, no authentication/multi-user isolation; unsuitable for public exposure.
+- Reports are HTML; browser print-to-PDF may be used manually. Server PDF export not implemented.
+- Capture retention is opt-in; no UI deletion/retention scheduling. Protect the local runtime directory.
+- Graceful temporary cleanup is implemented; an OS kill/crash can leave spool/temp artifacts.
+- Optional lab configs generated/tested as files; live Docker strongSwan integration unverified due permissions.
+- Benchmark represents one synthetic directional flow, not worst-case many-SA/IKE-heavy workloads.
