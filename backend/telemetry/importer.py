@@ -4,7 +4,7 @@ Do not export raw XFRM state: it can contain encryption keys. Only normalized al
 from datetime import datetime
 from ipaddress import ip_address
 from typing import Literal
-from pydantic import Field, field_validator
+from pydantic import Field, field_validator, model_validator
 from backend.schemas.models import StrictModel, SecurityAssociation, Evidence, Source
 
 
@@ -26,6 +26,22 @@ class TelemetrySA(StrictModel):
     esn: bool | None = None
     selectors: str | None = Field(default=None, max_length=512)
     ike_association_reference: str | None = Field(default=None, max_length=128)
+
+    @model_validator(mode="after")
+    def coherent_crypto(self):
+        enc, bits = self.encryption_algorithm, self.encryption_key_bits
+        if enc and enc.startswith("AES") and bits is not None and bits not in (128, 192, 256):
+            raise ValueError("Invalid AES key length")
+        if enc == "CHACHA20-POLY1305" and bits is not None and bits != 256:
+            raise ValueError("Invalid ChaCha20 key length")
+        if enc == "3DES" and bits is not None and bits not in (168, 192):
+            raise ValueError("Invalid 3DES key length")
+        if enc and ("GCM" in enc or enc == "CHACHA20-POLY1305"):
+            if self.integrity_algorithm not in (None, "NONE"):
+                raise ValueError("AEAD has integrated authentication; separate integrity assertion conflicts")
+        if self.pfs_enabled is True and self.dh_group == 0:
+            raise ValueError("PFS enabled conflicts with DH group NONE")
+        return self
 
     @field_validator("source", "destination")
     @classmethod

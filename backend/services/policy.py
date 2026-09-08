@@ -69,6 +69,11 @@ def assess(summary, sas, policy_name, visibility_partial=False):
                 crypto = None
             else:
                 crypto = 100
+                if enc in ("AES-GCM-8", "AES-GCM-12"):
+                    crypto = 80
+                    add("AEAD_TAG_POLICY", "LOW", Source.ASSISTED,
+                        "Shorter GCM authentication tag reported.", [ref, f"encryption={enc}"],
+                        "Prefer a 16-byte GCM authentication tag under the modern profile.", .9, "REVIEW")
                 if str(enc).startswith("AES") and int(bits or 0) < policy.minimum_aes_bits:
                     crypto = min(crypto, 60)
                     add("KEY_LENGTH_POLICY", "MEDIUM", Source.ASSISTED, "AES key length below policy preference.",

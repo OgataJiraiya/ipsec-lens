@@ -59,3 +59,13 @@ def test_spi_change_visibility(tmp_path):
                   for i,spi in enumerate((0x1234,0x1235))])
     summary,flows,_,_,_=analyze_capture(p)
     assert summary.spi_changes==1 and len(flows)==2
+
+
+@pytest.mark.parametrize("changes",[{"encryption_key_bits":4096},
+    {"encryption_algorithm":"CHACHA20-POLY1305","encryption_key_bits":128},
+    {"integrity_algorithm":"HMAC-SHA1-96"},{"pfs_enabled":True,"dh_group":0}])
+def test_telemetry_rejects_impossible_crypto(strong,changes):
+    data=json.loads((strong.parent/"telemetry.json").read_text())
+    data["sas"][0].update(changes)
+    with pytest.raises(ValidationError):
+        Telemetry.model_validate(data)
