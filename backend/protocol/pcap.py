@@ -52,8 +52,15 @@ def pcapng(stream: BinaryIO, max_packets: int) -> Iterator[tuple[float, int, byt
     endian = "<"
     interfaces: list[tuple[int, int, float, int]] = []
     count = 0
+    blocks = 0
+    # Packet ceilings alone do not bound CPU work: PCAPNG permits arbitrarily many
+    # metadata/unknown blocks. Allow modest metadata overhead but cap total blocks.
+    block_limit = max_packets + 8192
     block_type = b"\x0a\x0d\x0d\x0a"
     while block_type:
+        blocks += 1
+        if blocks > block_limit:
+            raise CaptureError("PCAPNG block count exceeds configured limit")
         if len(block_type) != 4:
             raise CaptureError("Truncated PCAPNG block")
         raw_len = exact(stream, 4)
