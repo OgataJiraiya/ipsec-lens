@@ -5,7 +5,7 @@ install:
 	$(PY) -m pip install -e '.[dev]'
 	cd frontend && npm ci
 backend:
-	$(PY) -m uvicorn backend.api.main:app --host 127.0.0.1 --port 8000
+	$(PY) -m uvicorn backend.api.main:app --host 127.0.0.1 --port 18760
 frontend:
 	cd frontend && npm run dev -- --host 127.0.0.1
 test:

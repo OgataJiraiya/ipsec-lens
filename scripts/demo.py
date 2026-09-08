@@ -1,7 +1,6 @@
 """Run actual analyzer against labelled synthetic fixtures and write reports, no injected results."""
 import json
 import uuid
-from pathlib import Path
 from scripts.fixtures import generate
 from backend.services.analysis import build_analysis
 from backend.telemetry.importer import Telemetry

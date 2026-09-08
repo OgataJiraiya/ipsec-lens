@@ -76,7 +76,7 @@ export default function App() {
  const ticket=useRef(0)
  async function refresh() {try {setHistory(await request<Summary[]>('/analyses'))}catch(e){setError(e instanceof Error?e.message:'Unable to load analyses')}}
  useEffect(()=>{const a=new AbortController();request<Summary[]>('/analyses',{signal:a.signal}).then(rows=>{setHistory(rows);if(rows[0])setId(rows[0].analysis_id)}).catch(e=>{if(!a.signal.aborted)setError(String(e))});request('/health',{signal:a.signal}).then(()=>setHealth('CONNECTED')).catch(()=>{if(!a.signal.aborted)setHealth('OFFLINE')});return()=>a.abort()},[])
- useEffect(()=>{if(!id)return;const a=new AbortController(), current=++ticket.current;setRun(null);setLoading(true);setError('');request<Analysis>('/analyses/'+id,{signal:a.signal}).then(value=>{if(current===ticket.current&&!a.signal.aborted)setRun(value)}).catch(e=>{if(!a.signal.aborted)setError(String(e))}).finally(()=>{if(current===ticket.current&&!a.signal.aborted)setLoading(false)});return()=>a.abort()},[id])
+ useEffect(()=>{if(!id){++ticket.current;setRun(null);setLoading(false);return}const a=new AbortController(), current=++ticket.current;setRun(null);setLoading(true);setError('');request<Analysis>('/analyses/'+id,{signal:a.signal}).then(value=>{if(current===ticket.current&&!a.signal.aborted)setRun(value)}).catch(e=>{if(!a.signal.aborted)setError(String(e))}).finally(()=>{if(current===ticket.current&&!a.signal.aborted)setLoading(false)});return()=>a.abort()},[id])
  function completed(value:Analysis) {++ticket.current;setRun(value);setId(value.analysis_id);setPage('Overview');void refresh()}
  function content() {
   if(page==='New Analysis')return <NewAnalysis onComplete={completed}/>

@@ -19,7 +19,7 @@ EXCHANGES = {34: "IKE_SA_INIT", 35: "IKE_AUTH", 36: "CREATE_CHILD_SA", 37: "INFO
 
 def parse_sa(body: bytes, scope: str) -> list[Transform]:
     pos = 0
-    result = []
+    result: list[Transform] = []
     while pos < len(body):
         if len(body) - pos < 8:
             raise PacketError("IKE proposal header")
@@ -98,6 +98,8 @@ def parse_ike(data: bytes, src: str, dst: str, timestamp: float) -> IkeMessage:
         if nxt == 33:
             scope = "IKE_SA_PROPOSAL" if exchange == 34 else "UNVERIFIED_VISIBLE_PROPOSAL"
             msg.transforms.extend(parse_sa(body, scope))
+            if len(msg.transforms) > 512:
+                raise PacketError("IKE aggregate transform limit")
         elif nxt == 34:
             if len(body) < 4:
                 raise PacketError("IKE KE payload")

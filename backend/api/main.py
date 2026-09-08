@@ -1,6 +1,5 @@
 """Local non-root API. No privileged commands, capture execution or model uploads."""
 import asyncio
-import json
 import logging
 import re
 import tempfile
@@ -10,6 +9,8 @@ from pathlib import Path
 from typing import Literal
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.exceptions import RequestValidationError
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 from pydantic import ValidationError, Field
 from backend.core import config
 from backend.core.security_policy import POLICIES, hardening
@@ -40,7 +41,7 @@ class IntakeLimits:
         headers = dict(scope["headers"])
         origin = headers.get(b"origin", b"").decode(errors="replace")
         if origin and origin not in ("http://127.0.0.1:5173", "http://localhost:5173",
-                                     "http://127.0.0.1:8000", "http://localhost:8000"):
+                                     "http://127.0.0.1:18760", "http://localhost:18760"):
             return await JSONResponse({"detail": "Origin not permitted"}, status_code=403)(scope, receive, send)
         if self.slots.locked():
             return await JSONResponse({"detail": "Analysis capacity busy; retry shortly"}, status_code=503)(scope, receive, send)
@@ -49,7 +50,10 @@ class IntakeLimits:
             with tempfile.SpooledTemporaryFile(max_size=1024 * 1024) as spool:
                 total = 0
                 while True:
-                    message = await receive()
+                    try:
+                        message = await asyncio.wait_for(receive(), timeout=30)
+                    except TimeoutError:
+                        return await JSONResponse({"detail": "Upload timed out"}, status_code=408)(scope, receive, send)
                     if message["type"] == "http.disconnect":
                         return
                     chunk = message.get("body", b"")
@@ -97,7 +101,12 @@ def create_app(data_dir: Path | None = None):
     app = FastAPI(title="IPsecLens AI", version="0.1.0", description=(
         "Local evidence-aware IPsec analyzer. UNKNOWN != SECURE. IKE proposals are not ESP transforms."))
     app.add_middleware(IntakeLimits)
+    app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "testserver"] if data_dir else ["127.0.0.1", "localhost"])
     app.state.store = store
+
+    @app.exception_handler(RequestValidationError)
+    async def invalid_request(request: Request, exc: RequestValidationError):
+        return JSONResponse({"detail": "Request validation failed; check field types and required values"}, status_code=422)
 
     @app.exception_handler(Exception)
     async def unexpected(request: Request, exc: Exception):

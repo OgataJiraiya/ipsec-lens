@@ -1,0 +1,33 @@
+services:
+  left:
+    profiles: ["lab"]
+    build:
+      context: .
+      dockerfile: testbed/Dockerfile
+    cap_add: [NET_ADMIN, NET_RAW]
+    volumes:
+      - ./testbed/generated/left/swanctl.conf:/etc/swanctl/swanctl.conf:ro
+    networks:
+      ipsec_lab:
+        ipv4_address: 172.29.160.10
+        ipv6_address: fd26:160::10
+  right:
+    profiles: ["lab"]
+    build:
+      context: .
+      dockerfile: testbed/Dockerfile
+    cap_add: [NET_ADMIN, NET_RAW]
+    volumes:
+      - ./testbed/generated/right/swanctl.conf:/etc/swanctl/swanctl.conf:ro
+    networks:
+      ipsec_lab:
+        ipv4_address: 172.29.160.20
+        ipv6_address: fd26:160::20
+networks:
+  ipsec_lab:
+    internal: true
+    enable_ipv6: true
+    ipam:
+      config:
+        - subnet: 172.29.160.0/24
+        - subnet: fd26:160::/64

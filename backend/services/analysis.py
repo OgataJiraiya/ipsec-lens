@@ -3,14 +3,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from backend.protocol.analyzer import analyze_capture
 from backend.ml.classifier import predict
-from backend.schemas.models import Analysis, SEMANTIC_LIMITATIONS
+from backend.schemas.models import Analysis, SEMANTIC_LIMITATIONS, PolicyName
 from backend.services.policy import assess
 from backend.telemetry.importer import Telemetry, apply_telemetry
 
 
-def build_analysis(path: Path, analysis_id: str, filename: str, label: str, policy: str,
+def build_analysis(path: Path, analysis_id: str, filename: str, label: str, policy: PolicyName,
                    retain=False, telemetry: Telemetry | None = None) -> Analysis:
-    digest = hashlib.file_digest(path.open("rb"), "sha256").hexdigest()
+    with path.open("rb") as stream:
+        digest = hashlib.file_digest(stream, "sha256").hexdigest()
     summary, flows, count, duration, warnings = analyze_capture(path)
     sas = [f.result() for f in flows]
     provenance = apply_telemetry(sas, telemetry, digest) if telemetry else []

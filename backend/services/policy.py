@@ -1,5 +1,7 @@
 """Evidence-aware domain scoring. Unknown checks receive no secure credit."""
 import hashlib
+from typing import Literal
+from backend.schemas.models import Recommendation
 from backend.core.security_policy import POLICIES, DOMAIN_WEIGHTS
 from backend.protocol.ike import ALGORITHMS
 from backend.schemas.models import Finding, Source, Domain, Score, ThreatRow
@@ -165,12 +167,12 @@ def assess(summary, sas, policy_name, visibility_partial=False):
     available_weight = sum(d.weight * d.coverage for d in domains if d.score is not None)
     score_value = (round(sum(d.score * d.weight * d.coverage for d in domains if d.score is not None)
                          / available_weight, 1) if coverage >= .5 and available_weight else None)
-    status = "UNAVAILABLE" if score_value is None else "AVAILABLE" if coverage >= .999999 else "PROVISIONAL"
+    status: Literal["AVAILABLE", "PROVISIONAL", "UNAVAILABLE"] = "UNAVAILABLE" if score_value is None else "AVAILABLE" if coverage >= .999999 else "PROVISIONAL"
     if coverage < .999999:
         add("INSUFFICIENT_EVIDENCE", "LOW", Source.UNKNOWN, "Some assessment domains lack sufficient evidence.",
             [f"coverage={coverage:.3f}"], "Import capture-matched endpoint telemetry and a complete negotiation capture.",
             0, "REVIEW")
-    disposition = ("QUARANTINE" if any(f.severity == "CRITICAL" for f in findings) else
+    disposition: Recommendation = ("QUARANTINE" if any(f.severity == "CRITICAL" for f in findings) else
                    "HARDEN" if any(f.severity == "HIGH" for f in findings) else
                    "REVIEW" if status != "AVAILABLE" or any(f.severity in ("MEDIUM", "LOW") for f in findings) else "ACCEPT")
     score = Score(security_score=score_value, risk_score=round(100 - score_value, 1) if score_value is not None else None,

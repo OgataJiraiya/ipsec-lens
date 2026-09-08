@@ -18,3 +18,5 @@ models/metrics.json
 datasets/generated/
 testbed/generated/
 *.key
+
+*.egg-info/

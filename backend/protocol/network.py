@@ -44,8 +44,8 @@ def decode(data: bytes, link: int) -> Packet | None:
         size = 16 if link == 113 else 20
         if len(data) < size:
             raise PacketError("Cooked header")
-        proto = data[14:16] if link == 113 else data[:2]
-        if int.from_bytes(proto, "big") not in (0x0800, 0x86DD):
+        cooked_proto = data[14:16] if link == 113 else data[:2]
+        if int.from_bytes(cooked_proto, "big") not in (0x0800, 0x86DD):
             return None
         data = data[size:]
     if not data:

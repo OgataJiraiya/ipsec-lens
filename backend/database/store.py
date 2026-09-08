@@ -49,5 +49,5 @@ class Store:
         with Session(self.engine) as session, session.begin():
             changed = session.execute(update(Run).where(Run.id == result.analysis_id, Run.revision == expected_revision)
                 .values(document=result.model_dump_json(), revision=result.revision))
-            if changed.rowcount != 1:
+            if getattr(changed, "rowcount", 0) != 1:
                 raise ValueError("Analysis changed concurrently; reload and retry")

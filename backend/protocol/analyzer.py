@@ -1,5 +1,6 @@
 """Directional ESP/AH grouping. SPI reuse and passive sequence signals do not prove attacks."""
 import hashlib
+from typing import Literal
 import math
 import struct
 from collections import Counter
@@ -18,7 +19,7 @@ class Flow:
     src: str
     dst: str
     spi: int
-    protocol: str
+    protocol: Literal["ESP", "AH"]
     ip_version: int
     nat_t: bool
     first: float
@@ -71,6 +72,7 @@ def analyze_capture(path: Path):
     counts: Counter[str] = Counter()
     flows: dict[tuple[str, str, str, int], Flow] = {}
     count, first, last = 0, None, None
+    retained_transforms = 0
     warnings: set[str] = set()
     with path.open("rb") as stream:
         for timestamp, link, raw in records(stream, config.MAX_PACKETS):
@@ -103,13 +105,15 @@ def analyze_capture(path: Path):
                     msg = parse_ike(payload, pkt.src, pkt.dst, timestamp)
                     counts[msg.version] += 1
                     counts["IKE"] += 1
-                    if len(summary.ike_messages) < config.MAX_IKE_MESSAGES:
+                    if len(summary.ike_messages) < config.MAX_IKE_MESSAGES and retained_transforms + len(msg.transforms) <= 16384:
                         summary.ike_messages.append(msg)
+                        retained_transforms += len(msg.transforms)
                     else:
                         warnings.add("IKE message retention limit reached; assessment is partial.")
                     continue
                 if proto not in (50, 51):
                     continue
+                name: Literal["ESP", "AH"]
                 if proto == 50:
                     if len(payload) < 8:
                         raise PacketError("ESP header")
@@ -139,8 +143,8 @@ def analyze_capture(path: Path):
     if count == 0:
         raise CaptureError("Capture contains no packets")
     endpoints: dict[tuple[str, str, str], set[int]] = {}
-    for src, dst, proto, spi in flows:
-        endpoints.setdefault((src, dst, proto), set()).add(spi)
+    for src, dst, flow_protocol, spi in flows:
+        endpoints.setdefault((src, dst, flow_protocol), set()).add(spi)
     summary.spi_changes = sum(max(0, len(spis) - 1) for spis in endpoints.values())
     summary.counts = dict(counts)
     if summary.malformed_packets:
