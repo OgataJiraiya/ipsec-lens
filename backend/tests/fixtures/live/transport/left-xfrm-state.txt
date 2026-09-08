@@ -1,0 +1,59 @@
+src 172.29.160.10 dst 172.29.160.20
+	proto esp spi 0xc8a145fa(3366012410) reqid 1(0x00000001) mode transport
+	replay-window 0 seq 0x00000000 flag  (0x00000000)
+	aead rfc4106(gcm(aes)) [REDACTED] (288 bits) 128
+	lastused 2026-09-08 11:16:10
+	anti-replay context: seq 0x0, oseq 0x14a, bitmap 0x00000000
+	dir out
+	sel src 172.29.160.10/32 dst 172.29.160.20/32 uid 0
+	lifetime config:
+	  limit: soft (INF)(bytes), hard (INF)(bytes)
+	  limit: soft (INF)(packets), hard (INF)(packets)
+	  expire add: soft 1211(sec), hard 3600(sec)
+	  expire use: soft 0(sec), hard 0(sec)
+	lifetime current:
+	  11998(bytes), 330(packets)
+	  add 2026-09-08 11:16:09 use 2026-09-08 11:16:09
+	stats:
+	  replay-window 0 replay 0 failed 0
+src 172.29.160.20 dst 172.29.160.10
+	proto esp spi 0xcfee6806(3488507910) reqid 1(0x00000001) mode transport
+	replay-window 0 seq 0x00000000 flag  (0x00000000)
+	aead rfc4106(gcm(aes)) [REDACTED] (288 bits) 128
+	lastused 2026-09-08 11:16:10
+	anti-replay esn context:
+	 seq-hi 0x0, seq 0x328, oseq-hi 0x0, oseq 0x0
+	 replay_window 64, bitmap-length 2
+	 ffffffff ffffffff 
+	dir in
+	sel src 172.29.160.20/32 dst 172.29.160.10/32 uid 0
+	lifetime config:
+	  limit: soft (INF)(bytes), hard (INF)(bytes)
+	  limit: soft (INF)(packets), hard (INF)(packets)
+	  expire add: soft 1667(sec), hard 3600(sec)
+	  expire use: soft 0(sec), hard 0(sec)
+	lifetime current:
+	  1153990(bytes), 808(packets)
+	  add 2026-09-08 11:16:09 use 2026-09-08 11:16:09
+	stats:
+	  replay-window 0 replay 0 failed 0
+src 172.29.160.20 dst 172.29.160.10
+	proto esp spi 0xc8725f0e(3362938638) reqid 1(0x00000001) mode transport
+	replay-window 0 seq 0x00000000 flag  (0x00000000)
+	aead rfc4106(gcm(aes)) [REDACTED] (288 bits) 128
+	anti-replay esn context:
+	 seq-hi 0x0, seq 0x0, oseq-hi 0x0, oseq 0x0
+	 replay_window 64, bitmap-length 2
+	 00000000 00000000 
+	dir in
+	sel src 172.29.160.20/32 dst 172.29.160.10/32 uid 0
+	lifetime config:
+	  limit: soft (INF)(bytes), hard (INF)(bytes)
+	  limit: soft (INF)(packets), hard (INF)(packets)
+	  expire add: soft 355(sec), hard 3600(sec)
+	  expire use: soft 0(sec), hard 0(sec)
+	lifetime current:
+	  0(bytes), 0(packets)
+	  add 2026-09-08 11:16:09 use -
+	stats:
+	  replay-window 0 replay 0 failed 0

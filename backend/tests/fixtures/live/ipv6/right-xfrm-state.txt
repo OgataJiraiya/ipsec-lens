@@ -1,0 +1,56 @@
+src fd26:160::20 dst fd26:160::10
+	proto esp spi 0xce73cae6(3463695078) reqid 1(0x00000001) mode tunnel
+	replay-window 0 seq 0x00000000 flag af-unspec (0x00100000)
+	aead rfc4106(gcm(aes)) [REDACTED] (288 bits) 128
+	lastused 2026-09-08 11:16:12
+	anti-replay context: seq 0x0, oseq 0x319, bitmap 0x00000000
+	dir out
+	lifetime config:
+	  limit: soft (INF)(bytes), hard (INF)(bytes)
+	  limit: soft (INF)(packets), hard (INF)(packets)
+	  expire add: soft 1230(sec), hard 3600(sec)
+	  expire use: soft 0(sec), hard 0(sec)
+	lifetime current:
+	  1106046(bytes), 793(packets)
+	  add 2026-09-08 11:16:11 use 2026-09-08 11:16:12
+	stats:
+	  replay-window 0 replay 0 failed 0
+src fd26:160::10 dst fd26:160::20
+	proto esp spi 0xc3755ff0(3279249392) reqid 1(0x00000001) mode tunnel
+	replay-window 0 seq 0x00000000 flag af-unspec (0x00100000)
+	aead rfc4106(gcm(aes)) [REDACTED] (288 bits) 128
+	lastused 2026-09-08 11:16:12
+	anti-replay esn context:
+	 seq-hi 0x0, seq 0x1c2, oseq-hi 0x0, oseq 0x0
+	 replay_window 64, bitmap-length 2
+	 ffffffff ffffffff 
+	dir in
+	lifetime config:
+	  limit: soft (INF)(bytes), hard (INF)(bytes)
+	  limit: soft (INF)(packets), hard (INF)(packets)
+	  expire add: soft 998(sec), hard 3600(sec)
+	  expire use: soft 0(sec), hard 0(sec)
+	lifetime current:
+	  32663(bytes), 450(packets)
+	  add 2026-09-08 11:16:11 use 2026-09-08 11:16:12
+	stats:
+	  replay-window 0 replay 0 failed 0
+src fd26:160::10 dst fd26:160::20
+	proto esp spi 0xc3afe5af(3283084719) reqid 1(0x00000001) mode tunnel
+	replay-window 0 seq 0x00000000 flag af-unspec (0x00100000)
+	aead rfc4106(gcm(aes)) [REDACTED] (288 bits) 128
+	anti-replay esn context:
+	 seq-hi 0x0, seq 0x0, oseq-hi 0x0, oseq 0x0
+	 replay_window 64, bitmap-length 2
+	 00000000 00000000 
+	dir in
+	lifetime config:
+	  limit: soft (INF)(bytes), hard (INF)(bytes)
+	  limit: soft (INF)(packets), hard (INF)(packets)
+	  expire add: soft 701(sec), hard 3600(sec)
+	  expire use: soft 0(sec), hard 0(sec)
+	lifetime current:
+	  0(bytes), 0(packets)
+	  add 2026-09-08 11:16:11 use -
+	stats:
+	  replay-window 0 replay 0 failed 0

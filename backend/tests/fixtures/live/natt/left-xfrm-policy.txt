@@ -1,0 +1,28 @@
+src 172.29.160.10/32 dst 172.29.160.20/32 
+	dir out priority 367231 ptype main 
+	tmpl src 172.29.160.10 dst 172.29.160.20
+		proto esp spi 0xc14bf47c reqid 1 mode tunnel
+src 172.29.160.20/32 dst 172.29.160.10/32 
+	dir fwd priority 367231 ptype main 
+	tmpl src 172.29.160.20 dst 172.29.160.10
+		proto esp reqid 1 mode tunnel
+src 172.29.160.20/32 dst 172.29.160.10/32 
+	dir in priority 367231 ptype main 
+	tmpl src 172.29.160.20 dst 172.29.160.10
+		proto esp reqid 1 mode tunnel
+src ::/0 dst ::/0 
+	socket in priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket out priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket in priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main 

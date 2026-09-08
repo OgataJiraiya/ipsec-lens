@@ -79,6 +79,12 @@ def raw_events(text: str, event: str) -> list[dict]:
     return result
 
 
+def mapping(value):
+    if not isinstance(value, dict):
+        raise ValueError("Telemetry section must be a mapping")
+    return value
+
+
 def parse_swanctl(sas_text: str, conns_text: str = "") -> list[TelemetrySA]:
     connections = {}
     for event in raw_events(conns_text, "list-conn"):
@@ -88,8 +94,9 @@ def parse_swanctl(sas_text: str, conns_text: str = "") -> list[TelemetrySA]:
         for name, ike in event.items():
             if not isinstance(ike, dict) or ike.get("state") != "ESTABLISHED":
                 continue
-            local, remote = str(ip_address(ike["local-host"])), str(ip_address(ike["remote-host"]))
-            for child in ike.get("child-sas", {}).values():
+            local, remote = str(ip_address(ike.get("local-host", ""))), str(ip_address(ike.get("remote-host", "")))
+            for child in mapping(ike.get("child-sas", {})).values():
+                child = mapping(child)
                 if child.get("state") != "INSTALLED" or child.get("protocol") != "ESP":
                     continue
                 props = {"mode":child.get("mode"),"encryption_algorithm":ENCRYPTION.get(child.get("encr-alg")),
@@ -99,13 +106,13 @@ def parse_swanctl(sas_text: str, conns_text: str = "") -> list[TelemetrySA]:
                 if props["encryption_algorithm"] and ("GCM" in props["encryption_algorithm"] or "POLY1305" in props["encryption_algorithm"]):
                     props["integrity_algorithm"] = "NONE"
                 # life-time is remaining time, NOT configured hard lifetime: leave it UNKNOWN here.
-                config = connections.get(name, {}).get("children", {}).get(child.get("name"), {})
-                proposals = list(config.get("esp_proposals", {}).values())
+                config = mapping(mapping(mapping(connections.get(name, {})).get("children", {})).get(child.get("name"), {}))
+                proposals = [mapping(p) for p in mapping(config.get("esp_proposals", {})).values()]
                 if proposals:
-                    groups = [p.get("ke", "") for p in proposals]
-                    if all(group and group != "NONE" for group in groups):
+                    groups = [p.get("ke", "").split() for p in proposals]
+                    if all(group and all(token != "NONE" for token in group) for group in groups):
                         props["pfs_enabled"] = True
-                    elif all(not group or group == "NONE" for group in groups):
+                    elif all(not group or all(token == "NONE" for token in group) for group in groups):
                         props["pfs_enabled"] = False
 
                 for incoming in (True, False):

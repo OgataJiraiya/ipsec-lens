@@ -1,0 +1,2073 @@
+{
+  "evaluation_type": "PRELIMINARY REAL TESTBED EVALUATION",
+  "source": "Real strongSwan ESP captures of generated workloads; not organic application traces",
+  "sessions": 120,
+  "groups": 12,
+  "classes": [
+    "ICMP",
+    "MESSAGING",
+    "VIDEO",
+    "VOIP",
+    "WEB"
+  ],
+  "split_sizes": {
+    "train": 60,
+    "validation": 20,
+    "test": 40
+  },
+  "group_ids": {
+    "train": [
+      "strong-g0",
+      "strong-g1",
+      "strong-g2",
+      "weak-g0",
+      "weak-g1",
+      "weak-g2"
+    ],
+    "validation": [
+      "strong-g3",
+      "weak-g3"
+    ],
+    "test": [
+      "strong-g4",
+      "strong-g5",
+      "weak-g4",
+      "weak-g5"
+    ]
+  },
+  "dataset_sha256": "85f54b1493fecbbafdd9a8e0bbe245e92f50cd6d6522c0f6c0a6c205c5451bad",
+  "production_model": "Preserved synthetic built-in classifier; experimental models not deployed",
+  "synthetic_to_real": {
+    "test": {
+      "accuracy": 0.45,
+      "macro_f1": 0.32,
+      "weighted_f1": 0.32,
+      "per_class": {
+        "ICMP": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 8.0
+        },
+        "MESSAGING": {
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1-score": 0.4,
+          "support": 8.0
+        },
+        "VIDEO": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1-score": 0.6666666666666666,
+          "support": 8.0
+        },
+        "VOIP": {
+          "precision": 0.36363636363636365,
+          "recall": 1.0,
+          "f1-score": 0.5333333333333333,
+          "support": 8.0
+        },
+        "WEB": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 8.0
+        },
+        "accuracy": 0.45,
+        "macro avg": {
+          "precision": 0.37272727272727274,
+          "recall": 0.45,
+          "f1-score": 0.32,
+          "support": 40.0
+        },
+        "weighted avg": {
+          "precision": 0.37272727272727274,
+          "recall": 0.45,
+          "f1-score": 0.32,
+          "support": 40.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0
+        ]
+      ],
+      "classes": [
+        "EMAIL",
+        "ICMP",
+        "MESSAGING",
+        "OTHER",
+        "VIDEO",
+        "VOIP",
+        "WEB"
+      ],
+      "multiclass_brier": 0.5130825,
+      "expected_calibration_error_10_bins": 0.30700000000000005,
+      "samples": 40
+    },
+    "threshold_selection": [
+      {
+        "threshold": 0.4,
+        "coverage": 1.0,
+        "selective_accuracy": 0.45
+      },
+      {
+        "threshold": 0.5,
+        "coverage": 0.8,
+        "selective_accuracy": 0.5
+      },
+      {
+        "threshold": 0.6,
+        "coverage": 0.6,
+        "selective_accuracy": 0.6666666666666666
+      },
+      {
+        "threshold": 0.7,
+        "coverage": 0.6,
+        "selective_accuracy": 0.6666666666666666
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 0.4,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 0.4,
+        "selective_accuracy": 1.0
+      }
+    ],
+    "abstention": {
+      "threshold": 0.9,
+      "coverage": 0.4,
+      "abstained": 24,
+      "selective_accuracy": 1.0,
+      "accuracy_counting_abstention_as_error": 0.4,
+      "macro_f1_including_unknown": 0.3333333333333333
+    }
+  },
+  "real_only": {
+    "selected_model": "RandomForest",
+    "validation": {
+      "RandomForest": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "per_class": {
+          "ICMP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "MESSAGING": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VIDEO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VOIP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "WEB": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4
+          ]
+        ],
+        "classes": [
+          "ICMP",
+          "MESSAGING",
+          "VIDEO",
+          "VOIP",
+          "WEB"
+        ],
+        "multiclass_brier": 9.75000000000001e-05,
+        "expected_calibration_error_10_bins": 0.00374999999999992,
+        "samples": 20
+      },
+      "LogisticRegression": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "per_class": {
+          "ICMP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "MESSAGING": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VIDEO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VOIP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "WEB": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4
+          ]
+        ],
+        "classes": [
+          "ICMP",
+          "MESSAGING",
+          "VIDEO",
+          "VOIP",
+          "WEB"
+        ],
+        "multiclass_brier": 0.0006637485280957488,
+        "expected_calibration_error_10_bins": 0.020684397300872903,
+        "samples": 20
+      },
+      "GradientBoosting": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "per_class": {
+          "ICMP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "MESSAGING": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VIDEO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VOIP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "WEB": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4
+          ]
+        ],
+        "classes": [
+          "ICMP",
+          "MESSAGING",
+          "VIDEO",
+          "VOIP",
+          "WEB"
+        ],
+        "multiclass_brier": 6.92206103781987e-09,
+        "expected_calibration_error_10_bins": 7.441538033370332e-05,
+        "samples": 20
+      }
+    },
+    "threshold_selection": [
+      {
+        "threshold": 0.4,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.5,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.6,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.7,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      }
+    ],
+    "test": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "per_class": {
+        "ICMP": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "MESSAGING": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "VIDEO": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "VOIP": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "WEB": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      ],
+      "classes": [
+        "ICMP",
+        "MESSAGING",
+        "VIDEO",
+        "VOIP",
+        "WEB"
+      ],
+      "multiclass_brier": 0.00029500000000000034,
+      "expected_calibration_error_10_bins": 0.006000000000000005,
+      "samples": 40
+    },
+    "abstention": {
+      "threshold": 0.9,
+      "coverage": 1.0,
+      "abstained": 0,
+      "selective_accuracy": 1.0,
+      "accuracy_counting_abstention_as_error": 1.0,
+      "macro_f1_including_unknown": 1.0
+    }
+  },
+  "mixed_to_real": {
+    "selected_model": "RandomForest",
+    "validation": {
+      "RandomForest": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "per_class": {
+          "ICMP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "MESSAGING": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VIDEO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VOIP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "WEB": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4
+          ]
+        ],
+        "classes": [
+          "EMAIL",
+          "ICMP",
+          "MESSAGING",
+          "OTHER",
+          "VIDEO",
+          "VOIP",
+          "WEB"
+        ],
+        "multiclass_brier": 0.00014750000000000017,
+        "expected_calibration_error_10_bins": 0.0035000000000000586,
+        "samples": 20
+      },
+      "LogisticRegression": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "per_class": {
+          "ICMP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "MESSAGING": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VIDEO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VOIP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "WEB": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4
+          ]
+        ],
+        "classes": [
+          "EMAIL",
+          "ICMP",
+          "MESSAGING",
+          "OTHER",
+          "VIDEO",
+          "VOIP",
+          "WEB"
+        ],
+        "multiclass_brier": 0.0017168898723267812,
+        "expected_calibration_error_10_bins": 0.021297753154438936,
+        "samples": 20
+      },
+      "GradientBoosting": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "per_class": {
+          "ICMP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "MESSAGING": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VIDEO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VOIP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "WEB": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4
+          ]
+        ],
+        "classes": [
+          "EMAIL",
+          "ICMP",
+          "MESSAGING",
+          "OTHER",
+          "VIDEO",
+          "VOIP",
+          "WEB"
+        ],
+        "multiclass_brier": 3.156733802980148e-08,
+        "expected_calibration_error_10_bins": 0.00012060096852850588,
+        "samples": 20
+      }
+    },
+    "threshold_selection": [
+      {
+        "threshold": 0.4,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.5,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.6,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.7,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      }
+    ],
+    "test": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "per_class": {
+        "ICMP": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "MESSAGING": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "VIDEO": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "VOIP": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "WEB": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 8.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      ],
+      "classes": [
+        "EMAIL",
+        "ICMP",
+        "MESSAGING",
+        "OTHER",
+        "VIDEO",
+        "VOIP",
+        "WEB"
+      ],
+      "multiclass_brier": 0.0002587500000000003,
+      "expected_calibration_error_10_bins": 0.005999999999999894,
+      "samples": 40
+    },
+    "abstention": {
+      "threshold": 0.9,
+      "coverage": 1.0,
+      "abstained": 0,
+      "selective_accuracy": 1.0,
+      "accuracy_counting_abstention_as_error": 1.0,
+      "macro_f1_including_unknown": 1.0
+    }
+  },
+  "cross_crypto": {
+    "modern_to_cbc128": {
+      "selected_model": "RandomForest",
+      "validation": {
+        "RandomForest": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "weighted_f1": 1.0,
+          "per_class": {
+            "ICMP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "MESSAGING": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VIDEO": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VOIP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "WEB": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "accuracy": 1.0,
+            "macro avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            },
+            "weighted avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "classes": [
+            "ICMP",
+            "MESSAGING",
+            "VIDEO",
+            "VOIP",
+            "WEB"
+          ],
+          "multiclass_brier": 0.0007731555555555594,
+          "expected_calibration_error_10_bins": 0.019400000000000084,
+          "samples": 10
+        },
+        "LogisticRegression": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "weighted_f1": 1.0,
+          "per_class": {
+            "ICMP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "MESSAGING": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VIDEO": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VOIP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "WEB": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "accuracy": 1.0,
+            "macro avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            },
+            "weighted avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "classes": [
+            "ICMP",
+            "MESSAGING",
+            "VIDEO",
+            "VOIP",
+            "WEB"
+          ],
+          "multiclass_brier": 0.0019528511288246547,
+          "expected_calibration_error_10_bins": 0.036282322477161566,
+          "samples": 10
+        },
+        "GradientBoosting": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "weighted_f1": 1.0,
+          "per_class": {
+            "ICMP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "MESSAGING": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VIDEO": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VOIP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "WEB": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "accuracy": 1.0,
+            "macro avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            },
+            "weighted avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "classes": [
+            "ICMP",
+            "MESSAGING",
+            "VIDEO",
+            "VOIP",
+            "WEB"
+          ],
+          "multiclass_brier": 6.92206103781987e-09,
+          "expected_calibration_error_10_bins": 7.441538033403639e-05,
+          "samples": 10
+        }
+      },
+      "threshold_selection": [
+        {
+          "threshold": 0.4,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        },
+        {
+          "threshold": 0.5,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        },
+        {
+          "threshold": 0.6,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        }
+      ],
+      "test": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "per_class": {
+          "ICMP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "MESSAGING": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VIDEO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VOIP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "WEB": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4
+          ]
+        ],
+        "classes": [
+          "ICMP",
+          "MESSAGING",
+          "VIDEO",
+          "VOIP",
+          "WEB"
+        ],
+        "multiclass_brier": 0.02140306666666667,
+        "expected_calibration_error_10_bins": 0.08305,
+        "samples": 20
+      },
+      "abstention": {
+        "threshold": 0.9,
+        "coverage": 0.6,
+        "abstained": 8,
+        "selective_accuracy": 1.0,
+        "accuracy_counting_abstention_as_error": 0.6,
+        "macro_f1_including_unknown": 0.5
+      }
+    },
+    "cbc128_to_modern": {
+      "selected_model": "RandomForest",
+      "validation": {
+        "RandomForest": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "weighted_f1": 1.0,
+          "per_class": {
+            "ICMP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "MESSAGING": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VIDEO": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VOIP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "WEB": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "accuracy": 1.0,
+            "macro avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            },
+            "weighted avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "classes": [
+            "ICMP",
+            "MESSAGING",
+            "VIDEO",
+            "VOIP",
+            "WEB"
+          ],
+          "multiclass_brier": 0.0007923222222222263,
+          "expected_calibration_error_10_bins": 0.01990000000000003,
+          "samples": 10
+        },
+        "LogisticRegression": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "weighted_f1": 1.0,
+          "per_class": {
+            "ICMP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "MESSAGING": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VIDEO": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VOIP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "WEB": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "accuracy": 1.0,
+            "macro avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            },
+            "weighted avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "classes": [
+            "ICMP",
+            "MESSAGING",
+            "VIDEO",
+            "VOIP",
+            "WEB"
+          ],
+          "multiclass_brier": 0.002027631130229958,
+          "expected_calibration_error_10_bins": 0.0365750083894929,
+          "samples": 10
+        },
+        "GradientBoosting": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "weighted_f1": 1.0,
+          "per_class": {
+            "ICMP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "MESSAGING": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VIDEO": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "VOIP": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "WEB": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 2.0
+            },
+            "accuracy": 1.0,
+            "macro avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            },
+            "weighted avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 10.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "classes": [
+            "ICMP",
+            "MESSAGING",
+            "VIDEO",
+            "VOIP",
+            "WEB"
+          ],
+          "multiclass_brier": 6.92206103781987e-09,
+          "expected_calibration_error_10_bins": 7.441538033403639e-05,
+          "samples": 10
+        }
+      },
+      "threshold_selection": [
+        {
+          "threshold": 0.4,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        },
+        {
+          "threshold": 0.5,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        },
+        {
+          "threshold": 0.6,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 1.0,
+          "selective_accuracy": 1.0
+        }
+      ],
+      "test": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "per_class": {
+          "ICMP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "MESSAGING": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VIDEO": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "VOIP": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "WEB": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 20.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4
+          ]
+        ],
+        "classes": [
+          "ICMP",
+          "MESSAGING",
+          "VIDEO",
+          "VOIP",
+          "WEB"
+        ],
+        "multiclass_brier": 0.0023443777777777818,
+        "expected_calibration_error_10_bins": 0.031233333333333453,
+        "samples": 20
+      },
+      "abstention": {
+        "threshold": 0.9,
+        "coverage": 1.0,
+        "abstained": 0,
+        "selective_accuracy": 1.0,
+        "accuracy_counting_abstention_as_error": 1.0,
+        "macro_f1_including_unknown": 1.0
+      }
+    }
+  },
+  "limitations": [
+    "Small single-host dataset; uncertainty is substantial.",
+    "Generated VOIP/MESSAGING/VIDEO workloads are not real application/vendor attribution.",
+    "All groups share topology and implementation; no external operational validation.",
+    "Each split contains entire tunnel-establishment groups; no windows or sessions cross splits.",
+    "Cross-crypto test uses only held-out target-profile groups, excluding matching generator seeds from training.",
+    "One dominant direction per session; whole-SA multiplexing remains a failure mode.",
+    "No calibrated deployment probabilities; thresholds selected on validation only.",
+    "The original production classifier and its default 0.60 threshold remain unchanged."
+  ]
+}
