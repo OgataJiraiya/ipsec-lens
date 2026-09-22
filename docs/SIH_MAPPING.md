@@ -52,7 +52,7 @@ Synthetic tests do not verify an actual VPN deployment. PARTIAL identifies absen
 | Isolated strongSwan integration | User/network/mount namespace fallback | real SAs, local ping/HTTP, tshark | COMPLETE — LIVE VERIFIED |
 | Offline runtime | Local assets/model/database | browser/source review | COMPLETE — OFFLINE VERIFIED |
 | Regressions | Python, frontend, browser, bounded fuzz | release results | COMPLETE — OFFLINE VERIFIED |
-| CI | Pinned GitHub Actions Python/frontend quality gates | Starting release head accfe47 passed hosted run 34203307597; final-pass gates in RELEASE_CHECKLIST.md | COMPLETE — OFFLINE VERIFIED |
+| CI | Pinned GitHub Actions Python/frontend quality gates | Final pre-merge implementation/documentation head 644f3167ead96a156392353a84ecc74fccb19c4f passed hosted run 35745833842 (Python and frontend); RELEASE_CHECKLIST.md | COMPLETE — OFFLINE VERIFIED |
 | Documentation | Architecture/semantics/model/demo/review/mapping | repository documents | COMPLETE — OFFLINE VERIFIED |
 
 Live scope is narrow: forced ESP-in-UDP, ordinary IPv6, strong/weak tunnel and transport profiles. Docker execution, NAT router traversal, other generated crypto combinations and organic application attribution are not validated. See LIVE_VALIDATION.md.
@@ -60,3 +60,6 @@ Live scope is narrow: forced ESP-in-UDP, ordinary IPv6, strong/weak tunnel and t
 Final-pass additions improve the existing dashboard/report/lifecycle capabilities: typed JSON
 export, per-analysis deletion, comparison, provenance and experimental model transparency.
 No PARTIAL or NOT IMPLEMENTED requirement is upgraded by these additions.
+
+The recorded hosted result predates this documentation-only synchronization, which changes no
+runtime code or requirement statuses. It does not pre-validate a subsequent documentation commit.

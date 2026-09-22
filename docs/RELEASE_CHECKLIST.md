@@ -5,16 +5,17 @@ not security certification. Main is not merged or changed.
 
 ## Source and hosted evidence
 
-- Starting clean HEAD: `accfe47da8a403905b6d1deb369b1bfba28e7052`.
+- Historical starting clean HEAD for the engineering pass: `accfe47da8a403905b6d1deb369b1bfba28e7052`.
 - Branch: `feat/sih26160-complete-prototype`; PR #1; base main `5087ec8d73c3074c95495393a788e081945b4b8c`.
 - Feature implementation: `6b9836037ca4bf39f9ea733f9e4ac3d377717b6e`.
 - Complete tested code and gate scripts: `2a2dcef47978394234450a78baa69de5a2fc0235`.
-- Documentation commits follow that tested code; use `git rev-parse HEAD` for the final documentation-inclusive revision.
-- Starting release candidate validated by GitHub Actions at the documented release head:
-  [successful run 34203307597](https://github.com/OgataJiraiya/ipsec-lens/actions/runs/34203307597),
-  independently queried through the GitHub connector in this pass. This supersedes the older
-  hardening-head reference without inventing a future SHA. Post-push checks for the final
-  branch tip are reported separately in the delivery handoff, not inferred from this prior run.
+- Final pre-merge implementation/documentation head before this documentation-only synchronization:
+  `644f3167ead96a156392353a84ecc74fccb19c4f`.
+- That head passed [GitHub Actions run 35745833842](https://github.com/OgataJiraiya/ipsec-lens/actions/runs/35745833842);
+  both Python and frontend jobs completed successfully. This synchronization does not change
+  runtime code. This hosted result applies to the recorded head, not to a subsequent documentation commit.
+- Historical starting-head evidence: `accfe47da8a403905b6d1deb369b1bfba28e7052` passed
+  [run 34203307597](https://github.com/OgataJiraiya/ipsec-lens/actions/runs/34203307597).
 
 ## Checks performed
 
@@ -24,6 +25,7 @@ no dependency changes or new dependency installation was necessary.
 | CHECK | RESULT | EVIDENCE |
 |---|---|---|
 | Starting branch / SHA / clean tree | PASS | Git status, branch, rev-parse and last 15 commits inspected before edits |
+| Hosted CI at `644f3167ead96a156392353a84ecc74fccb19c4f` | PASS | Run 35745833842; Python and frontend jobs successful |
 | `make test` | PASS | 162 Python + 28 frontend tests; static/build gates; `/tmp/ipseclens-make-test.log` |
 | `make release-check` | PASS | Deterministic artifact, pytest, compileall, Ruff, mypy, demos, frontend gates; `/tmp/ipseclens-release-check.log` |
 | Explicit `.venv/bin/python -m pytest -q` | PASS | 162 passed, two upstream deprecation warnings; `/tmp/ipseclens-pytest.log` |
@@ -102,8 +104,9 @@ is bounded engineering evidence, not an exhaustive adversarial or independent se
 
 ## Known limitations and merge readiness
 
-Local release gates: PASS; ready for manual merge review within the documented prototype scope.
-Final hosted tip validation and final clean-tree/push evidence belong to the delivery handoff.
+Local release gates and hosted CI at the recorded pre-synchronization head
+`644f3167ead96a156392353a84ecc74fccb19c4f`: PASS; ready for manual merge review within
+the documented prototype scope. No CI result is pre-claimed for a subsequent documentation commit.
 Do not merge automatically. No PARTIAL / NOT IMPLEMENTED SIH requirement was upgraded.
 
 Production ML remains EXPERIMENTAL, synthetic-trained, uncalibrated and poor at synthetic-to-real

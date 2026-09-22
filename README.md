@@ -105,9 +105,12 @@ See [docs/LIVE_VALIDATION.md](docs/LIVE_VALIDATION.md) for real strong/weak, tra
 
 ## Release validation
 
-Release candidate validated by GitHub Actions at the documented release head:
-`accfe47da8a403905b6d1deb369b1bfba28e7052`, [successful run 34203307597](https://github.com/OgataJiraiya/ipsec-lens/actions/runs/34203307597).
-See [Release checklist](docs/RELEASE_CHECKLIST.md) for this final pass and its separate validation evidence.
+The final pre-merge implementation/documentation head before this documentation-only synchronization,
+`644f3167ead96a156392353a84ecc74fccb19c4f`, passed
+[GitHub Actions run 35745833842](https://github.com/OgataJiraiya/ipsec-lens/actions/runs/35745833842)
+with both Python and frontend jobs successful. This synchronization does not change runtime code;
+that hosted result applies to the recorded head, not to a subsequent documentation commit.
+See [Release checklist](docs/RELEASE_CHECKLIST.md) for validation evidence and historical revisions.
 
 After `make install` and `make train`, `make release-check` performs the safe unprivileged
 release gates: deterministic regeneration against the committed model digest without replacing

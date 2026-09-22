@@ -1,13 +1,16 @@
 # Final pre-merge build report — 2026-09-22
 
 **Local release gates PASS; ready for manual merge review within the local SIH prototype scope.**
-No merge, force push or history rewrite. Starting clean HEAD:
+No merge, force push or history rewrite. Historical starting clean HEAD for the engineering pass:
 `accfe47da8a403905b6d1deb369b1bfba28e7052`. Tested implementation and release scripts:
-`2a2dcef47978394234450a78baa69de5a2fc0235`; subsequent documentation records the results.
-Final documentation-inclusive HEAD and post-push hosted checks are in the delivery handoff.
+`2a2dcef47978394234450a78baa69de5a2fc0235`.
 
-The starting release candidate passed [GitHub Actions run 34203307597](https://github.com/OgataJiraiya/ipsec-lens/actions/runs/34203307597).
-This was independently verified in this pass; previous hosted CI is not pending.
+The final pre-merge implementation/documentation head before this documentation-only synchronization,
+`644f3167ead96a156392353a84ecc74fccb19c4f`, passed
+[GitHub Actions run 35745833842](https://github.com/OgataJiraiya/ipsec-lens/actions/runs/35745833842).
+Both Python and frontend jobs passed. This synchronization does not change runtime code;
+the recorded hosted result validates that head, not a subsequent documentation commit.
+Historical starting-head CI also passed [run 34203307597](https://github.com/OgataJiraiya/ipsec-lens/actions/runs/34203307597).
 New local results: **162 Python tests, 28 React tests**, compileall, Ruff, mypy (56 files),
 TypeScript, ESLint and production build all PASS. Both `make test` and the new
 `make release-check` passed, followed by the separately requested explicit commands.
