@@ -1,0 +1,39 @@
+{
+  "adapter": "strongswan-normalized",
+  "capture_sha256": "00668f041cd1f2e19571237b275f8b161920662410ac53335438537fb8808c3c",
+  "collected_at": "2023-11-14T22:13:20+00:00",
+  "provenance": "SYNTHETIC FIXTURE scenario strong; generated assertions",
+  "synthetic": true,
+  "sas": [
+    {
+      "source": "192.0.2.1",
+      "destination": "192.0.2.2",
+      "spi": "0x00001001",
+      "protocol": "ESP",
+      "mode": "TUNNEL",
+      "encryption_algorithm": "AES-GCM-16",
+      "encryption_key_bits": 256,
+      "integrity_algorithm": "NONE",
+      "pfs_enabled": true,
+      "dh_group": 20,
+      "configured_lifetime": 1800,
+      "replay_window": 64,
+      "esn": false
+    },
+    {
+      "source": "192.0.2.2",
+      "destination": "192.0.2.1",
+      "spi": "0x00001002",
+      "protocol": "ESP",
+      "mode": "TUNNEL",
+      "encryption_algorithm": "AES-GCM-16",
+      "encryption_key_bits": 256,
+      "integrity_algorithm": "NONE",
+      "pfs_enabled": true,
+      "dh_group": 20,
+      "configured_lifetime": 1800,
+      "replay_window": 64,
+      "esn": false
+    }
+  ]
+}

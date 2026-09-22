@@ -1,0 +1,7 @@
+{
+  "source": "SYNTHETIC FIXTURE",
+  "description": "Protocol-format fixture, dummy KE and opaque ESP bytes; not a functioning VPN capture.",
+  "capture_sha256": "00668f041cd1f2e19571237b275f8b161920662410ac53335438537fb8808c3c",
+  "scenario": "strong",
+  "packet_count": 386
+}

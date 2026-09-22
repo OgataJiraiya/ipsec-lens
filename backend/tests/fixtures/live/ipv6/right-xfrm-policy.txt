@@ -1,0 +1,28 @@
+src fd26:160::20/128 dst fd26:160::10/128 
+	dir out priority 268927 ptype main 
+	tmpl src fd26:160::20 dst fd26:160::10
+		proto esp spi 0xce73cae6 reqid 1 mode tunnel
+src fd26:160::10/128 dst fd26:160::20/128 
+	dir fwd priority 268927 ptype main 
+	tmpl src fd26:160::10 dst fd26:160::20
+		proto esp reqid 1 mode tunnel
+src fd26:160::10/128 dst fd26:160::20/128 
+	dir in priority 268927 ptype main 
+	tmpl src fd26:160::10 dst fd26:160::20
+		proto esp reqid 1 mode tunnel
+src ::/0 dst ::/0 
+	socket in priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket out priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket in priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main 

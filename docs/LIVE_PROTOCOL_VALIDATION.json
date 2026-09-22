@@ -1,0 +1,673 @@
+{
+  "strong": {
+    "packet_count": 1223,
+    "ike_count": 8,
+    "esp_count": 1215,
+    "ipsec_lens_counts": {
+      "IPv4": 1223,
+      "UDP": 8,
+      "IKEv2": 8,
+      "IKE": 8,
+      "ESP": 1215
+    },
+    "warnings": [],
+    "header_spi_sequence_transform_comparison": "PASS",
+    "score": {
+      "security_score": 97.5,
+      "risk_score": 2.5,
+      "assessment_coverage": 1.0,
+      "score_status": "AVAILABLE",
+      "overall_disposition": "ACCEPT",
+      "domains": [
+        {
+          "name": "Cryptography",
+          "score": 100.0,
+          "weight": 0.25,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=0548656f0159519d; SPI=0xc8b45f53; Child-SA crypto=AES-GCM-16; bits=256; integrity=NONE",
+            "SA=2e4e123a6e711e74; SPI=0xc7eb7c1e; Child-SA crypto=AES-GCM-16; bits=256; integrity=NONE"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Key Exchange",
+          "score": 100.0,
+          "weight": 0.2,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=0548656f0159519d; SPI=0xc8b45f53; endpoint Child-SA DH=20",
+            "SA=2e4e123a6e711e74; SPI=0xc7eb7c1e; endpoint Child-SA DH=20"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "PFS / Rekey",
+          "score": 100.0,
+          "weight": 0.2,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=0548656f0159519d; SPI=0xc8b45f53; configured PFS=True",
+            "SA=0548656f0159519d; SPI=0xc8b45f53; configured lifetime=3600",
+            "SA=2e4e123a6e711e74; SPI=0xc7eb7c1e; configured PFS=True",
+            "SA=2e4e123a6e711e74; SPI=0xc7eb7c1e; configured lifetime=3600"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Replay Protection",
+          "score": 100.0,
+          "weight": 0.15,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=0548656f0159519d; SPI=0xc8b45f53; configured replay window=64",
+            "SA=2e4e123a6e711e74; SPI=0xc7eb7c1e; configured replay window=64"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Protocol Hygiene",
+          "score": 100.0,
+          "weight": 0.15,
+          "coverage": 1.0,
+          "evidence": [
+            "Observed IKE versions: IKEv2"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Metadata Exposure",
+          "score": 50.0,
+          "weight": 0.05,
+          "coverage": 1.0,
+          "evidence": [
+            "ESP outer metadata visibility"
+          ],
+          "source": "DERIVED"
+        }
+      ]
+    },
+    "findings": [
+      "METADATA_EXPOSURE",
+      "IP_VERSION_POSTURE"
+    ],
+    "analysis_id": "4be918e5cb2e4503bb5976b6852961c3",
+    "capture_sha256": "124c831d9427d67cf9e2cded11f0647b0e38298068dddc9b3596953ac1675ac5",
+    "sas": [
+      {
+        "source": "172.29.160.20",
+        "destination": "172.29.160.10",
+        "spi": "0xc7eb7c1e",
+        "protocol": "ESP",
+        "mode": "TUNNEL",
+        "encryption_algorithm": "AES-GCM-16",
+        "encryption_key_bits": 256,
+        "integrity_algorithm": "NONE",
+        "pfs_enabled": true,
+        "dh_group": 20,
+        "configured_lifetime": 3600,
+        "replay_window": 64,
+        "esn": false,
+        "selectors": "172.29.160.20/32 -> 172.29.160.10/32",
+        "ike_association_reference": "abe253b22ac2e89f:cc7b7840071d5f25"
+      },
+      {
+        "source": "172.29.160.10",
+        "destination": "172.29.160.20",
+        "spi": "0xc8b45f53",
+        "protocol": "ESP",
+        "mode": "TUNNEL",
+        "encryption_algorithm": "AES-GCM-16",
+        "encryption_key_bits": 256,
+        "integrity_algorithm": "NONE",
+        "pfs_enabled": true,
+        "dh_group": 20,
+        "configured_lifetime": 3600,
+        "replay_window": 64,
+        "esn": false,
+        "selectors": "172.29.160.10/32 -> 172.29.160.20/32",
+        "ike_association_reference": "abe253b22ac2e89f:cc7b7840071d5f25"
+      }
+    ]
+  },
+  "weak": {
+    "packet_count": 1202,
+    "ike_count": 8,
+    "esp_count": 1194,
+    "ipsec_lens_counts": {
+      "IPv4": 1202,
+      "UDP": 8,
+      "IKEv2": 8,
+      "IKE": 8,
+      "ESP": 1194
+    },
+    "warnings": [],
+    "header_spi_sequence_transform_comparison": "PASS",
+    "score": {
+      "security_score": 63.1,
+      "risk_score": 36.9,
+      "assessment_coverage": 0.8,
+      "score_status": "PROVISIONAL",
+      "overall_disposition": "HARDEN",
+      "domains": [
+        {
+          "name": "Cryptography",
+          "score": 60.0,
+          "weight": 0.25,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=0149030a65624136; SPI=0xce316844; Child-SA crypto=AES-CBC; bits=128; integrity=HMAC-SHA2-256-128",
+            "SA=6a8eab3fdfe4b09a; SPI=0xc672bf66; Child-SA crypto=AES-CBC; bits=128; integrity=HMAC-SHA2-256-128"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Key Exchange",
+          "score": null,
+          "weight": 0.2,
+          "coverage": 0.0,
+          "evidence": [
+            "SA=0149030a65624136; SPI=0xce316844; endpoint Child-SA DH=None",
+            "SA=6a8eab3fdfe4b09a; SPI=0xc672bf66; endpoint Child-SA DH=None"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "PFS / Rekey",
+          "score": 15.0,
+          "weight": 0.2,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=0149030a65624136; SPI=0xce316844; configured PFS=False",
+            "SA=0149030a65624136; SPI=0xce316844; configured lifetime=7200",
+            "SA=6a8eab3fdfe4b09a; SPI=0xc672bf66; configured PFS=False",
+            "SA=6a8eab3fdfe4b09a; SPI=0xc672bf66; configured lifetime=7200"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Replay Protection",
+          "score": 100.0,
+          "weight": 0.15,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=0149030a65624136; SPI=0xce316844; configured replay window=64",
+            "SA=6a8eab3fdfe4b09a; SPI=0xc672bf66; configured replay window=64"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Protocol Hygiene",
+          "score": 100.0,
+          "weight": 0.15,
+          "coverage": 1.0,
+          "evidence": [
+            "Observed IKE versions: IKEv2"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Metadata Exposure",
+          "score": 50.0,
+          "weight": 0.05,
+          "coverage": 1.0,
+          "evidence": [
+            "ESP outer metadata visibility"
+          ],
+          "source": "DERIVED"
+        }
+      ]
+    },
+    "findings": [
+      "CBC_POLICY",
+      "DH_POLICY_REVIEW",
+      "CBC_POLICY",
+      "DH_POLICY_REVIEW",
+      "KEY_LENGTH_POLICY",
+      "CBC_CTR_POLICY",
+      "PFS_DISABLED",
+      "LONG_SA_LIFETIME",
+      "KEY_LENGTH_POLICY",
+      "CBC_CTR_POLICY",
+      "PFS_DISABLED",
+      "LONG_SA_LIFETIME",
+      "METADATA_EXPOSURE",
+      "IP_VERSION_POSTURE",
+      "INSUFFICIENT_EVIDENCE"
+    ],
+    "analysis_id": "4e81a42f9f1747aebe2b035178b7ee7b",
+    "capture_sha256": "199f559a57d4fa749163cee0a9ae5abe32eff93f647e928a6b084a8537a59845",
+    "sas": [
+      {
+        "source": "172.29.160.20",
+        "destination": "172.29.160.10",
+        "spi": "0xc672bf66",
+        "protocol": "ESP",
+        "mode": "TUNNEL",
+        "encryption_algorithm": "AES-CBC",
+        "encryption_key_bits": 128,
+        "integrity_algorithm": "HMAC-SHA2-256-128",
+        "pfs_enabled": false,
+        "dh_group": null,
+        "configured_lifetime": 7200,
+        "replay_window": 64,
+        "esn": false,
+        "selectors": "172.29.160.20/32 -> 172.29.160.10/32",
+        "ike_association_reference": "2d76695563cb32fe:05f1a6d8477d4600"
+      },
+      {
+        "source": "172.29.160.10",
+        "destination": "172.29.160.20",
+        "spi": "0xce316844",
+        "protocol": "ESP",
+        "mode": "TUNNEL",
+        "encryption_algorithm": "AES-CBC",
+        "encryption_key_bits": 128,
+        "integrity_algorithm": "HMAC-SHA2-256-128",
+        "pfs_enabled": false,
+        "dh_group": null,
+        "configured_lifetime": 7200,
+        "replay_window": 64,
+        "esn": false,
+        "selectors": "172.29.160.10/32 -> 172.29.160.20/32",
+        "ike_association_reference": "2d76695563cb32fe:05f1a6d8477d4600"
+      }
+    ]
+  },
+  "transport": {
+    "packet_count": 1146,
+    "ike_count": 8,
+    "esp_count": 1138,
+    "ipsec_lens_counts": {
+      "IPv4": 1146,
+      "UDP": 8,
+      "IKEv2": 8,
+      "IKE": 8,
+      "ESP": 1138
+    },
+    "warnings": [],
+    "header_spi_sequence_transform_comparison": "PASS",
+    "score": {
+      "security_score": 97.5,
+      "risk_score": 2.5,
+      "assessment_coverage": 1.0,
+      "score_status": "AVAILABLE",
+      "overall_disposition": "REVIEW",
+      "domains": [
+        {
+          "name": "Cryptography",
+          "score": 100.0,
+          "weight": 0.25,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=fc2e4aac28217fd6; SPI=0xc8a145fa; Child-SA crypto=AES-GCM-16; bits=256; integrity=NONE",
+            "SA=6d430556348b86cf; SPI=0xcfee6806; Child-SA crypto=AES-GCM-16; bits=256; integrity=NONE"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Key Exchange",
+          "score": 100.0,
+          "weight": 0.2,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=fc2e4aac28217fd6; SPI=0xc8a145fa; endpoint Child-SA DH=20",
+            "SA=6d430556348b86cf; SPI=0xcfee6806; endpoint Child-SA DH=20"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "PFS / Rekey",
+          "score": 100.0,
+          "weight": 0.2,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=fc2e4aac28217fd6; SPI=0xc8a145fa; configured PFS=True",
+            "SA=fc2e4aac28217fd6; SPI=0xc8a145fa; configured lifetime=3600",
+            "SA=6d430556348b86cf; SPI=0xcfee6806; configured PFS=True",
+            "SA=6d430556348b86cf; SPI=0xcfee6806; configured lifetime=3600"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Replay Protection",
+          "score": 100.0,
+          "weight": 0.15,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=fc2e4aac28217fd6; SPI=0xc8a145fa; configured replay window=64",
+            "SA=6d430556348b86cf; SPI=0xcfee6806; configured replay window=64"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Protocol Hygiene",
+          "score": 100.0,
+          "weight": 0.15,
+          "coverage": 1.0,
+          "evidence": [
+            "Observed IKE versions: IKEv2"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Metadata Exposure",
+          "score": 50.0,
+          "weight": 0.05,
+          "coverage": 1.0,
+          "evidence": [
+            "ESP outer metadata visibility"
+          ],
+          "source": "DERIVED"
+        }
+      ]
+    },
+    "findings": [
+      "ESP_SEQUENCE_REGRESSION",
+      "METADATA_EXPOSURE",
+      "IP_VERSION_POSTURE"
+    ],
+    "analysis_id": "0b2f77fa1e3b4a769ee33728d3b764e6",
+    "capture_sha256": "617d28ce7bd30e152ceb1e494b7617337d92f8564fa2214722e2f0e5a15723f1",
+    "sas": [
+      {
+        "source": "172.29.160.20",
+        "destination": "172.29.160.10",
+        "spi": "0xcfee6806",
+        "protocol": "ESP",
+        "mode": "TRANSPORT",
+        "encryption_algorithm": "AES-GCM-16",
+        "encryption_key_bits": 256,
+        "integrity_algorithm": "NONE",
+        "pfs_enabled": true,
+        "dh_group": 20,
+        "configured_lifetime": 3600,
+        "replay_window": 64,
+        "esn": false,
+        "selectors": "172.29.160.20/32 -> 172.29.160.10/32",
+        "ike_association_reference": "a3ae4b8fc89791db:4cc1622c71e671bc"
+      },
+      {
+        "source": "172.29.160.10",
+        "destination": "172.29.160.20",
+        "spi": "0xc8a145fa",
+        "protocol": "ESP",
+        "mode": "TRANSPORT",
+        "encryption_algorithm": "AES-GCM-16",
+        "encryption_key_bits": 256,
+        "integrity_algorithm": "NONE",
+        "pfs_enabled": true,
+        "dh_group": 20,
+        "configured_lifetime": 3600,
+        "replay_window": 64,
+        "esn": false,
+        "selectors": "172.29.160.10/32 -> 172.29.160.20/32",
+        "ike_association_reference": "a3ae4b8fc89791db:4cc1622c71e671bc"
+      }
+    ]
+  },
+  "ipv6": {
+    "packet_count": 1251,
+    "ike_count": 8,
+    "esp_count": 1243,
+    "ipsec_lens_counts": {
+      "IPv6": 1251,
+      "UDP": 8,
+      "IKEv2": 8,
+      "IKE": 8,
+      "ESP": 1243
+    },
+    "warnings": [],
+    "header_spi_sequence_transform_comparison": "PASS",
+    "score": {
+      "security_score": 97.5,
+      "risk_score": 2.5,
+      "assessment_coverage": 1.0,
+      "score_status": "AVAILABLE",
+      "overall_disposition": "ACCEPT",
+      "domains": [
+        {
+          "name": "Cryptography",
+          "score": 100.0,
+          "weight": 0.25,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=2c5c18d23c0e325a; SPI=0xc3755ff0; Child-SA crypto=AES-GCM-16; bits=256; integrity=NONE",
+            "SA=a42c60d51c4fb7f8; SPI=0xce73cae6; Child-SA crypto=AES-GCM-16; bits=256; integrity=NONE"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Key Exchange",
+          "score": 100.0,
+          "weight": 0.2,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=2c5c18d23c0e325a; SPI=0xc3755ff0; endpoint Child-SA DH=20",
+            "SA=a42c60d51c4fb7f8; SPI=0xce73cae6; endpoint Child-SA DH=20"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "PFS / Rekey",
+          "score": 100.0,
+          "weight": 0.2,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=2c5c18d23c0e325a; SPI=0xc3755ff0; configured PFS=True",
+            "SA=2c5c18d23c0e325a; SPI=0xc3755ff0; configured lifetime=3600",
+            "SA=a42c60d51c4fb7f8; SPI=0xce73cae6; configured PFS=True",
+            "SA=a42c60d51c4fb7f8; SPI=0xce73cae6; configured lifetime=3600"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Replay Protection",
+          "score": 100.0,
+          "weight": 0.15,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=2c5c18d23c0e325a; SPI=0xc3755ff0; configured replay window=64",
+            "SA=a42c60d51c4fb7f8; SPI=0xce73cae6; configured replay window=64"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Protocol Hygiene",
+          "score": 100.0,
+          "weight": 0.15,
+          "coverage": 1.0,
+          "evidence": [
+            "Observed IKE versions: IKEv2"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Metadata Exposure",
+          "score": 50.0,
+          "weight": 0.05,
+          "coverage": 1.0,
+          "evidence": [
+            "ESP outer metadata visibility"
+          ],
+          "source": "DERIVED"
+        }
+      ]
+    },
+    "findings": [
+      "METADATA_EXPOSURE",
+      "IP_VERSION_POSTURE"
+    ],
+    "analysis_id": "834d6a20f802452584eea626e131f2d8",
+    "capture_sha256": "91440ed013a755e5e2fcabc0c80a9c2e747df7f10eae2f4142bc4f484aca7b93",
+    "sas": [
+      {
+        "source": "fd26:160::20",
+        "destination": "fd26:160::10",
+        "spi": "0xce73cae6",
+        "protocol": "ESP",
+        "mode": "TUNNEL",
+        "encryption_algorithm": "AES-GCM-16",
+        "encryption_key_bits": 256,
+        "integrity_algorithm": "NONE",
+        "pfs_enabled": true,
+        "dh_group": 20,
+        "configured_lifetime": 3600,
+        "replay_window": 64,
+        "esn": false,
+        "selectors": "fd26:160::20/128 -> fd26:160::10/128",
+        "ike_association_reference": "f96d8d815144f66f:ffb407af7ef89990"
+      },
+      {
+        "source": "fd26:160::10",
+        "destination": "fd26:160::20",
+        "spi": "0xc3755ff0",
+        "protocol": "ESP",
+        "mode": "TUNNEL",
+        "encryption_algorithm": "AES-GCM-16",
+        "encryption_key_bits": 256,
+        "integrity_algorithm": "NONE",
+        "pfs_enabled": true,
+        "dh_group": 20,
+        "configured_lifetime": 3600,
+        "replay_window": 64,
+        "esn": false,
+        "selectors": "fd26:160::10/128 -> fd26:160::20/128",
+        "ike_association_reference": "f96d8d815144f66f:ffb407af7ef89990"
+      }
+    ]
+  },
+  "natt": {
+    "packet_count": 1238,
+    "ike_count": 8,
+    "esp_count": 1230,
+    "ipsec_lens_counts": {
+      "IPv4": 1238,
+      "UDP": 1238,
+      "IKEv2": 8,
+      "IKE": 8,
+      "NAT_T": 1236,
+      "ESP": 1230
+    },
+    "warnings": [],
+    "header_spi_sequence_transform_comparison": "PASS",
+    "score": {
+      "security_score": 97.5,
+      "risk_score": 2.5,
+      "assessment_coverage": 1.0,
+      "score_status": "AVAILABLE",
+      "overall_disposition": "ACCEPT",
+      "domains": [
+        {
+          "name": "Cryptography",
+          "score": 100.0,
+          "weight": 0.25,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=d64ba3894cf0f68d; SPI=0xc14bf47c; Child-SA crypto=AES-GCM-16; bits=256; integrity=NONE",
+            "SA=9ab9fa8d93d13246; SPI=0xc78cbca9; Child-SA crypto=AES-GCM-16; bits=256; integrity=NONE"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Key Exchange",
+          "score": 100.0,
+          "weight": 0.2,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=d64ba3894cf0f68d; SPI=0xc14bf47c; endpoint Child-SA DH=20",
+            "SA=9ab9fa8d93d13246; SPI=0xc78cbca9; endpoint Child-SA DH=20"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "PFS / Rekey",
+          "score": 100.0,
+          "weight": 0.2,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=d64ba3894cf0f68d; SPI=0xc14bf47c; configured PFS=True",
+            "SA=d64ba3894cf0f68d; SPI=0xc14bf47c; configured lifetime=3600",
+            "SA=9ab9fa8d93d13246; SPI=0xc78cbca9; configured PFS=True",
+            "SA=9ab9fa8d93d13246; SPI=0xc78cbca9; configured lifetime=3600"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Replay Protection",
+          "score": 100.0,
+          "weight": 0.15,
+          "coverage": 1.0,
+          "evidence": [
+            "SA=d64ba3894cf0f68d; SPI=0xc14bf47c; configured replay window=64",
+            "SA=9ab9fa8d93d13246; SPI=0xc78cbca9; configured replay window=64"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Protocol Hygiene",
+          "score": 100.0,
+          "weight": 0.15,
+          "coverage": 1.0,
+          "evidence": [
+            "Observed IKE versions: IKEv2"
+          ],
+          "source": "DERIVED"
+        },
+        {
+          "name": "Metadata Exposure",
+          "score": 50.0,
+          "weight": 0.05,
+          "coverage": 1.0,
+          "evidence": [
+            "ESP outer metadata visibility"
+          ],
+          "source": "DERIVED"
+        }
+      ]
+    },
+    "findings": [
+      "METADATA_EXPOSURE",
+      "NAT_T",
+      "IP_VERSION_POSTURE"
+    ],
+    "analysis_id": "a29ce8c5a34f460e996e1bc052df84f6",
+    "capture_sha256": "51ae70feeff58101e724e8cafdcfbdadb159b74e30d1d95579dcfe48c99fdece",
+    "sas": [
+      {
+        "source": "172.29.160.20",
+        "destination": "172.29.160.10",
+        "spi": "0xc78cbca9",
+        "protocol": "ESP",
+        "mode": "TUNNEL",
+        "encryption_algorithm": "AES-GCM-16",
+        "encryption_key_bits": 256,
+        "integrity_algorithm": "NONE",
+        "pfs_enabled": true,
+        "dh_group": 20,
+        "configured_lifetime": 3600,
+        "replay_window": 64,
+        "esn": false,
+        "selectors": "172.29.160.20/32 -> 172.29.160.10/32",
+        "ike_association_reference": "11e0837089bb9bf6:74a037012191dd55"
+      },
+      {
+        "source": "172.29.160.10",
+        "destination": "172.29.160.20",
+        "spi": "0xc14bf47c",
+        "protocol": "ESP",
+        "mode": "TUNNEL",
+        "encryption_algorithm": "AES-GCM-16",
+        "encryption_key_bits": 256,
+        "integrity_algorithm": "NONE",
+        "pfs_enabled": true,
+        "dh_group": 20,
+        "configured_lifetime": 3600,
+        "replay_window": 64,
+        "esn": false,
+        "selectors": "172.29.160.10/32 -> 172.29.160.20/32",
+        "ike_association_reference": "11e0837089bb9bf6:74a037012191dd55"
+      }
+    ]
+  }
+}
