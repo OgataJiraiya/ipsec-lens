@@ -57,3 +57,17 @@ restricted demo cleanup by both known fixture hash and demo label; prevented pen
 file reads from racing submission; disabled CDN-dependent documentation UI for offline operation.
 
 Fresh live-pass review and fixed issues: [FINAL_SOURCE_REVIEW.md](FINAL_SOURCE_REVIEW.md). Offline PDF resource fetching is disabled. Capture output uses exclusive no-follow creation with byte bounds and interruption cleanup.
+
+## Final pre-merge addendum — 2026-09-22
+
+Reviewed new JSON export, exact-ID deletion, directory descriptor/no-follow capture cleanup,
+DB rollback/retry/concurrent writer behavior, mutation Host/Origin/body controls, React
+comparison/provenance/model panels, typed unknown semantics and stale lifecycle responses.
+No new arbitrary model/metadata paths, raw HTML rendering, secret fields or permissive CORS.
+No supported new HIGH/MEDIUM issue remains open in this bounded local-prototype review.
+
+20 new Python and 18 new frontend cases pass; total 162 Python / 28 frontend. All thirteen
+pages, actual report/JSON downloads and confirmed disposable deletion pass Chromium checks.
+Known tradeoff: capture unlink precedes DB commit; commit failure leaves a retryable row
+with absent retained capture. Logical deletion is not forensic erasure of DB pages/backups.
+Full evidence and corrected presentation issues: [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).

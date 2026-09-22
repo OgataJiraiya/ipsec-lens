@@ -1,3 +1,8 @@
+# Historical offline source review (superseded)
+
+This records the earlier offline baseline. Current results are in FINAL_SOURCE_REVIEW.md,
+EXTERNAL_RELEASE_AUDIT.md and RELEASE_CHECKLIST.md; historical gaps below are not current release claims.
+
 # Final source review
 
 Reviewed repository-owned protocol code, schemas, feature extraction, inference, policy/coverage,

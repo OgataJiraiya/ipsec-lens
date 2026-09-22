@@ -47,3 +47,12 @@ The capture sensor passed interface enumeration, normal duration, byte-ceiling c
 Synthetic-trained → held-out real: accuracy 0.45, macro F1 0.32, weighted F1 0.32. Real-only and mixed-training RF experiments: accuracy/macro/weighted F1 1.00 on 40 held-out sessions. Cross-crypto directions: 1.00 on 20 held-out sessions each. These are preliminary single-host testbed results, not operational accuracy benchmarks. See REAL_ML_EVALUATION.json for per-class metrics, matrices, Brier/ECE, candidate comparisons and exact group IDs.
 
 Validation selected threshold 0.90 for experiments. Production retains the original synthetic model and threshold 0.60. No test-set tuning or silent model replacement. No payload was decrypted by the analyzer. VOIP/MESSAGING/VIDEO label generated workloads, not identified commercial applications. EMAIL/OTHER have no real validation sessions.
+
+## Release gate separation
+
+`make release-check` validates unprivileged offline gates only. The commands above are separate
+explicit live experiments; this final pre-merge pass does not claim fresh SA establishment.
+The starting release head `accfe47da8a403905b6d1deb369b1bfba28e7052` passed hosted
+[Actions run 34203307597](https://github.com/OgataJiraiya/ipsec-lens/actions/runs/34203307597).
+Final-pass evidence is recorded in RELEASE_CHECKLIST.md. Real results above remain distinct
+from bundled synthetic strong/weak/replay/partial/IPv6 fixtures.

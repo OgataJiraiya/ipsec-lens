@@ -49,3 +49,36 @@ Blank selection clears the loaded analysis. Evidence values always show UNKNOWN 
 
 Single-machine analyst workspace. No authentication, cloud, multi-tenancy or public deployment.
 Loopback binding and Host/Origin checks reduce unintended browser access, but local operators remain trusted.
+
+## Local lifecycle and comparison
+
+`GET /api/analyses/{identity}/export` returns the persisted typed Analysis at its current
+revision as an attachment (`application/json`, generated filename, `nosniff`). It does
+not include retained capture bytes, raw endpoint key fields or internal storage paths.
+Operator-entered labels/provenance remain part of the document; do not put secrets in them.
+
+`DELETE /api/analyses/{identity}` accepts exactly 32 lowercase hexadecimal characters,
+like detail/report endpoints. HTTP 200 returns DELETED or ALREADY_ABSENT; invalid IDs
+return 404. DELETE has the same Host, Origin, body and concurrency limits as other writes.
+A SQLite write transaction serializes deletion with telemetry updates. Only a row marked
+retain_capture allows removal of `captures/<generated ID>.pcap`. Directory descriptors
+opened with O_DIRECTORY/O_NOFOLLOW anchor unlink to configured local storage. Capture
+symlinks and nonregular files are refused; no recursive deletion is exposed.
+
+Capture cleanup failure returns 409 and rolls back DB deletion. Missing captures are
+harmless on retry. Filesystem unlink and SQLite commit cannot be one atomic transaction:
+a crash/commit failure after unlink can leave a row whose retained capture is absent.
+Retry completes deletion; analysis/report data remain usable until then. This is logical
+deletion, not forensic secure erasure of SQLite free pages/WAL, backups or downloaded reports.
+
+Comparison loads two persisted documents independently with abort guards; selection changes
+invalidate old content. Scores are right minus left, with UNKNOWN if either score is null.
+Configuration compares only exact directional endpoint/protocol/SPI identities; absent SAs
+are observation changes, not proven teardown/rekey. Unknown properties stay incomparable.
+Findings use backend identity plus severity/source/reason. RESOLVED means absent from the
+second snapshot, not verified remediation. Policy and coverage remain visible side-by-side.
+
+Evidence Provenance preserves typed sources, including DERIVED sequence statistics rather
+than relabelling them OBSERVED. Capture source is SYNTHETIC_FIXTURE only on a bundled
+manifest hash match; otherwise UNVERIFIED. Old persisted documents default to UNVERIFIED.
+No filename, analyst label or absence of synthetic telemetry establishes real capture origin.

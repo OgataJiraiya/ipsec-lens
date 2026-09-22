@@ -25,10 +25,13 @@
 - Synchronous bounded analysis with two concurrent writes; no job queue or cancellation/progress API.
 - Non-root loopback backend only, no authentication/multi-user isolation; unsuitable for public exposure.
 - HTML is canonical; offline PDF export has a 256 KiB HTML ceiling and one-render concurrency limit.
-- Capture retention is opt-in; no UI deletion/retention scheduling. Protect the local runtime directory.
+- Capture retention is opt-in; explicit per-analysis UI deletion is available; no retention scheduling. Deletion is not forensic erasure; downloaded reports, backups and SQLite free pages/WAL may retain data. Protect the local runtime directory.
 - Graceful temporary cleanup is implemented; an OS kill/crash can leave spool/temp artifacts.
 - Docker integration remains unverified due permissions. Real isolated namespace strong/weak, transport, IPv6 and forced NAT-T SAs are verified.
 - Benchmark represents one synthetic directional flow, not worst-case many-SA/IKE-heavy workloads.
 
 - Real ML validation is preliminary: generated workloads, one host/topology, five classes, four held-out tunnel groups. Production synthetic model transfers poorly (macro F1 0.32).
 - Forced NAT-T is not a NAT-router traversal test; live IPv6 extension chains were not exercised.
+
+- Comparison is snapshot evidence comparison, not a causal improvement or verified remediation claim. Different policies and visibility can change scores/findings. Exact directional SPI matching does not associate rekeys.
+- Capture removal precedes DB commit: a crash/commit failure may leave a row with no retained capture; retry deletion. Symlink/nonregular capture storage fails closed.

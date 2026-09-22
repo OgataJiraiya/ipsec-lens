@@ -1,4 +1,43 @@
-# Final build report — live validation
+# Final pre-merge build report — 2026-09-22
+
+**Local release gates PASS; ready for manual merge review within the local SIH prototype scope.**
+No merge, force push or history rewrite. Starting clean HEAD:
+`accfe47da8a403905b6d1deb369b1bfba28e7052`. Tested implementation and release scripts:
+`2a2dcef47978394234450a78baa69de5a2fc0235`; subsequent documentation records the results.
+Final documentation-inclusive HEAD and post-push hosted checks are in the delivery handoff.
+
+The starting release candidate passed [GitHub Actions run 34203307597](https://github.com/OgataJiraiya/ipsec-lens/actions/runs/34203307597).
+This was independently verified in this pass; previous hosted CI is not pending.
+New local results: **162 Python tests, 28 React tests**, compileall, Ruff, mypy (56 files),
+TypeScript, ESLint and production build all PASS. Both `make test` and the new
+`make release-check` passed, followed by the separately requested explicit commands.
+The production model digest remains `ccf24a3017e7715ff203e5ee311ac97957d6168702b63f26ff7f19cc5c78ecad`.
+
+Added side-by-side comparison, typed evidence provenance, visible EXPERIMENTAL model metadata,
+JSON analysis download, confirmed per-analysis deletion, and deterministic offline release gates.
+Added 20 Python and 18 frontend regressions. Fixed all-message IKE display, passive fixture
+labeling, report/history lifecycle race guards and unrelated comparison provenance banners.
+Scoring, production classifier, default threshold and real ML evaluation results are unchanged.
+
+Chromium visited all thirteen pages at 1366×768 and 1920×1080, plus mobile Overview;
+all five synthetic uploads, executive/technical HTML/PDF, typed JSON download and confirmed
+analysis deletion passed with no application console errors. Synthetic strong 97.5/ACCEPT,
+weak 30.5/HARDEN, replay/partial UNAVAILABLE/REVIEW, IPv6 96.6/PROVISIONAL/REVIEW remain intact.
+No fresh privileged strongSwan establishment is claimed; prior live evidence below is retained.
+
+Repository hygiene checks found only the five expected synthetic PCAPs and `.env.example`
+among sensitive-path matches; ten XFRM text fixtures remain redacted. Runtime captures, DBs,
+keys and browser downloads remain ignored. No supported HIGH/MEDIUM issue remains open in
+this bounded internal review. No SIH PARTIAL requirement was upgraded.
+
+See [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md) for exact commands, results, demo table,
+security decisions, evidence paths and lifecycle limitations. Production ML still has
+controlled held-out real macro F1 **0.32**; it is experimental metadata inference, not
+application attribution or VPN security certification.
+
+---
+
+# Previous live-validation build report — 2026-09-08
 
 **DEMO READY for the isolated local demonstration**, 2026-09-08. This does not certify operational ML accuracy or VPN security. Starting clean SHA: eb87df381057d6f2c97fed9931851cf30b9f8c59; live-validation implementation e03d4d6; original documentation-inclusive handoff SHA cc21c4499f1621c97b140f03ed03fc54b18f7a04. Branch `feat/sih26160-complete-prototype`; main remains `5087ec8d73c3074c95495393a788e081945b4b8c`. Remote repository is `OgataJiraiya/ipsec-lens`; PR #1 contains the release candidate and remains unmerged.
 

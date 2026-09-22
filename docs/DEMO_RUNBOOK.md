@@ -11,3 +11,19 @@ Prepare first: follow LIVE_VALIDATION.md, then start `make backend` and `make fr
 7. **Optional:** upload demo/replay/replay.pcap, explicitly a SYNTHETIC FIXTURE. Duplicate/regression/gap signals do not prove accepted replay. Upload demo/partial/partial.pcap to show UNKNOWN configuration and unavailable score.
 
 Transport's real capture has 28 sequence regressions and REVIEW despite high configuration score. IPv6 and forced NAT-T captures are available under their matching runtime/live directories. Capture-only analysis must leave mode/PFS/Child crypto UNKNOWN until matched telemetry is imported.
+
+## Final pre-merge demonstration additions
+
+Prepare with `make release-check`; namespace/live commands remain separately invoked. The
+starting release head passed hosted Actions run 34203307597; current pass evidence is in
+RELEASE_CHECKLIST.md. Without local live captures, use the five bundled fixtures and explicitly
+call them SYNTHETIC FIXTURE throughout. Synthetic weak is 30.5/HARDEN, distinct from real weak 63.1.
+
+- **Compare Analyses:** select strong on the left and weak on the right. Read policy, coverage,
+  score delta and findings. RESOLVED is snapshot absence, not verified remediation.
+- **Evidence Provenance:** show OBSERVED headers, ASSISTED endpoint configuration, INFERRED
+  classifier outputs and UNKNOWN facts. DERIVED preserves computed sequence-statistic provenance.
+- **Encrypted Traffic AI / System:** show EXPERIMENTAL, model hash, 22 features, production
+  threshold 0.60, payload decrypted NO, attribution validated NO and controlled real macro F1 0.32.
+- **Reports:** download Analysis JSON as well as HTML/PDF. Demonstrate deletion only on a
+  disposable analysis: read its label/ID, type the exact ID, confirm and show the cleared selection.

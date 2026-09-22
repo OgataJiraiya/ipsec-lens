@@ -45,14 +45,18 @@ Synthetic tests do not verify an actual VPN deployment. PARTIAL identifies absen
 | Executive report | Escaped standalone HTML | API/browser downloads | COMPLETE — OFFLINE VERIFIED |
 | Technical report | Full evidence document | API/browser downloads | COMPLETE — OFFLINE VERIFIED |
 | Server PDF | Bounded WeasyPrint, no URL fetching | API tests and browser downloads | COMPLETE — OFFLINE VERIFIED |
-| Interactive dashboard | Eleven React views | Vitest/browser walkthrough | COMPLETE — OFFLINE VERIFIED |
+| Interactive dashboard | Thirteen React views, comparison and evidence provenance | Vitest/browser walkthrough | COMPLETE — OFFLINE VERIFIED |
 | Configuration hardener | Recommendation-only policy fragment | API/report/UI | COMPLETE — OFFLINE VERIFIED |
 | Strong/weak/replay/partial demos | Synthetic capture + actual pipeline | make demo | COMPLETE — OFFLINE VERIFIED |
 | IPv6 demo | NAT-T ESP + basic AH, partial coverage | make demo | COMPLETE — OFFLINE VERIFIED |
 | Isolated strongSwan integration | User/network/mount namespace fallback | real SAs, local ping/HTTP, tshark | COMPLETE — LIVE VERIFIED |
 | Offline runtime | Local assets/model/database | browser/source review | COMPLETE — OFFLINE VERIFIED |
 | Regressions | Python, frontend, browser, bounded fuzz | release results | COMPLETE — OFFLINE VERIFIED |
-| CI | Pinned GitHub Actions Python/frontend quality gates | PR #1 hosted run 34202981510 passed; 142 Python tests + frontend gates | COMPLETE — OFFLINE VERIFIED |
+| CI | Pinned GitHub Actions Python/frontend quality gates | Starting release head accfe47 passed hosted run 34203307597; final-pass gates in RELEASE_CHECKLIST.md | COMPLETE — OFFLINE VERIFIED |
 | Documentation | Architecture/semantics/model/demo/review/mapping | repository documents | COMPLETE — OFFLINE VERIFIED |
 
 Live scope is narrow: forced ESP-in-UDP, ordinary IPv6, strong/weak tunnel and transport profiles. Docker execution, NAT router traversal, other generated crypto combinations and organic application attribution are not validated. See LIVE_VALIDATION.md.
+
+Final-pass additions improve the existing dashboard/report/lifecycle capabilities: typed JSON
+export, per-analysis deletion, comparison, provenance and experimental model transparency.
+No PARTIAL or NOT IMPLEMENTED requirement is upgraded by these additions.

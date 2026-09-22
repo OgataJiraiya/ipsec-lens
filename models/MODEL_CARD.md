@@ -1,4 +1,4 @@
-# IPsecLens synthetic metadata classifier
+# IPsecLens experimental encrypted-flow metadata classifier
 
 ## Intended use
 Demonstrate reproducible encrypted-flow metadata feature extraction, model selection, inference and abstention.
@@ -56,3 +56,11 @@ Preliminary evaluation: 120 real ESP captures of generated local workloads, five
 RF/LR/GradientBoosting selection and threshold selection used validation only. Experimental threshold 0.90; synthetic-model coverage 0.40 with 24/40 abstentions, real/mixed coverage 1.00. Both held-out cross-crypto directions scored macro F1 1.00 on 20 target sessions. Full distributions, candidate metrics and group IDs: ../docs/REAL_ML_EVALUATION.json.
 
 The production artifact remains synthetic-trained at threshold 0.60. Poor transfer (macro F1 0.32) is material. Perfect lab-trained results reflect a small, controlled single-host experiment with only four held-out tunnel groups; no deployment, vendor/application attribution or calibrated operational confidence claim is supported. EMAIL/OTHER lack real samples. Generated workload labels are not organic application traces.
+
+## Product presentation
+
+EXPERIMENTAL. System and Encrypted Traffic AI show the built-in model type/hash, training
+source, 22-feature count, current runtime threshold, separately labelled synthetic metrics and
+controlled held-out real macro F1 0.32. Payload decrypted: NO. Real-world application attribution
+validated: NO. Values come from fixed local model/evaluation files; no external runtime metadata.
+The production artifact and its committed SHA-256 are unchanged by this release pass.

@@ -63,3 +63,18 @@ not cryptographic attestation. Outer passive ESP alone cannot distinguish tunnel
 
 Configured lifetime differs from observed duration. Configured PFS differs from proof of every rekey's DH.
 Implementation, version and CVEs remain unknown without supporting endpoint evidence.
+
+## Standards alignment / engineering references
+
+Verified publisher references (2026-09-22):
+
+| Reference | How it informs this prototype | Boundary |
+|---|---|---|
+| [RFC 7296, IKEv2](https://www.rfc-editor.org/rfc/rfc7296.html), §§1.2, 3.1–3.4, 3.14 | Exchange/header/proposal/transform/KE interpretation; opaque encrypted payload boundary | No IKE AUTH cryptographic verification |
+| [RFC 4303, ESP](https://www.rfc-editor.org/rfc/rfc4303.html), §§2, 3.4 | SPI/sequence visibility and receiver anti-replay distinction | Passive anomalies cannot prove receiver acceptance |
+| [RFC 4302, AH](https://www.rfc-editor.org/rfc/rfc4302.html), §2 | Basic AH next-header, length, SPI and sequence interpretation | No authentication verification |
+| [NIST SP 800-77 Rev. 1, Guide to IPsec VPNs](https://csrc.nist.gov/pubs/sp/800/77/r1/final) | Engineering context for IPsec VPN configuration, deployment and lifecycle review | Guidance, not an implemented conformance checklist |
+
+These are engineering references, not certification or a claim of complete standards
+compliance. Scoring remains the unchanged prototype rubric in SCORING_POLICY.md; no
+weights or thresholds are attributed to these standards.

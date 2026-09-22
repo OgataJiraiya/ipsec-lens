@@ -37,3 +37,17 @@ Requested TODO/FIXME/shell=True/eval(/exec( hits in the pre-documentation invent
 Loopback single-user service has no public/multi-tenant authentication. Endpoint telemetry is not attested. OS kills may leave temporary files. No fragmentation/ESN reconstruction, payload authentication or decryption. PDF has a size ceiling. Docker was not executed. Small generated-workload real dataset does not establish deployment accuracy; synthetic-model transfer is poor. These remain documented scope limits, not hidden secure assertions.
 
 Validation: 138 Python tests, Ruff, mypy, compileall; 10 React tests, typecheck/lint/build; actual browser uploads and HTML/PDF downloads; five live protocol cross-checks; capture sensor lifecycle. No supported release-blocking correctness/security issue remains from this review.
+
+## Final pre-merge addendum — 2026-09-22
+
+Reviewed new JSON export, exact-ID deletion, directory descriptor/no-follow capture cleanup,
+DB rollback/retry/concurrent writer behavior, mutation Host/Origin/body controls, React
+comparison/provenance/model panels, typed unknown semantics and stale lifecycle responses.
+No new arbitrary model/metadata paths, raw HTML rendering, secret fields or permissive CORS.
+No supported new HIGH/MEDIUM issue remains open in this bounded local-prototype review.
+
+20 new Python and 18 new frontend cases pass; total 162 Python / 28 frontend. All thirteen
+pages, actual report/JSON downloads and confirmed disposable deletion pass Chromium checks.
+Known tradeoff: capture unlink precedes DB commit; commit failure leaves a retryable row
+with absent retained capture. Logical deletion is not forensic erasure of DB pages/backups.
+Full evidence and corrected presentation issues: [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
