@@ -25,7 +25,14 @@ def main():
         results[name] = {"analysis_id": run.analysis_id, "packets": run.packet_count,
                          "status": run.analysis_status, **run.score.model_dump(exclude={"domains"}),
                          "findings": sorted({f.category for f in run.findings})}
-    assert results["strong"]["security_score"] >= 90
+    assert results["strong"]["security_score"] == 97.5
+    assert results["strong"]["assessment_coverage"] == 1
+    assert results["strong"]["overall_disposition"] == "ACCEPT"
+    assert results["weak"]["security_score"] == 30.5
+    assert results["replay"]["score_status"] == "UNAVAILABLE"
+    assert results["replay"]["overall_disposition"] == "REVIEW"
+    assert results["ipv6"]["score_status"] == "PROVISIONAL"
+    assert results["ipv6"]["overall_disposition"] == "REVIEW"
     assert results["weak"]["overall_disposition"] == "HARDEN"
     assert "ESP_DUPLICATE_SEQUENCE" in results["replay"]["findings"]
     assert results["partial"]["score_status"] == "UNAVAILABLE"

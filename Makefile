@@ -19,3 +19,17 @@ demo: train
 	$(PY) -m scripts.demo
 clean-demo:
 	$(PY) -m scripts.clean_demo
+
+# Dependencies are installed explicitly by make install; release-check stays offline.
+# Use make release-check RELEASE_NPM_CI=1 for an explicit clean lockfile install.
+RELEASE_NPM_CI ?= 0
+.PHONY: release-check
+release-check:
+	$(PY) -m scripts.check_model
+	$(PY) -m pytest -q
+	$(PY) -m compileall -q backend training scripts
+	$(PY) -m ruff check .
+	$(PY) -m mypy backend training scripts
+	$(PY) -m scripts.demo
+	@if [ "$(RELEASE_NPM_CI)" = "1" ]; then cd frontend && npm ci; fi
+	cd frontend && npm run typecheck && npm run lint && npm test -- --run && npm run build
