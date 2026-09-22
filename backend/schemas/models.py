@@ -173,6 +173,7 @@ class Analysis(StrictModel):
     label: str
     capture_sha256: str
     capture_filename: str
+    capture_source: Literal["SYNTHETIC_FIXTURE", "UNVERIFIED"] = "UNVERIFIED"
     capture_size: int
     packet_count: int
     capture_duration: float

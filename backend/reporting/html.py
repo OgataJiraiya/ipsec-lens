@@ -38,6 +38,7 @@ pre{{white-space:pre-wrap;overflow-wrap:anywhere;background:#eef5f7;padding:18px
 li{{margin:8px 0}}@media print{{body{{margin:0}}pre{{break-inside:auto}}}}</style>
 <header>IPsecLens AI · SIH 26160</header><h1>{esc(kind.title())} assessment report</h1>
 <p>{esc(analysis.label or analysis.capture_filename)} · Policy {esc(analysis.policy)}</p>
+<p>Capture source: {esc(analysis.capture_source.replace("_", " "))}. UNVERIFIED means capture origin is not established.</p>
 <p>Analysis {esc(analysis.analysis_id)} · Revision {analysis.revision} · {esc(analysis.created_at)}</p>
 <p>Capture: {esc(analysis.capture_filename)} · {analysis.capture_size} bytes · {analysis.packet_count} packets<br>
 SHA-256: {esc(analysis.capture_sha256)}</p><div class="metrics">{metrics}</div>

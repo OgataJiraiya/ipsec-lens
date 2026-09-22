@@ -37,7 +37,7 @@ class IntakeLimits:
         self.slots = asyncio.Semaphore(2)
 
     async def __call__(self, scope, receive, send):
-        if scope["type"] != "http" or scope["method"] not in ("POST", "PUT", "PATCH"):
+        if scope["type"] != "http" or scope["method"] not in ("POST", "PUT", "PATCH", "DELETE"):
             return await self.app(scope, receive, send)
         headers = dict(scope["headers"])
         origin = headers.get(b"origin", b"").decode(errors="replace")
@@ -172,6 +172,22 @@ def create_app(data_dir: Path | None = None):
     @app.get("/api/analyses/{identity}", response_model=Analysis)
     def detail(identity: str):
         return get(identity)
+
+    @app.get("/api/analyses/{identity}/export", response_model=Analysis)
+    def export(identity: str):
+        return JSONResponse(get(identity).model_dump(mode="json"), headers={
+            "Content-Disposition": f'attachment; filename="ipseclens-{identity}.json"',
+            "X-Content-Type-Options": "nosniff"})
+
+    @app.delete("/api/analyses/{identity}")
+    def delete_analysis(identity: str):
+        if not re.fullmatch(r"[0-9a-f]{32}", identity):
+            raise HTTPException(404, "Analysis not found")
+        try:
+            deleted = store.delete(identity)
+        except OSError:
+            raise HTTPException(409, "Capture cleanup failed; analysis kept. Inspect local storage and retry.") from None
+        return {"analysis_id": identity, "status": "DELETED" if deleted else "ALREADY_ABSENT"}
 
     @app.get("/api/analyses/{identity}/protocol", response_model=ProtocolSummary)
     def protocol(identity: str):

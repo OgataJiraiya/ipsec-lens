@@ -3,11 +3,8 @@ import { describe,it,expect,vi } from 'vitest'
 import App from '../App'
 import NewAnalysis from '../components/NewAnalysis'
 import { ScoreCards, EvidenceValue } from '../components/common'
-import type { Analysis } from '../api/types'
 
-const score={security_score:null,risk_score:null,assessment_coverage:.05,score_status:'UNAVAILABLE',overall_disposition:'REVIEW',domains:[{name:'Cryptography',score:null,weight:.25,coverage:0,evidence:['No telemetry']}]}
-const analysis: Analysis={analysis_id:'a'.repeat(32),created_at:'2026-01-01',label:'Partial capture',capture_filename:'partial.pcap',packet_count:22,policy:'MODERN',score,capture_sha256:'b'.repeat(64),capture_size:1000,capture_duration:2,analysis_status:'COMPLETE',protocol_observations:{counts:{ESP:22},ike_messages:[],spi_changes:0,malformed_packets:0,unsupported_packets:0,ah_next_headers:[]},security_associations:[],traffic_predictions:[],findings:[{finding_id:'1',category:'ESP_DUPLICATE_SEQUENCE',severity:'MEDIUM',confidence:.95,source:'DERIVED',reason:'Duplicate sequence observed',evidence:['seq=2'],recommendation:'REVIEW',remediation:'Review capture artifacts',limitations:[]},{finding_id:'2',category:'INSUFFICIENT_EVIDENCE',severity:'LOW',confidence:0,source:'UNKNOWN',reason:'Missing telemetry',evidence:[],recommendation:'REVIEW',remediation:'Import telemetry',limitations:[]}],threat_matrix:[],limitations:['UNKNOWN != SECURE'],report_references:{},telemetry_provenance:[],revision:1}
-const response=(body: unknown,ok=true)=>Promise.resolve({ok,status:ok?200:422,json:()=>Promise.resolve(body)} as Response)
+import { analysis, score, response } from './fixtures'
 function api() {
  return vi.spyOn(globalThis,'fetch').mockImplementation((input)=>{
   const path=String(input)
