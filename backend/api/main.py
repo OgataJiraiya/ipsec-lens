@@ -1,6 +1,7 @@
 """Local non-root API. No privileged commands, capture execution or model uploads."""
 import asyncio
 import logging
+import os
 import re
 import tempfile
 import uuid
@@ -102,6 +103,7 @@ class TelemetryRequest(Telemetry):
 
 def create_app(data_dir: Path | None = None, *, preview_hosted: bool = False):
     directory = data_dir or config.DATA_DIR
+    submission_preview = os.getenv("IPSECLENS_SUBMISSION_PREVIEW", "").lower() == "true"
     store = Store(directory)
     app = FastAPI(title="IPsecLens AI", version="0.1.0", docs_url=None, redoc_url=None, description=(
         "Local evidence-aware IPsec analyzer. UNKNOWN != SECURE. IKE proposals are not ESP transforms."))
@@ -138,7 +140,7 @@ def create_app(data_dir: Path | None = None, *, preview_hosted: bool = False):
                label: str = Form("", max_length=160), retain_capture: bool = Form(False),
                telemetry: str | None = Form(None, max_length=config.MAX_TELEMETRY)):
         identity = uuid.uuid4().hex
-        keep_capture = retain_capture and not preview_hosted
+        keep_capture = retain_capture and not (preview_hosted or submission_preview)
         filename = re.sub(r"[^A-Za-z0-9._-]", "_", (capture.filename or "capture.pcap").replace("\\", "/").split("/")[-1])[:120]
         imported = None
         try:
@@ -183,12 +185,16 @@ def create_app(data_dir: Path | None = None, *, preview_hosted: bool = False):
 
     @app.get("/api/analyses/{identity}/export", response_model=Analysis)
     def export(identity: str):
+        if submission_preview:
+            raise HTTPException(403, "Disabled in submission preview")
         return JSONResponse(get(identity).model_dump(mode="json"), headers={
             "Content-Disposition": f'attachment; filename="ipseclens-{identity}.json"',
             "X-Content-Type-Options": "nosniff"})
 
     @app.delete("/api/analyses/{identity}")
     def delete_analysis(identity: str):
+        if submission_preview:
+            raise HTTPException(403, "Disabled in submission preview")
         if not re.fullmatch(r"[0-9a-f]{32}", identity):
             raise HTTPException(404, "Analysis not found")
         try:

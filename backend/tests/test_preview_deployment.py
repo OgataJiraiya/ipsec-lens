@@ -1,10 +1,17 @@
 """Exercise the same-origin deployment shell with the bundled synthetic fixtures."""
+import json
+from pathlib import Path
+
 from fastapi.testclient import TestClient
 
+from backend.api.main import create_app
 from deploy.render_app import create_preview_app
 
+STRONG_CAPTURE = Path(__file__).resolve().parents[2] / "demo" / "strong" / "strong.pcap"
 
-def test_preview_workflow_and_static_routes(tmp_path):
+
+def test_preview_workflow_and_static_routes(tmp_path, monkeypatch):
+    monkeypatch.setenv("IPSECLENS_SUBMISSION_PREVIEW", "true")
     dist = tmp_path / "dist"
     (dist / "assets").mkdir(parents=True)
     (dist / "index.html").write_text("<html>preview shell</html>")
@@ -30,8 +37,17 @@ def test_preview_workflow_and_static_routes(tmp_path):
             run = response.json()
             assert run["capture_source"] == "SYNTHETIC_FIXTURE"
             assert run["policy"] == "MODERN"
+            assert run["retain_capture"] is False
             assert not (tmp_path / "runtime" / "captures").exists()
             identity = run["analysis_id"]
+            assert client.get(f"/api/analyses/{identity}").status_code == 200
+            assert any(item["analysis_id"] == identity for item in client.get("/api/analyses").json())
+            for route in ("protocol", "sas", "findings", "score"):
+                assert client.get(f"/api/analyses/{identity}/{route}").status_code == 200
+            for method, suffix in ((client.delete, ""), (client.get, "/export")):
+                blocked = method(f"/api/analyses/{identity}{suffix}")
+                assert blocked.status_code == 403
+                assert blocked.json() == {"detail": "Disabled in submission preview"}
             assert client.get(f"/api/analyses/{identity}").status_code == 200
             for kind in ("executive", "technical"):
                 report = client.get(f"/api/analyses/{identity}/report/{kind}")
@@ -48,7 +64,48 @@ def test_preview_workflow_and_static_routes(tmp_path):
         assert no_telemetry.status_code == 201
         assert all(sa["encryption_algorithm"]["source"] == "UNKNOWN"
                    for sa in no_telemetry.json()["security_associations"])
+        imported = json.loads(telemetry.text)
+        imported["expected_revision"] = 1
+        import_response = client.post(
+            f"/api/analyses/{no_telemetry.json()['analysis_id']}/telemetry", json=imported,
+            headers={"Origin": "https://preview.onrender.com"})
+        assert import_response.status_code == 200, import_response.text
+        assert import_response.json()["revision"] == 2
         blocked = client.post("/api/analyses", files={"capture": ("weak.pcap", capture.content)},
                               headers={"Origin": "https://foreign.example"})
         assert blocked.status_code == 403
+    app.state.store.engine.dispose()
+
+
+def test_preview_flag_applies_to_direct_api(tmp_path, monkeypatch):
+    monkeypatch.setenv("IPSECLENS_SUBMISSION_PREVIEW", "true")
+    app = create_app(tmp_path / "preview")
+    with TestClient(app) as client:
+        response = client.post("/api/analyses", files={"capture": ("strong.pcap", STRONG_CAPTURE.read_bytes())},
+                               data={"retain_capture": "true"})
+        assert response.status_code == 201, response.text
+        run = response.json()
+        assert run["retain_capture"] is False
+        assert not (tmp_path / "preview" / "captures").exists()
+        identity = run["analysis_id"]
+        assert client.delete(f"/api/analyses/{identity}").json() == {
+            "detail": "Disabled in submission preview"}
+        assert client.get(f"/api/analyses/{identity}/export").status_code == 403
+    app.state.store.engine.dispose()
+
+
+def test_normal_mode_keeps_export_delete_and_retention(tmp_path, monkeypatch):
+    monkeypatch.delenv("IPSECLENS_SUBMISSION_PREVIEW", raising=False)
+    app = create_app(tmp_path / "normal")
+    with TestClient(app) as client:
+        response = client.post("/api/analyses", files={"capture": ("strong.pcap", STRONG_CAPTURE.read_bytes())},
+                               data={"retain_capture": "true"})
+        assert response.status_code == 201, response.text
+        run = response.json()
+        assert run["retain_capture"] is True
+        identity = run["analysis_id"]
+        assert (tmp_path / "normal" / "captures" / f"{identity}.pcap").exists()
+        assert client.get(f"/api/analyses/{identity}/export").status_code == 200
+        assert client.delete(f"/api/analyses/{identity}").json()["status"] == "DELETED"
+        assert client.get(f"/api/analyses/{identity}").status_code == 404
     app.state.store.engine.dispose()
