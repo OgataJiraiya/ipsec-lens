@@ -1,0 +1,43 @@
+FROM node:24-bookworm-slim AS frontend-build
+WORKDIR /app/frontend
+COPY frontend/package.json frontend/package-lock.json ./
+RUN npm ci
+COPY frontend/ ./
+ENV VITE_SUBMISSION_PREVIEW=true
+RUN npm run build
+
+FROM python:3.13-slim-bookworm AS python-build
+WORKDIR /app
+RUN python -m venv /opt/ipseclens-venv
+ENV PATH="/opt/ipseclens-venv/bin:${PATH}"
+COPY requirements.lock ./
+RUN pip install --no-cache-dir -r requirements.lock
+COPY backend/ ./backend/
+COPY training/ ./training/
+COPY models/classifier.sha256 ./expected-model.sha256
+RUN python -m training.train && python -c "import hashlib,pathlib; p=pathlib.Path('models/classifier.json'); assert hashlib.sha256(p.read_bytes()).hexdigest()==pathlib.Path('expected-model.sha256').read_text().strip()"
+
+FROM python:3.13-slim-bookworm
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libcairo2 libpango-1.0-0 libpangoft2-1.0-0 libpangocairo-1.0-0 \
+    libharfbuzz-subset0 libgdk-pixbuf-2.0-0 \
+    libffi8 libgomp1 fonts-dejavu-core && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+COPY --from=python-build /opt/ipseclens-venv /opt/ipseclens-venv
+COPY --from=python-build /app/models /app/models
+COPY backend/ ./backend/
+COPY deploy/ ./deploy/
+COPY demo/weak/ ./demo/weak/
+COPY demo/strong/ ./demo/strong/
+COPY docs/REAL_ML_EVALUATION.json ./docs/REAL_ML_EVALUATION.json
+COPY --from=frontend-build /app/frontend/dist ./frontend/dist
+ENV PATH="/opt/ipseclens-venv/bin:${PATH}" \
+    PYTHONUNBUFFERED=1 \
+    IPSECLENS_DATA_DIR=/app/runtime \
+    IPSECLENS_MAX_UPLOAD=8388608 \
+    IPSECLENS_MAX_PACKETS=100000 \
+    IPSECLENS_MAX_FLOWS=512
+RUN useradd --system --uid 10001 --create-home preview && mkdir /app/runtime && chown preview:preview /app/runtime
+USER preview
+EXPOSE 10000
+CMD ["sh", "-c", "exec uvicorn deploy.render_app:app --host 0.0.0.0 --port ${PORT:-10000}"]

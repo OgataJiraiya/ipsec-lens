@@ -2,6 +2,8 @@ import { useRef, useState } from 'react'
 import { UploadCloud, FileCheck2, Play, ShieldCheck } from 'lucide-react'
 import { request, type Analysis } from '../api/types'
 import { Panel } from './common'
+const submissionPreview = import.meta.env.VITE_SUBMISSION_PREVIEW === 'true'
+const captureLimit = submissionPreview ? 8 * 1024 * 1024 : 256 * 1024 * 1024
 export default function NewAnalysis({onComplete}: {onComplete: (run: Analysis) => void}) {
   const [file,setFile] = useState<File | null>(null)
   const [hash,setHash] = useState('')
@@ -18,7 +20,7 @@ export default function NewAnalysis({onComplete}: {onComplete: (run: Analysis) =
     const ticket = ++generation.current
     setFile(null); setHash(''); setError('')
     if (!next) return
-    if (next.size > 256 * 1024 * 1024) { setError('Capture exceeds 256 MiB browser limit.'); return }
+    if (next.size > captureLimit) { setError(`Capture exceeds ${submissionPreview ? 8 : 256} MiB browser limit.`); return }
     setFile(next)
     // Browser WebCrypto digest uses a bounded buffer; backend independently hashes streamed bytes.
     try {
@@ -31,7 +33,7 @@ export default function NewAnalysis({onComplete}: {onComplete: (run: Analysis) =
     setBusy(true); setError('')
     const form = new FormData()
     form.append('capture',file); form.append('policy',policy); form.append('label',label)
-    form.append('retain_capture',String(retain))
+    form.append('retain_capture',String(!submissionPreview && retain))
     if (telemetry) form.append('telemetry',telemetry)
     try { onComplete(await request<Analysis>('/analyses',{method:'POST',body:form})) }
     catch (e) { setError(e instanceof Error ? e.message : 'Analysis failed') }
@@ -39,7 +41,7 @@ export default function NewAnalysis({onComplete}: {onComplete: (run: Analysis) =
   }
   return <div className="intake-grid"><Panel title="Capture intake" extra={<span className="muted">01 / EVIDENCE</span>}>
     <label className="drop-zone" onDragOver={e=>e.preventDefault()} onDrop={e=>{e.preventDefault(); if(!busy) void selectFile(e.dataTransfer.files[0])}}>
-      <UploadCloud size={40}/><strong>Drop a capture to begin</strong><span>PCAP or PCAPNG · up to 256 MiB</span>
+      <UploadCloud size={40}/><strong>Drop a capture to begin</strong><span>PCAP or PCAPNG · up to {submissionPreview ? 8 : 256} MiB</span>
       <input aria-label="Capture file" type="file" accept=".pcap,.pcapng,.cap" disabled={busy} onChange={e=>void selectFile(e.target.files?.[0])}/>
       <span className="button secondary">Browse files</span>
     </label>
@@ -51,10 +53,10 @@ export default function NewAnalysis({onComplete}: {onComplete: (run: Analysis) =
       else if(value) setError('Telemetry exceeds 2 MiB')
       if(current===telemetryTicket.current)setTelemetryPending(false)
     }}/></label>
-    <label className="checkbox"><input type="checkbox" checked={retain} disabled={busy} onChange={e=>setRetain(e.target.checked)}/>Retain capture on this machine</label>
+    {!submissionPreview&&<label className="checkbox"><input type="checkbox" checked={retain} disabled={busy} onChange={e=>setRetain(e.target.checked)}/>Retain capture on this machine</label>}
     {error && <div role="alert" className="error">{error}</div>}
     <button className="primary" disabled={!file || !hash || busy || telemetryPending} onClick={()=>void run()}><Play size={16}/>{busy ? 'Analyzing evidence…' : 'Run analysis'}</button>
   </Panel><div><Panel title="Assessment policy" extra={<ShieldCheck size={18}/>}>
     {['MODERN','COMPATIBILITY','STRICT'].map(p=><label className={'policy-option ' +(policy===p?'selected':'')} key={p}><input type="radio" name="policy" value={p} disabled={busy} checked={policy===p} onChange={()=>setPolicy(p)}/><div><strong>{p}</strong><p>{p==='MODERN'?'AEAD, modern DH, PFS and replay protection':p==='STRICT'?'256-bit AES, stronger ECDH set, shorter lifetimes':'Allows CBC + SHA-2 and DH14 for interoperability'}</p></div></label>)}
-    </Panel><div className="notice"><strong>Evidence before certainty</strong><p>IKE proposals do not establish ESP Child-SA algorithms. Import matching telemetry to assess PFS, lifetime, replay window and operating mode.</p><p>Uploads are deleted after analysis unless retention is selected. The backend never runs privileged capture commands.</p></div></div></div>
+    </Panel>{submissionPreview&&<Panel title="SYNTHETIC FIXTURE demo files"><p className="muted">Download a capture and its matching generated telemetry, then upload both above with MODERN policy. The weak fixture is the suggested demonstration; the strong fixture remains available for comparison. Neither is a real VPN capture.</p><p><a className="button secondary" href="/fixtures/weak/weak.pcap" download>Weak capture</a> <a className="button secondary" href="/fixtures/weak/telemetry.json" download>Weak telemetry</a></p><p><a className="button secondary" href="/fixtures/strong/strong.pcap" download>Strong capture</a> <a className="button secondary" href="/fixtures/strong/telemetry.json" download>Strong telemetry</a></p></Panel>}<div className="notice"><strong>Evidence before certainty</strong><p>IKE proposals do not establish ESP Child-SA algorithms. Import matching telemetry to assess PFS, lifetime, replay window and operating mode.</p><p>{submissionPreview?'Uploaded captures are deleted after analysis. Preview analyses may be cleared when the hosted service restarts.':'Uploads are deleted after analysis unless retention is selected.'} The backend never runs privileged capture commands.</p></div></div></div>
 }

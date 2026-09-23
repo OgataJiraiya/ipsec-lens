@@ -32,17 +32,21 @@ class IntakeLimits:
     """Bound actual body bytes before multipart parsing; at most two intake requests.
     Disk-backed spool avoids unbounded upload memory and catches lying Content-Length.
     """
-    def __init__(self, app):
+    def __init__(self, app, same_origin_writes: bool = False):
         self.app = app
         self.slots = asyncio.Semaphore(2)
+        self.same_origin_writes = same_origin_writes
 
     async def __call__(self, scope, receive, send):
         if scope["type"] != "http" or scope["method"] not in ("POST", "PUT", "PATCH", "DELETE"):
             return await self.app(scope, receive, send)
         headers = dict(scope["headers"])
         origin = headers.get(b"origin", b"").decode(errors="replace")
-        if origin and origin not in ("http://127.0.0.1:5173", "http://localhost:5173",
-                                     "http://127.0.0.1:18760", "http://localhost:18760"):
+        local_origins = ("http://127.0.0.1:5173", "http://localhost:5173",
+                         "http://127.0.0.1:18760", "http://localhost:18760")
+        same_origin = (self.same_origin_writes and origin ==
+                       "https://" + headers.get(b"host", b"").decode(errors="replace"))
+        if origin and not (same_origin or (not self.same_origin_writes and origin in local_origins)):
             return await JSONResponse({"detail": "Origin not permitted"}, status_code=403)(scope, receive, send)
         if self.slots.locked():
             return await JSONResponse({"detail": "Analysis capacity busy; retry shortly"}, status_code=503)(scope, receive, send)
@@ -96,13 +100,16 @@ class TelemetryRequest(Telemetry):
     expected_revision: int = Field(ge=1)
 
 
-def create_app(data_dir: Path | None = None):
+def create_app(data_dir: Path | None = None, *, preview_hosted: bool = False):
     directory = data_dir or config.DATA_DIR
     store = Store(directory)
     app = FastAPI(title="IPsecLens AI", version="0.1.0", docs_url=None, redoc_url=None, description=(
         "Local evidence-aware IPsec analyzer. UNKNOWN != SECURE. IKE proposals are not ESP transforms."))
-    app.add_middleware(IntakeLimits)
-    app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "testserver"] if data_dir else ["127.0.0.1", "localhost"])
+    app.add_middleware(IntakeLimits, same_origin_writes=preview_hosted)
+    hosts = (["127.0.0.1", "localhost", "testserver"] if data_dir else ["127.0.0.1", "localhost"])
+    if preview_hosted:
+        hosts += ["*.onrender.com"]
+    app.add_middleware(TrustedHostMiddleware, allowed_hosts=hosts)
     app.state.store = store
 
     @app.exception_handler(RequestValidationError)
@@ -131,6 +138,7 @@ def create_app(data_dir: Path | None = None):
                label: str = Form("", max_length=160), retain_capture: bool = Form(False),
                telemetry: str | None = Form(None, max_length=config.MAX_TELEMETRY)):
         identity = uuid.uuid4().hex
+        keep_capture = retain_capture and not preview_hosted
         filename = re.sub(r"[^A-Za-z0-9._-]", "_", (capture.filename or "capture.pcap").replace("\\", "/").split("/")[-1])[:120]
         imported = None
         try:
@@ -147,15 +155,15 @@ def create_app(data_dir: Path | None = None):
                         if size > config.MAX_UPLOAD:
                             raise HTTPException(413, "Capture exceeds configured upload limit")
                         output.write(chunk)
-                result = build_analysis(path, identity, filename, label, policy, retain_capture, imported)
-                if retain_capture:
+                result = build_analysis(path, identity, filename, label, policy, keep_capture, imported)
+                if keep_capture:
                     retained = directory / "captures"
                     retained.mkdir(exist_ok=True, mode=0o700)
                     path.replace(retained / (identity + ".pcap"))
                 try:
                     store.save(result)
                 except Exception:
-                    if retain_capture:
+                    if keep_capture:
                         (directory / "captures" / (identity + ".pcap")).unlink(missing_ok=True)
                     raise
                 return result

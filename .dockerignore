@@ -1,0 +1,12 @@
+.git
+.venv
+**/__pycache__
+frontend/node_modules
+frontend/dist
+runtime
+datasets/generated
+testbed/generated
+models/classifier.json
+models/metrics.json
+*.db
+*.db-*
