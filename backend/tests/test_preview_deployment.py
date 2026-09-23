@@ -1,4 +1,5 @@
 """Exercise the same-origin deployment shell with the bundled synthetic fixtures."""
+import hashlib
 import json
 from pathlib import Path
 
@@ -8,6 +9,21 @@ from backend.api.main import create_app
 from deploy.render_app import create_preview_app
 
 STRONG_CAPTURE = Path(__file__).resolve().parents[2] / "demo" / "strong" / "strong.pcap"
+
+
+def test_preview_image_packages_canonical_model():
+    root = Path(__file__).resolve().parents[2]
+    expected = "ccf24a3017e7715ff203e5ee311ac97957d6168702b63f26ff7f19cc5c78ecad"
+    assert (root / "models" / "classifier.sha256").read_text().strip() == expected
+    assert hashlib.sha256((root / "models" / "classifier.json").read_bytes()).hexdigest() == expected
+    assert "!models/classifier.json" in (root / ".dockerignore").read_text().splitlines()
+    dockerfile = (root / "Dockerfile.preview").read_text()
+    assert "python -m training.train" not in dockerfile
+    assert "COPY models/classifier.json ./models/classifier.json" in dockerfile
+    assert "COPY models/classifier.sha256 ./models/classifier.sha256" in dockerfile
+    assert "assert actual==expected" in dockerfile
+    assert "COPY --from=python-build /app/models/classifier.json ./models/classifier.json" in dockerfile
+    assert "COPY --from=python-build /app/models/classifier.sha256 ./models/classifier.sha256" in dockerfile
 
 
 def test_preview_workflow_and_static_routes(tmp_path, monkeypatch):

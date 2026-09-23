@@ -44,10 +44,13 @@ threshold remains `0.60`.
 The Node 24 build produces `frontend/dist`; Python 3.13 runs the existing FastAPI
 routes and serves the same-origin SPA and four downloadable synthetic fixture files.
 PDF reporting uses Cairo, Pango, GDK Pixbuf, and DejaVu fonts in the runtime image.
-The trusted production classifier is regenerated from the pinned dependencies in
-the image and checked against the canonical SHA-256. The runtime uses an unprivileged
-user, disables raw capture retention even for direct API calls, and does not run
-capture, VPN lab, or Docker commands. No raw capture download endpoint is provided.
+The preview image packages the validated `models/classifier.json` artifact and
+`models/classifier.sha256` digest. Its Docker build verifies their SHA-256 match and
+copies both into the runtime image; it does not retrain the classifier. The normal
+`make release-check` model regeneration and integrity gate remain unchanged. The
+runtime uses an unprivileged user, disables raw capture retention even for direct API
+calls, and does not run capture, VPN lab, or Docker commands. No raw capture download
+endpoint is provided.
 
 For the recommended demonstration, download the weak capture and matching
 `telemetry.json` from New Analysis, upload both, and keep MODERN policy. The strong

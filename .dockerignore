@@ -7,6 +7,7 @@ runtime
 datasets/generated
 testbed/generated
 models/classifier.json
+!models/classifier.json
 models/metrics.json
 *.db
 *.db-*
