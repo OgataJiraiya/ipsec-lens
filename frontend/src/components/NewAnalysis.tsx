@@ -2,9 +2,13 @@ import { useRef, useState } from 'react'
 import { UploadCloud, FileCheck2, Play, ShieldCheck } from 'lucide-react'
 import { request, type Analysis } from '../api/types'
 import { Panel } from './common'
+import PreviewDemo from './PreviewDemo'
 const submissionPreview = import.meta.env.VITE_SUBMISSION_PREVIEW === 'true'
 const captureLimit = submissionPreview ? 8 * 1024 * 1024 : 256 * 1024 * 1024
 export default function NewAnalysis({onComplete}: {onComplete: (run: Analysis) => void}) {
+  return <>{submissionPreview && <PreviewDemo onComplete={onComplete}/>}<ManualAnalysis onComplete={onComplete}/></>
+}
+function ManualAnalysis({onComplete}: {onComplete: (run: Analysis) => void}) {
   const [file,setFile] = useState<File | null>(null)
   const [hash,setHash] = useState('')
   const [telemetry,setTelemetry] = useState('')
@@ -36,10 +40,11 @@ export default function NewAnalysis({onComplete}: {onComplete: (run: Analysis) =
     form.append('retain_capture',String(!submissionPreview && retain))
     if (telemetry) form.append('telemetry',telemetry)
     try { onComplete(await request<Analysis>('/analyses',{method:'POST',body:form})) }
-    catch (e) { setError(e instanceof Error ? e.message : 'Analysis failed') }
+    catch (e) { setError(submissionPreview ? 'Preview analysis could not be completed. Please use one of the bundled synthetic demo scenarios.' : e instanceof Error ? e.message : 'Analysis failed') }
     finally { setBusy(false) }
   }
-  return <div className="intake-grid"><Panel title="Capture intake" extra={<span className="muted">01 / EVIDENCE</span>}>
+  return <div className="intake-grid"><Panel title={submissionPreview ? 'Advanced · bundled fixture upload' : 'Capture intake'} extra={<span className="muted">01 / EVIDENCE</span>}>
+    {submissionPreview && <p>Public preview supports the bundled synthetic fixture files only.</p>}
     <label className="drop-zone" onDragOver={e=>e.preventDefault()} onDrop={e=>{e.preventDefault(); if(!busy) void selectFile(e.dataTransfer.files[0])}}>
       <UploadCloud size={40}/><strong>Drop a capture to begin</strong><span>PCAP or PCAPNG · up to {submissionPreview ? 8 : 256} MiB</span>
       <input aria-label="Capture file" type="file" accept=".pcap,.pcapng,.cap" disabled={busy} onChange={e=>void selectFile(e.target.files?.[0])}/>

@@ -1,6 +1,7 @@
 """Exercise the same-origin deployment shell with the bundled synthetic fixtures."""
 import hashlib
 import json
+import pytest
 from pathlib import Path
 
 from fastapi.testclient import TestClient
@@ -9,6 +10,63 @@ from backend.api.main import create_app
 from deploy.render_app import create_preview_app
 
 STRONG_CAPTURE = Path(__file__).resolve().parents[2] / "demo" / "strong" / "strong.pcap"
+
+
+@pytest.mark.parametrize("scenario,score,disposition", [("weak", 30.5, "HARDEN"), ("strong", 97.5, "ACCEPT")])
+def test_guided_demo(tmp_path, monkeypatch, scenario, score, disposition):
+    monkeypatch.setenv("IPSECLENS_SUBMISSION_PREVIEW", "true")
+    app = create_app(tmp_path, preview_hosted=True)
+    with TestClient(app, base_url="https://preview.onrender.com") as client:
+        route = f"/api/preview/demo/{scenario}"
+        assert client.post(route, headers={"Origin": "https://foreign.example"}).status_code == 403
+        response = client.post(route, headers={"Origin": "https://preview.onrender.com"})
+        assert response.status_code == 201, response.text
+        run = response.json()
+        assert run["score"]["security_score"] == score
+        assert run["score"]["assessment_coverage"] == 1.0
+        assert run["score"]["overall_disposition"] == disposition
+        assert run["capture_source"] == "SYNTHETIC_FIXTURE"
+        assert run["label"] == f"SYNTHETIC FIXTURE · {scenario.title()} VPN Demo"
+        assert run["policy"] == "MODERN"
+        assert run["retain_capture"] is False
+        assert not (tmp_path / "captures").exists()
+        identity = run["analysis_id"]
+        assert client.get(f"/api/analyses/{identity}").json() == run
+        assert any(row["analysis_id"] == identity for row in client.get("/api/analyses").json())
+        for suffix in ("protocol", "score", "findings"):
+            assert client.get(f"/api/analyses/{identity}/{suffix}").status_code == 200
+        for kind in ("executive", "technical"):
+            html = client.get(f"/api/analyses/{identity}/report/{kind}")
+            assert html.status_code == 200 and "SYNTHETIC FIXTURE" in html.text
+            pdf = client.get(f"/api/analyses/{identity}/report/{kind}?format=pdf")
+            assert pdf.status_code == 200 and pdf.content.startswith(b"%PDF")
+        assert client.delete(f"/api/analyses/{identity}").status_code == 403
+        assert client.get(f"/api/analyses/{identity}/export").status_code == 403
+        for unknown in ("other", "partial", "telemetry.json"):
+            assert client.post(f"/api/preview/demo/{unknown}").status_code == 422
+    app.state.store.engine.dispose()
+
+
+def test_demo_unavailable_normally(tmp_path, monkeypatch):
+    monkeypatch.delenv("IPSECLENS_SUBMISSION_PREVIEW", raising=False)
+    app = create_app(tmp_path)
+    with TestClient(app) as client:
+        for scenario in ("weak", "strong"):
+            assert client.post(f"/api/preview/demo/{scenario}").status_code == 404
+    app.state.store.engine.dispose()
+
+
+def test_demo_failure_is_safe(tmp_path, monkeypatch):
+    monkeypatch.setenv("IPSECLENS_SUBMISSION_PREVIEW", "true")
+    def failed(*args, **kwargs):
+        raise RuntimeError("private /internal/path traceback")
+    monkeypatch.setattr("backend.api.main.build_analysis", failed)
+    app = create_app(tmp_path)
+    with TestClient(app, raise_server_exceptions=False) as client:
+        response = client.post("/api/preview/demo/weak")
+        assert response.status_code == 500
+        assert response.json() == {"detail": "Preview analysis could not be completed. Please use one of the bundled synthetic demo scenarios."}
+    app.state.store.engine.dispose()
 
 
 def test_preview_image_packages_canonical_model():
@@ -24,6 +82,8 @@ def test_preview_image_packages_canonical_model():
     assert "assert actual==expected" in dockerfile
     assert "COPY --from=python-build /app/models/classifier.json ./models/classifier.json" in dockerfile
     assert "COPY --from=python-build /app/models/classifier.sha256 ./models/classifier.sha256" in dockerfile
+    for scenario in ("replay", "partial", "ipv6"):
+        assert f"COPY demo/{scenario}/manifest.json ./demo/{scenario}/manifest.json" in dockerfile
 
 
 def test_preview_workflow_and_static_routes(tmp_path, monkeypatch):

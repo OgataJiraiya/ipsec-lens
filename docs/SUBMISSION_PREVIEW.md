@@ -52,9 +52,36 @@ runtime uses an unprivileged user, disables raw capture retention even for direc
 calls, and does not run capture, VPN lab, or Docker commands. No raw capture download
 endpoint is provided.
 
-For the recommended demonstration, download the weak capture and matching
-`telemetry.json` from New Analysis, upload both, and keep MODERN policy. The strong
-pair is available there too. All four downloads are labelled `SYNTHETIC FIXTURE`.
+The public preview uses controlled synthetic fixtures. The full local prototype supports broader analysis.
+
+Recommended judge workflow:
+
+1. Open preview.
+2. Click **Analyze Weak VPN** on Overview (or New Analysis).
+3. Review Overview.
+4. Open Protocol Analysis.
+5. Open Security Assessment.
+6. Open Findings.
+7. Open Reports and download Executive/Technical HTML or PDF.
+8. Optionally run **Analyze Strong VPN** from New Analysis for comparison.
+
+Each button runs the real backend pipeline with the matching bundled capture and
+validated telemetry, MODERN policy and no raw capture retention. Results are
+persisted normally and labelled SYNTHETIC FIXTURE. Expected canonical results are
+weak: 30.5 / HARDEN and strong: 97.5 / ACCEPT, both with coverage 1.0.
+Nothing runs automatically on page load. Both buttons disable during analysis;
+temporary failures show a safe retry message.
+
+`POST /api/preview/demo/{scenario}` exists only with the backend preview flag.
+Only `weak` and `strong` are accepted; no paths or URLs are inputs. The existing
+two-slot intake limit and same-origin POST protection also apply to demo requests.
+There is no job queue. The preview image includes all five provenance manifests
+required by the existing analyzer, while offering only the two approved scenarios.
+
+Manual upload is labelled **Advanced · bundled fixture upload** (Option A): the
+supported public workflow uses bundled synthetic fixtures only. Download links for
+captures and matching telemetry remain available; use MODERN policy when uploading.
+This is a UI scope notice, not a server-side digest restriction.
 Preview analyses may disappear after a restart. The public preview has no user
 accounts: analysis history and reports are shared by visitors. Use only the bundled
 synthetic fixtures on this public service; do not upload private captures or endpoint
@@ -68,9 +95,10 @@ normal local API keeps its existing export, deletion, and capture retention beha
 ```sh
 make test
 make release-check
-cd frontend && VITE_SUBMISSION_PREVIEW=true npm test -- --run src/test/Preview.test.tsx
+(cd frontend && VITE_SUBMISSION_PREVIEW=true npm test -- --run src/test/Preview.test.tsx)
+(cd frontend && VITE_SUBMISSION_PREVIEW=true npm run build)
 docker build -f Dockerfile.preview -t ipseclens-submission-preview .
-docker run --rm -p 10000:10000 -e PORT=10000 ipseclens-submission-preview
+docker run --rm -p 10000:10000 -e PORT=10000 -e IPSECLENS_SUBMISSION_PREVIEW=true ipseclens-submission-preview
 ```
 
 With the container running, check `/api/health`, `/`, a frontend fallback route,

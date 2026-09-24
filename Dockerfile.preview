@@ -29,6 +29,9 @@ COPY backend/ ./backend/
 COPY deploy/ ./deploy/
 COPY demo/weak/ ./demo/weak/
 COPY demo/strong/ ./demo/strong/
+COPY demo/replay/manifest.json ./demo/replay/manifest.json
+COPY demo/partial/manifest.json ./demo/partial/manifest.json
+COPY demo/ipv6/manifest.json ./demo/ipv6/manifest.json
 COPY docs/REAL_ML_EVALUATION.json ./docs/REAL_ML_EVALUATION.json
 COPY --from=frontend-build /app/frontend/dist ./frontend/dist
 ENV PATH="/opt/ipseclens-venv/bin:${PATH}" \

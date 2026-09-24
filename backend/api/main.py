@@ -121,7 +121,23 @@ def create_app(data_dir: Path | None = None, *, preview_hosted: bool = False):
     @app.exception_handler(Exception)
     async def unexpected(request: Request, exc: Exception):
         log.error("Analysis service error: %s", type(exc).__name__)
-        return JSONResponse({"detail": "Analysis service error; inspect local service logs"}, status_code=500)
+        message = ("Preview analysis could not be completed. Please use one of the bundled synthetic demo scenarios."
+                   if submission_preview else "Analysis service error; inspect local service logs")
+        return JSONResponse({"detail": message}, status_code=500)
+
+    if submission_preview:
+        @app.post("/api/preview/demo/{scenario}", response_model=Analysis, status_code=201)
+        def preview_demo(scenario: Literal["weak", "strong"]):
+            fixture = config.ROOT / "demo" / scenario
+            try:
+                imported = Telemetry.model_validate_json((fixture / "telemetry.json").read_text(), strict=True)
+                result = build_analysis(
+                    fixture / f"{scenario}.pcap", uuid.uuid4().hex, f"{scenario}.pcap",
+                    f"SYNTHETIC FIXTURE · {scenario.title()} VPN Demo", "MODERN", False, imported)
+                store.save(result)
+                return result
+            except (CaptureError, ValidationError, ValueError):
+                raise HTTPException(422, "Preview analysis could not be completed. Please use one of the bundled synthetic demo scenarios.") from None
 
     @app.get("/api/health", response_model=Health)
     def health():
@@ -171,6 +187,8 @@ def create_app(data_dir: Path | None = None, *, preview_hosted: bool = False):
                 return result
         except (CaptureError, ValidationError, ValueError) as exc:
             message = str(exc) if isinstance(exc, CaptureError) else "Invalid telemetry or analysis input"
+            if submission_preview:
+                message = "Preview analysis could not be completed. Please use one of the bundled synthetic demo scenarios."
             raise HTTPException(422, message) from None
         finally:
             capture.file.close()
