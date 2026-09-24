@@ -5,6 +5,7 @@ import NewAnalysis from '../components/NewAnalysis'
 import { ScoreCards, EvidenceValue } from '../components/common'
 
 import { analysis, score, response } from './fixtures'
+const preview = import.meta.env.VITE_SUBMISSION_PREVIEW === 'true'
 function api() {
  return vi.spyOn(globalThis,'fetch').mockImplementation((input)=>{
   const path=String(input)
@@ -66,12 +67,13 @@ describe('Capture intake',()=>{
   fireEvent.change(screen.getByLabelText('Capture file'),{target:{files:[file]}})
   await waitFor(()=>expect(screen.getByRole('button',{name:'Run analysis'})).toBeEnabled())
   fireEvent.click(screen.getByRole('button',{name:'Run analysis'}))
-  expect(await screen.findByRole('alert')).toHaveTextContent('Truncated capture record')
+  expect(await screen.findByRole('alert')).toHaveTextContent(preview ? 'Preview analysis could not be completed. Please use one of the bundled synthetic demo scenarios.' : 'Truncated capture record')
  })
 })
 
 describe('Initial history and explicit selection',()=>{
- it('does not override an explicit empty selection with late startup history',async()=>{
+ // The empty selector is intentionally hidden in preview until history arrives.
+ it.skipIf(preview)('does not override an explicit empty selection with late startup history',async()=>{
   let resolveHistory:(r:Response)=>void=()=>{}
   vi.spyOn(globalThis,'fetch').mockImplementation(input=>{
    if(String(input)==='/api/analyses')return new Promise(resolve=>{resolveHistory=resolve})
